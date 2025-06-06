@@ -1,139 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q47TS07D8C"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-Q47TS07D8C');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FreeGameArcade.space | Play Monster Survivors & Other Free Online Games</title>
-    <meta name="description" content="Play Monster Survivors and other exciting free online games on FreeGameArcade.space, your top destination for instant arcade fun. No downloads required!">
-    <meta name="keywords" content="freegamearcade, monster survivors, free online games, arcade games, play games online, instant play games, freegamearcade.space, free game arcade">
-    <link rel="canonical" href="https://freegamearcade.space/">
-
+    <title>Free Game Arcade - Play The Best Free Online Games</title>
+    <meta name="description" content="Discover and play hundreds of free online games at Free Game Arcade. New HTML5 games added daily. No downloads, just instant fun!">
+    <link rel="canonical" href="https://freegamearcade.space">
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
+    <!-- Custom Tailwind Config (Optional - for specific Apple colors if needed) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'apple-bg': '#f5f5f7', // Very light gray, similar to Apple's UI background
+                        'apple-text': '#1d1d1f', // Dark gray for text
+                        'apple-blue': '#007aff', // Apple's signature blue for links and accents
+                        'apple-light-gray-text': '#6e6e73', // Lighter gray for secondary text
+                    }
+                },
+                fontFamily: {
+                    // Using system fonts for a clean, Apple-like feel
+                    sans: ['-apple-system', 'BlinkMacSystemFont', "Segoe UI", 'Roboto', "Helvetica Neue", 'Arial', "Noto Sans", 'sans-serif', "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
+                }
+            }
+        }
+    </script>
     <style>
-        /* Apply Inter font globally */
-        html {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth; /* Smooth scrolling for anchor links if any */
+        /* Fallback for custom scrollbar styling if Tailwind plugins are not used */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
-        /* Custom style for iframe wrapper to maintain aspect ratio */
-        .iframe-container {
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
         }
-        .iframe-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            width: 100%;
+        ::-webkit-scrollbar-thumb {
+            background: #007aff;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #005bb5;
+        }
+        /* Ensure body takes full height for footer positioning if content is short */
+        html, body {
             height: 100%;
-            border: none;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
         }
-        /* Simple focus style for accessibility */
-        *:focus-visible {
-            outline: 2px solid #2563eb; /* Tailwind's blue-600 */
-            outline-offset: 2px;
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        main {
+            flex-grow: 1;
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-700 antialiased">
+<body class="bg-apple-bg text-apple-text antialiased">
 
-    <header class="bg-white shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
-            <div class="flex flex-col sm:flex-row justify-between items-center">
-                <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-                    <a href="/" class="hover:text-blue-600 transition-colors">FreeGameArcade.space</a>
-                </h1>
-                <p class="text-sm sm:text-base text-slate-600 mt-1 sm:mt-0">
-                    Your #1 Spot for Free Online Arcade Games!
-                </p>
+    <!-- Header / Navbar -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a  class="text-2xl font-bold text-apple-blue">FGA</a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                 <!-- 
+                <nav class="hidden md:flex space-x-6">
+                    <a href="/categories/action.html" class="text-gray-600 hover:text-apple-blue px-3 py-2 rounded-md text-sm font-medium">Action</a>
+                    <a href="/categories/puzzle.html" class="text-gray-600 hover:text-apple-blue px-3 py-2 rounded-md text-sm font-medium">Puzzle</a>
+                    <a href="/categories/strategy.html" class="text-gray-600 hover:text-apple-blue px-3 py-2 rounded-md text-sm font-medium">Strategy</a>
+                    <a href="/categories/sports.html" class="text-gray-600 hover:text-apple-blue px-3 py-2 rounded-md text-sm font-medium">Sports</a>
+                </nav>
+
+        
+                Search Bar 
+                <div class="hidden md:flex items-center">
+                    <input type="search" placeholder="Search games..." class="px-3 py-2 border border-gray-300 rounded-md text-sm focus:ring-apple-blue focus:border-apple-blue">
+                    <button class="ml-2 px-4 py-2 bg-apple-blue text-white rounded-md text-sm hover:bg-opacity-90">Search</button>
+                </div>
+                -->
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-apple-blue focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
             </div>
         </div>
+
+        <!-- Mobile Menu -->
+        <!--
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+            <a href="/categories/action.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-apple-blue">Action</a>
+            <a href="/categories/puzzle.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-apple-blue">Puzzle</a>
+            <a href="/categories/strategy.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-apple-blue">Strategy</a>
+            <a href="/categories/sports.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-apple-blue">Sports</a>
+            
+            <div class="p-4">
+                <input type="search" placeholder="Search games..." class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:ring-apple-blue focus:border-apple-blue">
+                <button class="mt-2 w-full px-4 py-2 bg-apple-blue text-white rounded-md text-sm hover:bg-opacity-90">Search</button>
+            </div>
+            
+        </div>-->
     </header>
 
-    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
-        <section id="game-monster-survivors" class="mb-12 md:mb-16">
-            <div class="text-center mb-6 md:mb-8">
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-800">
-                    Now Playing: <span class="text-blue-600">Monster Survivors</span>
-                </h2>
-                <p class="mt-3 text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">
-                    Face endless hordes and fight for survival in Monster Survivors, a thrilling free arcade game! No downloads, just instant action.
-                </p>
-            </div>
+        <!-- Hero Section -->
+        <section class="text-center py-12 md:py-20 bg-white rounded-xl shadow-lg">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-apple-text mb-6">
+                Free Game Arcade: <span class="text-apple-blue">Your Ultimate Hub</span> for Online Games
+            </h1>
+            <p class="text-lg text-apple-light-gray-text mb-8 max-w-2xl mx-auto">
+                Dive into a world of endless fun! Hundreds of free HTML5 games await, ready to play instantly on any device.
+            </p>
+            <a href="./index.html" class="bg-apple-blue text-white font-semibold px-8 py-3 rounded-lg text-lg hover:bg-opacity-90 transition duration-150 ease-in-out transform hover:scale-105">
+                Play Now
+            </a>
+        </section>
 
-            <div class="iframe-container bg-black rounded-xl shadow-2xl max-w-5xl mx-auto">
-                <iframe
-                    src="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html"
-                    title="Monster Survivors - Free Online Arcade Game on FreeGameArcade.space"
-                    allowfullscreen
-                    scrolling="no"
-                    loading="lazy"
-                ></iframe>
+        <!-- Featured Games Section -->
+        <section id="featured-games" class="py-12">
+            <h2 class="text-3xl font-bold text-apple-text mb-8 text-center">Featured Games</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Game Card Example (Repeat 8-12 times) -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <a href="./game/Kick_the_Pirate.html">
+                        <img src="./image/Kick_the_Pirate.png" alt="Kick the Pirate" class="w-full h-48 object-cover">
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold text-apple-text mb-2">Kick the Pirate</h3>
+                            <p class="text-sm text-apple-light-gray-text">It's a stress-busting clicker game perfect for blowing off some steam!</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <a href="./game/Monster_Survivors.html">
+                        <img src="./image/Monster_Survivors.png" alt="Monster Survivors" class="w-full h-48 object-cover">
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold text-apple-text mb-2">Monster Survivors</h3>
+                            <p class="text-sm text-apple-light-gray-text">This game challenges your reflexes, strategic thinking, and endurance. Good luck, survivor!</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <a href="./game/Epic_Basketball.html">
+                        <img src="./image/Epic_Basketball.png" alt="Epic Basketball" class="w-full h-48 object-cover">
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold text-apple-text mb-2">Epic Basketball</h3>
+                            <p class="text-sm text-apple-light-gray-text">Epic Basketball is designed for quick fun and a satisfying challenge. It's easy to learn but difficult to master!</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <a href="./game/Geometry_Vibes_X_Ball.html">
+                        <img src="./image/Geometry_Vibes_X_Ball.png" alt="Geometry Vibes X Ball" class="w-full h-48 object-cover">
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold text-apple-text mb-2">Geometry Vibes X Ball</h3>
+                            <p class="text-sm text-apple-light-gray-text">In Geometry Vibes X Ball, you're thrown into a high-speed world of shifting shapes and intense music. </p>
+                        </div>
+                    </a>
+                </div>
+                 <!-- Add 4 more featured game cards here to make it 8 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <a href="./game/Red_Light_Green_Light.html">
+                        <img src="./image/Red_Light_Green_Light.png" alt="Red Light,Green Light" class="w-full h-48 object-cover">
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold text-apple-text mb-2">Red Light,Green Light</h3>
+                            <p class="text-sm text-apple-light-gray-text">Defend the galaxy in this action-packed space shooter.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <a href="./game/Car_Parking_City_Duel.html">
+                        <img src="./image/Car_Parking_City_Duel.png" alt="Car Parking City Duel" class="w-full h-48 object-cover">
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold text-apple-text mb-2">Car Parking City Duel</h3>
+                            <p class="text-sm text-apple-light-gray-text">Car Parking City Duel offers multiple exciting modes where you can race against time or challenge a friend directly.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <a href="./game/Ultimate_Moto.html">
+                        <img src="./image/Ultimate_Moto.png" alt="Ultimate Moto" class="w-full h-48 object-cover">
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold text-apple-text mb-2">Ultimate Moto</h3>
+                            <p class="text-sm text-apple-light-gray-text">Your goal is to outrace your opponents, master the tracks, and finish in first place to become the ultimate motorcycle champion.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <a href="./game/PacXon_New_Realms.html">
+                        <img src="./image/PacXon_New_Realms.png" alt="PacXon New Realms" class="w-full h-48 object-cover">
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold text-apple-text mb-2">PacXon New Realms</h3>
+                            <p class="text-sm text-apple-light-gray-text">Car Parking City Duel offers multiple exciting modes where you can race against time or challenge a friend directly.</p>
+                        </div>
+                    </a>
+                </div>
             </div>
         </section>
 
-        <section id="about-game" class="mb-12 md:mb-16 bg-white p-6 sm:p-8 rounded-xl shadow-xl">
-            <h2 class="text-2xl md:text-3xl font-bold text-slate-800 mb-4 md:mb-6">
-                About Monster Survivors
-            </h2>
-            <div class="space-y-4 text-base md:text-lg text-slate-600 leading-relaxed">
-                <p>
-                    Monster Survivors is an exhilarating free-to-play arcade game that puts your survival instincts and combat skills to the ultimate test. You'll find yourself pitted against relentless waves of diverse and challenging monsters, with each wave more formidable than the last. Your core objective is simple yet demanding: survive for as long as you possibly can!
-                </p>
-                <p>
-                    As you navigate the ever-escalating chaos, you'll have the opportunity to collect powerful upgrades, unlock unique abilities, and strategically enhance your arsenal of weapons. These choices are crucial to turning the tide of battle in your favor. The gameplay in Monster Survivors is designed to be intuitive and accessible for newcomers, while still offering significant depth and strategic elements to keep seasoned arcade enthusiasts engaged. Every play session presents a fresh challenge, testing your skill, reflexes, and decision-making under pressure.
-                </p>
-                <p>
-                    Experience the non-stop action, addictive gameplay, and the thrill of the fight right here on FreeGameArcade.space. We offer direct access to Monster Survivors with no downloads, no installations, and absolutely no hidden fees – just pure, unadulterated arcade fun. Are you ready to prove your mettle, conquer the monstrous hordes, and etch your name as the ultimate monster survivor?
-                </p>
+
+        <!-- New Arrivals Section -->
+        <section class="py-12">
+            <h2 class="text-3xl font-bold text-apple-text mb-8 text-center">New Arrivals</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Game Card Example (Repeat for new games) -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <a href="./game/Car_Parking_City_Duel.html">
+                        <img src="./image/Car_Parking_City_Duel.png" alt="Car Parking City Duel" class="w-full h-48 object-cover">
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold text-apple-text mb-2">Car Parking City Duel</h3>
+                            <p class="text-sm text-apple-light-gray-text">Car Parking City Duel offers multiple exciting modes where you can race against time or challenge a friend directly.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <a href="./game/PacXon_New_Realms.html">
+                        <img src="./image/PacXon_New_Realms.png" alt="PacXon New Realms" class="w-full h-48 object-cover">
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold text-apple-text mb-2">PacXon New Realms</h3>
+                            <p class="text-sm text-apple-light-gray-text">Car Parking City Duel offers multiple exciting modes where you can race against time or challenge a friend directly.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <a href="./game/Kick_the_Pirate.html">
+                        <img src="./image/Kick_the_Pirate.png" alt="Kick the Pirate" class="w-full h-48 object-cover">
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold text-apple-text mb-2">Kick the Pirate</h3>
+                            <p class="text-sm text-apple-light-gray-text">It's a stress-busting clicker game perfect for blowing off some steam!</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <a href="./game/Monster_Survivors.html">
+                        <img src="./image/Monster_Survivors.png" alt="Monster Survivors" class="w-full h-48 object-cover">
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold text-apple-text mb-2">Monster Survivors</h3>
+                            <p class="text-sm text-apple-light-gray-text">This game challenges your reflexes, strategic thinking, and endurance. Good luck, survivor!</p>
+                        </div>
+                    </a>
+                </div>
             </div>
         </section>
 
-        <section id="why-us" class="mb-12 md:mb-16 bg-slate-100 p-6 sm:p-8 rounded-xl shadow-lg">
-            <h2 class="text-2xl md:text-3xl font-bold text-slate-800 mb-4 md:mb-6">
-                Why Play on FreeGameArcade.space?
-            </h2>
-            <div class="grid md:grid-cols-2 gap-6 text-base md:text-lg text-slate-600 leading-relaxed">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold text-slate-700 mb-2">Completely Free Gaming</h3>
-                    <p>At FreeGameArcade.space, we firmly believe that fun shouldn't come with a price tag. Enjoy Monster Survivors and an ever-expanding library of exciting games entirely free of charge.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold text-slate-700 mb-2">Instant Play, No Hassle</h3>
-                    <p>Jump straight into the action! All our games are playable directly in your browser on both PC and mobile devices. Say goodbye to cumbersome downloads and lengthy installations.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold text-slate-700 mb-2">Optimized for All Devices</h3>
-                    <p>Whether you're gaming on your desktop computer, tablet, or smartphone, FreeGameArcade.space is designed to provide a smooth, responsive, and enjoyable gaming experience across all platforms.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold text-slate-700 mb-2">Your New Arcade Hub</h3>
-                    <p>We are passionate about bringing you the very best in free online arcade entertainment. Bookmark FreeGameArcade.space and check back frequently for new titles and gaming adventures!</p>
-                </div>
+
+        <!--
+            Game Categories Section 
+        <section class="py-12 bg-white rounded-xl shadow-lg">
+            <h2 class="text-3xl font-bold text-apple-text mb-8 text-center">Game Categories</h2>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="/categories/action.html" class="bg-apple-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition duration-150">Action</a>
+                <a href="/categories/puzzle.html" class="bg-apple-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition duration-150">Puzzle</a>
+                <a href="/categories/strategy.html" class="bg-apple-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition duration-150">Strategy</a>
+                <a href="/categories/sports.html" class="bg-apple-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition duration-150">Sports</a>
+                <a href="/categories/arcade.html" class="bg-apple-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition duration-150">Arcade</a>
+                <a href="/categories/adventure.html" class="bg-apple-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition duration-150">Adventure</a>
+               
+            </div>
+        </section>
+        -->
+
+        <!-- Website Introduction Section -->
+        <section class="py-12 mt-8">
+            <div class="bg-white p-8 rounded-xl shadow-lg max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-apple-text mb-4">Welcome to FreeGameArcade.space</h2>
+                <p class="text-apple-light-gray-text leading-relaxed">
+                    FreeGameArcade.space is your premier destination for an extensive collection of free online HTML5 games. Our mission is to provide instant access to a diverse range of games that you can enjoy on any device – PC, tablet, or mobile – without the need for downloads or installations. From action-packed adventures and brain-teasing puzzles to classic arcade hits and competitive sports games, we've got something for everyone. New games are added regularly, so there's always something new to discover. Start playing and have fun!
+                </p>
             </div>
         </section>
 
     </main>
 
-    <footer class="bg-slate-800 text-slate-300 py-8 md:py-12">
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-12 mt-auto">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-base">&copy; <span id="currentYear"></span> FreeGameArcade.space. All Rights Reserved.</p>
-            <p class="text-sm mt-2">Your ultimate portal to endless free arcade gaming fun.</p>
-            <p class="text-xs mt-4">Disclaimer: All games featured on this site are embedded from third-party sources. FreeGameArcade.space does not host these games directly.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-3">FGA</h3>
+                    <p class="text-sm">Your ultimate hub for free online games.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-3">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/about.html" class="hover:text-apple-blue">About Us</a></li>
+                        <li><a href="/contact.html" class="hover:text-apple-blue">Contact Us</a></li>
+                        <li><a href="/privacy.html" class="hover:text-apple-blue">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="hover:text-apple-blue">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-3">Connect</h3>
+                    <!-- Placeholder for social media icons if you add them later -->
+                    <p class="text-sm">Follow us on social media!</p>
+                    <div class="flex justify-center space-x-4 mt-2">
+                        <!-- Example: <a href="#" class="hover:text-apple-blue">Facebook</a> -->
+                    </div>
+                </div>
+            </div>
+            <hr class="border-gray-700 my-8">
+            <p class="text-sm">&copy; <span id="currentYear"></span> FreeGameArcade.space. All rights reserved.</p>
+            <p class="text-xs mt-1">Designed with <span class="text-red-500">&hearts;</span> using HTML & Tailwind CSS.</p>
         </div>
     </footer>
 
     <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Set current year in footer
         document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
 
