@@ -22,7 +22,7 @@ def generate_game_page_with_gemini(game_data, all_games):
     # 重要安全提示: 请勿在此处直接写入您的API密钥。
     # 这个脚本被设计为从一个名为 "GEMINI_API_KEY" 的环境变量中安全地读取密钥。
     # 请参考第四步中的说明，在您的GitHub仓库的 "Secrets" 中设置此密钥。
-    api_key = "AIzaSyDVfAsLX3sjJiz8befufBfo0NhMEmIVpcM"
+    api_key = os.getenv("GEMINI_API_KEY")
     if not api_key:
         print("  -> 警告: 未设置 GEMINI_API_KEY 环境变量。无法生成页面。")
         return None
