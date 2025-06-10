@@ -46,5 +46,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages # 部署到的分支
-          folder: generated_pages # 要部署的文件夹
+          folder: game # 要部署的文件夹
           clean: true
