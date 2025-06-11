@@ -1,57 +1,47 @@
-name: Daily AI-Powered Game Scraper and Deploy
+name: Build and Deploy Site to Main Branch
 
 on:
-  workflow_dispatch: # 允许手动触发
+  workflow_dispatch:
   schedule:
-    - cron: '0 1 * * *' # 每天UTC时间1点运行
+    - cron: '0 1 * * *'
 
 jobs:
-  build-and-deploy:
+  build-and-commit:
     runs-on: ubuntu-latest
-
-    # --- 关键修复: 授予工作流写入权限 ---
-    # 默认情况下，工作流只有读取权限。
-    # 我们需要明确授予它 'contents: write' 权限，
-    # 这样它才能将生成的网站推送到 gh-pages 分支。
+    
     permissions:
       contents: write
-    # 设置环境变量，以便Python脚本可以访问API密钥
+      
     env:
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Python 🐍
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
 
-      - name: Install dependencies 📦
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          # 新增 google-generativeai 依赖
           pip install requests beautifulsoup4 google-generativeai
 
-      - name: Run Scraper and AI Page Generator 🏃
-        # Python脚本将通过 os.getenv("GEMINI_API_KEY") 自动获取密钥
+      - name: Run scraper and page generator
         run: python main.py
 
-      - name: List files for debugging # 调试步骤
-        run: ls -R
-
-      - name: Commit data files 💾
+      - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add games_archive.json processed_games.txt
-          git diff --staged --quiet || git commit -m "chore: 更新游戏数据库"
-          git push origin main || echo "No changes to commit"
-
-      - name: Deploy to GitHub Pages 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: main
-          folder: game # <--- 确保这个文件夹名称与 page_generator.py 中的 OUTPUT_DIR 一致
-          clean: true
+          # 添加所有新生成或修改的文件
+          git add .
+          # 检查是否有文件变动，只有在有变动时才提交
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "Automated build: Update game data and pages"
+            git push origin main
+          else
+            echo "No changes to commit."
+          fi
