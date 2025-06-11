@@ -190,7 +190,7 @@ def generate_homepage(games):
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="[https://www.googletagmanager.com/gtag/js?id=G-Q47TS07D8C](https://www.googletagmanager.com/gtag/js?id=G-Q47TS07D8C)"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q47TS07D8C"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){{dataLayer.push(arguments);}}
@@ -203,7 +203,7 @@ def generate_homepage(games):
     <title>Free Game Arcade - Play The Best Free Online Games</title>
     <meta name="description" content="Discover and play hundreds of free online games at Free Game Arcade. New HTML5 games added daily. No downloads, just instant fun!">
     <link rel="canonical" href="{SITE_BASE_URL}">
-    <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {{
             theme: {{
