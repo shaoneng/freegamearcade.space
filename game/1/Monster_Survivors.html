@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q47TS07D8C"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-Q47TS07D8C');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <!-- Title of the page, crucial for SEO and browser tabs -->
+    <title>Play Monster Survivors - Free Online Game | Free Game Arcade</title>
+    <!-- Description of the page, used by search engines -->
+    <meta name="description" content="Play Monster Survivors for free at Free Game Arcade. Survive hordes of monsters, upgrade your abilities, and see how long you can last in this thrilling survival game! No download required, play directly in your browser.">
+    <!-- Canonical URL to prevent duplicate content issues -->
+    <link rel="canonical" href="https://freegamearcade.space/game/monster-survivors.html">
+
+    <!-- Tailwind CSS CDN -->
+    <!-- Loads the Tailwind CSS framework for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Tailwind Configuration -->
+    <!-- Extends the default Tailwind theme with custom styles (e.g., Apple-like colors and fonts) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'apple-bg': '#f5f5f7', // Light background color
+                        'apple-text': '#1d1d1f', // Dark text color for contrast
+                        'apple-blue': '#007aff', // Accent blue color
+                        'apple-light-gray-text': '#6e6e73', // Lighter gray for secondary text
+                    }
+                },
+                fontFamily: {
+                    // Apple-style system fonts for a clean, modern look
+                    sans: ['-apple-system', 'BlinkMacSystemFont', "Segoe UI", 'Roboto', "Helvetica Neue", 'Arial', "Noto Sans", 'sans-serif', "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Scrollbar Styling (WebKit-based browsers) */
+        ::-webkit-scrollbar {
+            width: 8px; /* Width of the scrollbar */
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; /* Background of the scrollbar track */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #007aff; /* Color of the scrollbar thumb (the draggable part) */
+            border-radius: 4px; /* Rounded corners for the thumb */
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #005bb5; /* Color of the thumb on hover */
+        }
+
+        /* Full Height HTML and Body */
+        /* Ensures that the page takes up at least the full viewport height,
+           which helps in positioning the footer correctly. */
+        html {
+            height: 100%;
+        }
+        body {
+            min-height: 100%; /* Body takes at least full viewport height */
+            display: flex; /* Enables flexbox layout */
+            flex-direction: column; /* Arranges children (header, main, footer) vertically */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* Sets the default font for the page */
+        }
+        main {
+            flex-grow: 1; /* Allows the main content area to expand and fill available space, pushing the footer down */
+        }
+
+        /* 16:9 Aspect Ratio Container for iFrame */
+        /* This creates a responsive container that maintains a 16:9 aspect ratio for the game iframe. */
+        .aspect-16-9 {
+            position: relative; /* Needed for absolute positioning of the iframe */
+            width: 100%; /* Container takes full width of its parent */
+            padding-bottom: 56.25%; /* 9 / 16 = 0.5625 (56.25%). This sets the height relative to the width. */
+        }
+        .aspect-16-9 iframe {
+            position: absolute; /* Positions the iframe within the aspect ratio container */
+            top: 0;
+            left: 0;
+            width: 100%; /* iframe fills the container horizontally */
+            height: 100%; /* iframe fills the container vertically */
+        }
+    </style>
+</head>
+<body class="bg-apple-bg text-apple-text antialiased"> <!-- Apply base background, text color, and anti-aliasing for smoother fonts -->
+
+    <!-- Header / Navbar -->
+    <!-- The header is sticky, meaning it stays at the top of the viewport when scrolling.
+         It has a semi-transparent background with a blur effect. -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8"> <!-- Centered container with padding -->
+            <div class="flex items-center justify-between h-16"> <!-- Flex container for logo, nav, and search -->
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="../index.html" class="text-2xl font-bold text-apple-blue">FGA</a> <!-- Site Logo/Name -->
+                </div>
+
+                <!-- Desktop Navigation -->
+                <!-- Navigation links are hidden on small screens (md:flex) -->
+                <nav class="hidden md:flex space-x-6">
+                    <a href="/categories/action.html" class="text-gray-600 hover:text-apple-blue px-3 py-2 rounded-md text-sm font-medium">Action</a>
+                    <a href="/categories/puzzle.html" class="text-gray-600 hover:text-apple-blue px-3 py-2 rounded-md text-sm font-medium">Puzzle</a>
+                    <a href="/categories/strategy.html" class="text-gray-600 hover:text-apple-blue px-3 py-2 rounded-md text-sm font-medium">Strategy</a>
+                    <a href="/categories/sports.html" class="text-gray-600 hover:text-apple-blue px-3 py-2 rounded-md text-sm font-medium">Sports</a>
+                </nav>
+
+                <!-- Search Bar (Desktop) -->
+                <!-- Search bar is hidden on small screens (md:flex) -->
+                <div class="hidden md:flex items-center">
+                    <input type="search" placeholder="Search games..." class="px-3 py-2 border border-gray-300 rounded-md text-sm focus:ring-apple-blue focus:border-apple-blue">
+                    <button class="ml-2 px-4 py-2 bg-apple-blue text-white rounded-md text-sm hover:bg-opacity-90">Search</button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <!-- This button is only visible on small screens (md:hidden) to toggle the mobile menu. -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-apple-blue focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <!-- This menu is hidden by default and shown when the mobile menu button is clicked. -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+            <a href="/categories/action.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-apple-blue">Action</a>
+            <a href="/categories/puzzle.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-apple-blue">Puzzle</a>
+            <a href="/categories/strategy.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-apple-blue">Strategy</a>
+            <a href="/categories/sports.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-apple-blue">Sports</a>
+            <!-- Search Bar (Mobile) -->
+            <div class="p-4">
+                <input type="search" placeholder="Search games..." class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:ring-apple-blue focus:border-apple-blue">
+                <button class="mt-2 w-full px-4 py-2 bg-apple-blue text-white rounded-md text-sm hover:bg-opacity-90">Search</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8"> <!-- Centered container with padding for the main content -->
+        <!-- Breadcrumb Navigation -->
+        <nav class="mb-6" aria-label="Breadcrumb">
+            <ol class="flex items-center space-x-2 text-sm">
+                <li>
+                    <a href="../index.html" class="text-apple-light-gray-text hover:text-apple-blue">Home</a>
+                </li>
+                <li>
+                    <span class="text-gray-400">/</span>
+                </li>
+                <li class="font-medium text-apple-text" aria-current="page">
+                    Pac-Xon New Realms
+                </li>
+            </ol>
+        </nav>
+        <!-- Game Title -->
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-apple-text mb-6 text-center">Monster Survivors</h1>
+
+        <!-- Game Embed Area -->
+        <section class="mb-10">
+            <!-- Container for the game iframe, styled with a background, rounded corners, and shadow.
+                 It uses the 'aspect-16-9' class for responsive embedding. -->
+            <div id="game-embed-container" class="aspect-16-9 bg-black rounded-lg shadow-2xl overflow-hidden mx-auto max-w-4xl">
+                <iframe 
+                    id="game-iframe"
+                    src="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html" 
+                    title="Monster Survivors Game" 
+                    class="border-0" /* Removes default iframe border */
+                    allowfullscreen /* Allows the iframe to go fullscreen */
+                    /* Permissions policy for iframe features */
+                    allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    loading="lazy"> /* Defers loading of the iframe until it's near the viewport */
+                </iframe>
+            </div>
+            <!-- Fullscreen Button -->
+            <div class="mt-5 text-center">
+                <button id="fullscreen-button" class="bg-apple-blue text-white font-semibold px-6 py-3 rounded-lg hover:bg-opacity-80 transition duration-150 ease-in-out text-sm sm:text-base">
+                    Enter Full Screen
+                </button>
+            </div>
+        </section>
+
+        <!-- How to Play Section -->
+        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto">
+            <h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play Monster Survivors</h2>
+            <div class="text-apple-light-gray-text space-y-3 leading-relaxed text-sm sm:text-base">
+                <p>Welcome to Monster Survivors! Your mission is to withstand relentless waves of creatures and fight for your survival as long as you can.</p>
+                <p><strong>Core Gameplay:</strong></p>
+                <ul class="list-disc list-inside ml-4 space-y-1">
+                    <li><strong>Movement:</strong> Use <strong>WASD</strong> or <strong>Arrow Keys</strong> to move your character around the map.</li>
+                    <li><strong>Combat:</strong> Your character will often attack automatically. Focus on maneuvering to avoid enemies and position yourself strategically.</li>
+                    <li><strong>Experience & Upgrades:</strong> Defeated monsters drop experience gems. Collect them to level up.</li>
+                    <li><strong>Level Up Choices:</strong> Each time you level up, you'll be presented with a choice of new abilities or upgrades to existing ones. Choose wisely to build a powerful character!</li>
+                    <li><strong>Survival:</strong> The longer you survive, the more challenging the waves of monsters become.</li>
+                </ul>
+                <p><strong>Tips for Survival:</strong></p>
+                <ul class="list-disc list-inside ml-4 space-y-1">
+                    <li><strong>Keep Moving:</strong> Don't stand still for too long, or you'll get overwhelmed.</li>
+                    <li><strong>Prioritize Threats:</strong> Some monsters are more dangerous than others. Learn their patterns.</li>
+                    <li><strong>Synergize Abilities:</strong> Pick upgrades that work well together to maximize your damage and survivability.</li>
+                    <li><strong>Collect Wisely:</strong> Sometimes it's safer to clear an area before rushing to collect all experience gems.</li>
+                </ul>
+                <p>This game challenges your reflexes, strategic thinking, and endurance. Good luck, survivor!</p>
+            </div>
+        </section>
+
+        <!-- You Might Also Like Section -->
+        <div id="related-games-placeholder"></div>
+
+    </main>
+
+    <!-- Footer -->
+    <!-- The footer is styled with a dark background and light text.
+         It uses 'mt-auto' to push itself to the bottom if the main content is short. -->
+    <footer class="bg-gray-800 text-gray-300 py-12 mt-auto">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center"> <!-- Centered container for footer content -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8"> <!-- Grid layout for footer sections -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-3">FGA</h3>
+                    <p class="text-sm">Your ultimate hub for free online games.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-3">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/about.html" class="hover:text-apple-blue">About Us</a></li>
+                        <li><a href="/contact.html" class="hover:text-apple-blue">Contact Us</a></li>
+                        <li><a href="/privacy.html" class="hover:text-apple-blue">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="hover:text-apple-blue">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-3">Connect</h3>
+                    <p class="text-sm">Follow us on social media!</p>
+                    <div class="flex justify-center space-x-4 mt-2">
+                        <!-- Placeholder for social media links. Example: <a href="#" class="hover:text-apple-blue">Facebook</a> -->
+                    </div>
+                </div>
+            </div>
+            <hr class="border-gray-700 my-8"> <!-- Horizontal rule for separation -->
+            <p class="text-sm">&copy; <span id="currentYear"></span> FreeGameArcade.space. All rights reserved.</p>
+            <p class="text-xs mt-1">Designed with <span class="text-red-500">&hearts;</span> using HTML & Tailwind CSS.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js" defer>
+    </script>
+
+</body>
+</html>
