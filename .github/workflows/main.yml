@@ -38,20 +38,15 @@ jobs:
         # Python脚本将通过 os.getenv("GEMINI_API_KEY") 自动获取密钥
         run: python main.py
 
-      - name: List files for debugging
-        run: ls -R
-
-      - name: Commit data files 💾
+      - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add games_archive.json processed_games.txt
-          git diff --staged --quiet || git commit -m "chore: 更新游戏数据库"
-          git push origin main || echo "No changes to commit"
-
-      - name: Deploy to GitHub Pages 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages # 部署到的分支
-          folder: game # 要部署的文件夹
-          clean: true
+          # 添加所有新生成或修改的文件
+          git add .
+          # 检查是否有文件变动，只有在有变动时才提交
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "Automated build: Update game data and pages"
+            git push origin main
+          else
+            echo "No changes to commit."
