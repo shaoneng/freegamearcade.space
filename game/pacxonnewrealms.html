@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play PacXon New Realms - Free Online Game | Free Game Arcade</title>
-    <meta name="description" content="Play PacXon New Realms for free! The classic wall-closing arcade game is back with new realms, enemies, and power-ups. Capture 80% of the screen by building walls while dodging ghosts. No download needed!">
+    <meta name="description" content="Experience the modern revival of a classic! Play PacXon New Realms for free at Free Game Arcade. Build walls, trap ghosts, and claim 80% of the screen in this thrilling sequel. Features new levels, power-ups, and endless arcade fun. No download needed!">
     <link rel="canonical" href="https://shaoneng.github.io/freegamearcade.space/game/pacxonnewrealms.html">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -51,9 +51,73 @@
         <nav class="mb-6" aria-label="Breadcrumb"><ol class="flex items-center space-x-2 text-sm"><li><a href="../index.html" class="text-apple-light-gray-text hover:text-apple-blue">Home</a></li><li><span class="text-gray-400">/</span></li><li class="font-medium text-apple-text" aria-current="page">PacXon New Realms</li></ol></nav>
         <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-apple-text mb-6 text-center">PacXon New Realms</h1>
         <section class="mb-10"><div id="game-embed-container" class="aspect-16-9 bg-black rounded-lg shadow-2xl overflow-hidden mx-auto max-w-4xl"><iframe id="game-iframe" src="https://html5.gamedistribution.com/727e29ac2f7a40e69a17dc7ff7f4c306/?gd_sdk_referrer_url=https://www.onlinegames.io/pacxon-new-realms/" title="PacXon New Realms" class="border-0" allowfullscreen allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy"></iframe></div></section>
-        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play PacXon New Realms</h2><div class="text-apple-light-gray-text space-y-4 leading-relaxed text-sm sm:text-base"><p>Welcome to the world of PacXon, a clever mix of classic arcade games like Pac-Man and Xonix. Your mission isn't to eat dots, but to claim territory by building walls and filling up the screen.</p><p>The main objective in each level is to capture at least 80% of the playing field. The area is made of yellow dots (open space) and orange dots (your captured territory). Keep an eye on the progress bar at the top of the screen to track how much you've claimed.</p><p>You control the PacXon character. As you move into open space, you'll leave a trail. To capture a section, guide your character back to your existing territory to close the loop. The enclosed area will then become yours, marked by orange dots.</p><p>Watch out for the ghosts! If an enemy touches you or your wall-building trail before you've closed the loop, you will lose a life. Your remaining lives are shown in the bottom-left corner. Study the movement patterns of the different ghosts to find the safest time to build.</p><p>Be sure to grab the sweet treats that appear on the map! These items grant you powerful boosts that can help you clear the level more easily and fend off the pesky ghosts.</p></div></section>
+        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play PacXon New Realms</h2><div class="text-apple-light-gray-text space-y-3 leading-relaxed text-sm sm:text-base">
+<p>Welcome to PacXon: New Realms, a modern take on the classic arcade puzzler that blends the mechanics of Pac-Man and Xonix. Your mission is to claim territory by building walls and filling up the screen.</p>
+<p>Control your PacXon character to draw a trail across the open space (yellow dots). To capture a section, you must start from your existing territory (orange dots) and draw a complete loop back to it. The goal is to fill at least 80% of the screen to advance to the next level. Keep an eye on the progress bar at the top to track your progress.</p>
+<p>Beware of the ghosts roaming the field! If an enemy touches you or your uncompleted wall trail, you will lose a life. Your remaining lives are shown in the bottom-left corner. Study the unique movement patterns of each ghost to time your moves perfectly and avoid collisions.</p>
+<p>As you navigate the levels, look out for special power-ups disguised as sweet treats on the map. Collecting these will grant you powerful boosts to help you clear the screen faster and deal with the pesky enemies.</p>
+<p>PacXon: New Realms is all about balancing risk and reward. Be patient, watch the enemy patterns, and seize your opportunities to capture large chunks of territory. Good luck!</p>
+</div></section>
+    
     </main>
+    
     <footer class="bg-gray-800 text-gray-300 py-12 mt-auto"><div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center"><p class="text-sm">&copy; <span id="currentYear"></span> FreeGameArcade.space. All rights reserved.</p></div></footer>
-    <script>document.getElementById('currentYear').textContent = new Date().getFullYear();</script>
+    <script >
+        /**
+         * 网站功能脚本
+         * 包含了移动端菜单切换、页脚年份更新以及游戏全屏功能。
+        **/
+
+    # 当整个HTML文档加载完成后执行
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {{
+            mobileMenuButton.addEventListener('click', () => {{
+                mobileMenu.classList.toggle('hidden');
+            }});
+        }}
+
+        // Set current year in footer
+        const currentYearSpan = document.getElementById('currentYear');
+        if (currentYearSpan) {{
+            currentYearSpan.textContent = new Date().getFullYear();
+        }}
+
+        // Fullscreen functionality
+        const fullscreenButton = document.getElementById('fullscreen-button');
+        const gameIframe = document.getElementById('game-iframe'); // Target the iframe itself
+
+        if (fullscreenButton && gameIframe) {{
+            fullscreenButton.addEventListener('click', () => {{
+                if (!document.fullscreenElement) {{
+                    // Try to make the iframe fullscreen
+                    if (gameIframe.requestFullscreen) {{
+                        gameIframe.requestFullscreen().catch(err => console.error("Error attempting to enable full-screen mode:", err));
+                    }} else if (gameIframe.mozRequestFullScreen) {{ /* Firefox */
+                        gameIframe.mozRequestFullScreen();
+                    }} else if (gameIframe.webkitRequestFullscreen) {{ /* Chrome, Safari & Opera */
+                        gameIframe.webkitRequestFullscreen();
+                    }} else if (gameIframe.msRequestFullscreen) {{ /* IE/Edge */
+                        gameIframe.msRequestFullscreen();
+                    }}
+                }} else {{
+                    if (document.exitFullscreen) {{
+                        document.exitFullscreen().catch(err => console.error("Error attempting to disable full-screen mode:", err));
+                    }}
+                }}
+            }});
+
+            document.addEventListener('fullscreenchange', () => {{
+                // Check if the iframe is the fullscreen element
+                if (document.fullscreenElement === gameIframe) {{
+                    fullscreenButton.textContent = '退出全屏'; // Exit Fullscreen in Chinese
+                }} else {{
+                    fullscreenButton.textContent = '进入全屏'; // Enter Fullscreen in Chinese
+                }}
+            }});
+            
+        }}
+    </script>
 </body>
 </html>

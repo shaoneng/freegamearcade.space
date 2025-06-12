@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play Crazy Motorcycle - Free Online Game | Free Game Arcade</title>
-    <meta name="description" content="Play Crazy Motorcycle for free at Free Game Arcade. Guide a Minecraft-style noob on a wild ride through a floating, blocky obstacle course in the sky. No download required, play instantly in your browser!">
+    <meta name="description" content="Jump into Crazy Motorcycle, a wild, blocky platformer! Guide a Minecraft-style noob on a motorbike through floating obstacle courses in the sky. No roads, no rules, just pure stunt-biking fun. Play for free in your browser!">
     <link rel="canonical" href="https://shaoneng.github.io/freegamearcade.space/game/crazymotorcycle.html">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -51,9 +51,67 @@
         <nav class="mb-6" aria-label="Breadcrumb"><ol class="flex items-center space-x-2 text-sm"><li><a href="../index.html" class="text-apple-light-gray-text hover:text-apple-blue">Home</a></li><li><span class="text-gray-400">/</span></li><li class="font-medium text-apple-text" aria-current="page">Crazy Motorcycle</li></ol></nav>
         <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-apple-text mb-6 text-center">Crazy Motorcycle</h1>
         <section class="mb-10"><div id="game-embed-container" class="aspect-16-9 bg-black rounded-lg shadow-2xl overflow-hidden mx-auto max-w-4xl"><iframe id="game-iframe" src="https://html5.gamedistribution.com/30637801603e46ec82b342b77f539cf3/?gd_sdk_referrer_url=https://www.onlinegames.io/crazy-motorcycle/" title="Crazy Motorcycle" class="border-0" allowfullscreen allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy"></iframe></div></section>
-        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play Crazy Motorcycle</h2><div class="text-apple-light-gray-text space-y-3 leading-relaxed text-sm sm:text-base"><p>Welcome to a blocky world where mining takes a backseat to motocross! In Crazy Motorcycle, you'll guide Nubik, a brave (or just crazy) Minecraft-style character, on a high-flying adventure. Your mission isn't to build, but to ride.</p><p>Each level is a floating obstacle course suspended in the sky, built from familiar pixelated blocks. Navigate your motorcycle across treacherous gaps, dodge chunky trees and stone walls, and maintain your balance on tricky platforms made of grass, ice, and stone.</p><p>The goal is simple: survive the chaos and ride your way to the red portal at the end of each stage. It's a pure test of platforming skill and stunt-biking nerve. One wrong move and you'll be treated to a dramatic, blocky wipeout before you instantly retry. If you enjoy this comedic, physics-based action, you might also like Obby But You're on a Bike for a similar sky-high biking challenge.</p></div></section>
+        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play Crazy Motorcycle</h2><div class="text-apple-light-gray-text space-y-4 leading-relaxed text-sm sm:text-base"><p>If Minecraft had a wild cousin who ditched mining for motorbikes, Crazy Motorcycle would be it. In this crazy bike game, you take a Minecraft-style hero (we call him Nubik), give him a shiny motorcycle, and drop him into a floating obstacle course in the sky. There are no roads, no rules, and definitely no safety rails—just pure, blocky platforming fun.</p><p>Your mission is to navigate through a world of pixelated grass blocks, chunky trees, mossy stone pillars, and slippery ice blocks. You aren't here to build or mine; your job is to dodge, jump, and race to the red portal at the end of each level. The short levels and instant retries make every wipeout a funny lesson before you try again.</p><p>Crazy Motorcycle is a browser-based platformer created by AM-Games. If you enjoy the chaotic fun of this voxel racing title, you should also try <a href="#" class="text-apple-blue hover:underline">Obby But You're on a Bike</a> for another sky-high adventure with a Roblox-inspired theme.</p></div></section>
+    
     </main>
+    
     <footer class="bg-gray-800 text-gray-300 py-12 mt-auto"><div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center"><p class="text-sm">&copy; <span id="currentYear"></span> FreeGameArcade.space. All rights reserved.</p></div></footer>
-    <script>document.getElementById('currentYear').textContent = new Date().getFullYear();</script>
+    <script >
+        /**
+         * 网站功能脚本
+         * 包含了移动端菜单切换、页脚年份更新以及游戏全屏功能。
+        **/
+
+    # 当整个HTML文档加载完成后执行
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {{
+            mobileMenuButton.addEventListener('click', () => {{
+                mobileMenu.classList.toggle('hidden');
+            }});
+        }}
+
+        // Set current year in footer
+        const currentYearSpan = document.getElementById('currentYear');
+        if (currentYearSpan) {{
+            currentYearSpan.textContent = new Date().getFullYear();
+        }}
+
+        // Fullscreen functionality
+        const fullscreenButton = document.getElementById('fullscreen-button');
+        const gameIframe = document.getElementById('game-iframe'); // Target the iframe itself
+
+        if (fullscreenButton && gameIframe) {{
+            fullscreenButton.addEventListener('click', () => {{
+                if (!document.fullscreenElement) {{
+                    // Try to make the iframe fullscreen
+                    if (gameIframe.requestFullscreen) {{
+                        gameIframe.requestFullscreen().catch(err => console.error("Error attempting to enable full-screen mode:", err));
+                    }} else if (gameIframe.mozRequestFullScreen) {{ /* Firefox */
+                        gameIframe.mozRequestFullScreen();
+                    }} else if (gameIframe.webkitRequestFullscreen) {{ /* Chrome, Safari & Opera */
+                        gameIframe.webkitRequestFullscreen();
+                    }} else if (gameIframe.msRequestFullscreen) {{ /* IE/Edge */
+                        gameIframe.msRequestFullscreen();
+                    }}
+                }} else {{
+                    if (document.exitFullscreen) {{
+                        document.exitFullscreen().catch(err => console.error("Error attempting to disable full-screen mode:", err));
+                    }}
+                }}
+            }});
+
+            document.addEventListener('fullscreenchange', () => {{
+                // Check if the iframe is the fullscreen element
+                if (document.fullscreenElement === gameIframe) {{
+                    fullscreenButton.textContent = '退出全屏'; // Exit Fullscreen in Chinese
+                }} else {{
+                    fullscreenButton.textContent = '进入全屏'; // Enter Fullscreen in Chinese
+                }}
+            }});
+            
+        }}
+    </script>
 </body>
 </html>

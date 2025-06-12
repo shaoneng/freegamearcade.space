@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play Crazy Cattle 3D - Free Online Game | Free Game Arcade</title>
-    <meta name="description" content="Play Crazy Cattle 3D for free at Free Game Arcade! Control a bouncy sheep in a hilarious battle royale. Knock your opponents off the map, unlock new levels, and experience the wacky physics that made this game a viral hit. No download required, play instantly in your browser!">
+    <meta name="description" content="Play Crazy Cattle 3D for free at Free Game Arcade! Control a bouncy sheep in a hilarious battle royale. Knock other sheep off the map, unlock new levels, and see why this game went viral. No download required, play instantly in your browser!">
     <link rel="canonical" href="https://shaoneng.github.io/freegamearcade.space/game/crazycattle3d.html">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -51,9 +51,69 @@
         <nav class="mb-6" aria-label="Breadcrumb"><ol class="flex items-center space-x-2 text-sm"><li><a href="../index.html" class="text-apple-light-gray-text hover:text-apple-blue">Home</a></li><li><span class="text-gray-400">/</span></li><li class="font-medium text-apple-text" aria-current="page">Crazy Cattle 3D</li></ol></nav>
         <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-apple-text mb-6 text-center">Crazy Cattle 3D</h1>
         <section class="mb-10"><div id="game-embed-container" class="aspect-16-9 bg-black rounded-lg shadow-2xl overflow-hidden mx-auto max-w-4xl"><iframe id="game-iframe" src="https://cloud.onlinegames.io/games/2025/unity3/crazy-cattle-3d/index-og.html" title="Crazy Cattle 3D" class="border-0" allowfullscreen allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy"></iframe></div></section>
-        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">About Crazy Cattle 3D</h2><div class="text-apple-light-gray-text space-y-4 leading-relaxed text-sm sm:text-base"><p>Crazy Cattle 3D is a unique battle royale where you control a bouncy, uncontrollable sheep. Your goal is to be the last one standing by knocking other sheep out of the arena. Brace yourself for some truly strange physics and hilarious movements that make every round unpredictable. And if you get knocked out? Your sheep explodes in the most comedic way possible!</p><p>Your chaotic journey begins in the green fields of Ireland. As you win rounds, you'll earn shiny trophies for your personal trophy room and unlock new maps. First up is snowy Sweden, where icy surfaces add a new layer of challenge. After that, you can take on the sandy dunes of Egypt, filled with its own unique obstacles. Can you conquer all three and become the ultimate sheep champion?</p><p>Developed by Anna Mayberry and released in April 2025, Crazy Cattle 3D quickly became a viral sensation. Its simple charm, wacky physics, and fast-paced rounds captured the internet's attention, with players sharing hilarious clips across TikTok and YouTube.</p><p>The game is designed to run smoothly in any desktop or laptop browser—no download is necessary to play! Just open the page and start charging. If you love the wild physics and chaotic fun of Crazy Cattle 3D, you might also enjoy Duck Life Battle, another free online game full of comical combat and laugh-out-loud moments.</p></div></section>
+        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play Crazy Cattle 3D</h2><div class="text-apple-light-gray-text space-y-4 leading-relaxed text-sm sm:text-base"><p>Welcome to Crazy Cattle 3D, the hilarious one-player battle royale that has taken the internet by storm! Your mission is simple: control a bouncy sheep and be the last one standing in the herd. But with outrageously strange physics, every movement is a comical adventure.</p><p>Charge into other sheep to knock them out of the arena. The controls are part of the fun—your sheep slides and bounces uncontrollably, leading to absolute comedy. And if you get knocked out? Your sheep explodes in the funniest way possible! It's fast-paced, chaotic, and incredibly addictive.</p><p>Win rounds to earn trophies and unlock three unique maps. You'll start in the green fields of Ireland, dodge wooden fences, and then move on to the icy, slippery terrain of snowy Sweden. Master that, and you'll unlock the sandy dunes of Egypt, filled with its own hidden challenges. Each victory adds a shiny trophy to your personal trophy room.</p><p>Developed by Anna Mayberry, Crazy Cattle 3D requires no downloads. Just open your browser and get ready to join the frenzy and find out why this simple indie game became a viral sensation.</p><p>If you enjoy the wild physics and quick rounds of Crazy Cattle 3D, check out Duck Life Battle, a free online game where you train your duck for upcoming battles. It's easy to jump into, packed with chaos, and guaranteed to deliver just as many laugh-out-loud moments.</p></div></section>
+    
+    <!-- You Might Also Like Section -->
+        {you_might_also_like_html}
     </main>
+    
     <footer class="bg-gray-800 text-gray-300 py-12 mt-auto"><div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center"><p class="text-sm">&copy; <span id="currentYear"></span> FreeGameArcade.space. All rights reserved.</p></div></footer>
-    <script>document.getElementById('currentYear').textContent = new Date().getFullYear();</script>
+    <script >
+        /**
+         * 网站功能脚本
+         * 包含了移动端菜单切换、页脚年份更新以及游戏全屏功能。
+        **/
+
+    # 当整个HTML文档加载完成后执行
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {{
+            mobileMenuButton.addEventListener('click', () => {{
+                mobileMenu.classList.toggle('hidden');
+            }});
+        }}
+
+        // Set current year in footer
+        const currentYearSpan = document.getElementById('currentYear');
+        if (currentYearSpan) {{
+            currentYearSpan.textContent = new Date().getFullYear();
+        }}
+
+        // Fullscreen functionality
+        const fullscreenButton = document.getElementById('fullscreen-button');
+        const gameIframe = document.getElementById('game-iframe'); // Target the iframe itself
+
+        if (fullscreenButton && gameIframe) {{
+            fullscreenButton.addEventListener('click', () => {{
+                if (!document.fullscreenElement) {{
+                    // Try to make the iframe fullscreen
+                    if (gameIframe.requestFullscreen) {{
+                        gameIframe.requestFullscreen().catch(err => console.error("Error attempting to enable full-screen mode:", err));
+                    }} else if (gameIframe.mozRequestFullScreen) {{ /* Firefox */
+                        gameIframe.mozRequestFullScreen();
+                    }} else if (gameIframe.webkitRequestFullscreen) {{ /* Chrome, Safari & Opera */
+                        gameIframe.webkitRequestFullscreen();
+                    }} else if (gameIframe.msRequestFullscreen) {{ /* IE/Edge */
+                        gameIframe.msRequestFullscreen();
+                    }}
+                }} else {{
+                    if (document.exitFullscreen) {{
+                        document.exitFullscreen().catch(err => console.error("Error attempting to disable full-screen mode:", err));
+                    }}
+                }}
+            }});
+
+            document.addEventListener('fullscreenchange', () => {{
+                // Check if the iframe is the fullscreen element
+                if (document.fullscreenElement === gameIframe) {{
+                    fullscreenButton.textContent = '退出全屏'; // Exit Fullscreen in Chinese
+                }} else {{
+                    fullscreenButton.textContent = '进入全屏'; // Enter Fullscreen in Chinese
+                }}
+            }});
+            
+        }}
+    </script>
 </body>
 </html>

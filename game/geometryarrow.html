@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play Geometry Arrow - Free Online Game | Free Game Arcade</title>
-    <meta name="description" content="Play Geometry Arrow for free at Free Game Arcade. Test your reflexes in this sleek, rhythm-driven platformer. Guide your arrow through a minimalist geometric world with one-tap controls. No download required, play instantly in your browser.">
+    <meta name="description" content="Play Geometry Arrow for free. Race your arrow through a dark tunnel in this sleek, rhythm-driven platformer. Test your reflexes across 12 challenging levels with a single tap. Play online in your browser now!">
     <link rel="canonical" href="https://shaoneng.github.io/freegamearcade.space/game/geometryarrow.html">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -51,9 +51,69 @@
         <nav class="mb-6" aria-label="Breadcrumb"><ol class="flex items-center space-x-2 text-sm"><li><a href="../index.html" class="text-apple-light-gray-text hover:text-apple-blue">Home</a></li><li><span class="text-gray-400">/</span></li><li class="font-medium text-apple-text" aria-current="page">Geometry Arrow</li></ol></nav>
         <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-apple-text mb-6 text-center">Geometry Arrow</h1>
         <section class="mb-10"><div id="game-embed-container" class="aspect-16-9 bg-black rounded-lg shadow-2xl overflow-hidden mx-auto max-w-4xl"><iframe id="game-iframe" src="https://html5.gamedistribution.com/9ee26ba4405c456094c70af7dc31a524/?gd_sdk_referrer_url=https://www.onlinegames.io/geometry-arrow/" title="Geometry Arrow" class="border-0" allowfullscreen allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy"></iframe></div></section>
-        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play Geometry Arrow</h2><div class="text-apple-light-gray-text space-y-3 leading-relaxed text-sm sm:text-base"><p>Get ready for a test of pure reflex and rhythm in Geometry Arrow! When you begin, you become the arrow, soaring through a minimalist, high-contrast world. This game is all about precision and timing, challenging you to navigate treacherous geometric landscapes.</p><p>The controls are deceptively simple: a single tap or click is all you have. Tap to make your arrow rise, and release to let it fall. Your goal is to skillfully guide it through a series of sharp angles, spikes, and tight passages without crashing. Each level is synchronized with its own unique, upbeat soundtrack, turning every run into a pulse-pounding dance with danger.</p><p>With 12 challenging levels and a secret bonus stage to unlock, Geometry Arrow offers a satisfyingly difficult experience. The clean graphics ensure there are no distractions—it's just you, the arrow, and the beat. If the intensity gets to you, remember to take a break! For fans of this style, we also recommend trying Space Waves for a similar one-tap rhythmic challenge with a more colorful, neon aesthetic.</p></div></section>
+        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play Geometry Arrow</h2><div class="text-apple-light-gray-text space-y-3 leading-relaxed text-sm sm:text-base"><p>Get ready for a test of pure reflex and rhythm in Geometry Arrow! The controls are deceptively simple: a single tap or click is all you need. When you tap, your arrow rises. When you release, it falls.</p><p>Your goal is to guide the sleek white arrow through a perilous, dark tunnel filled with sharp geometric obstacles and deadly spikes. Timing is everything. You must navigate the maze, syncing your taps to the upbeat music to survive and race against geometry itself.</p><p>Advance through 12 increasingly difficult levels, each with its own unique track and challenges. Can you master the rhythm and conquer all the stages, including the hidden bonus level? A word of advice: the game can get intense. Don't be afraid to take a short break if you feel the rage building!</p></div></section>
+    
+    <!-- You Might Also Like Section -->
+        {you_might_also_like_html}
     </main>
+    
     <footer class="bg-gray-800 text-gray-300 py-12 mt-auto"><div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center"><p class="text-sm">&copy; <span id="currentYear"></span> FreeGameArcade.space. All rights reserved.</p></div></footer>
-    <script>document.getElementById('currentYear').textContent = new Date().getFullYear();</script>
+    <script >
+        /**
+         * 网站功能脚本
+         * 包含了移动端菜单切换、页脚年份更新以及游戏全屏功能。
+        **/
+
+    # 当整个HTML文档加载完成后执行
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {{
+            mobileMenuButton.addEventListener('click', () => {{
+                mobileMenu.classList.toggle('hidden');
+            }});
+        }}
+
+        // Set current year in footer
+        const currentYearSpan = document.getElementById('currentYear');
+        if (currentYearSpan) {{
+            currentYearSpan.textContent = new Date().getFullYear();
+        }}
+
+        // Fullscreen functionality
+        const fullscreenButton = document.getElementById('fullscreen-button');
+        const gameIframe = document.getElementById('game-iframe'); // Target the iframe itself
+
+        if (fullscreenButton && gameIframe) {{
+            fullscreenButton.addEventListener('click', () => {{
+                if (!document.fullscreenElement) {{
+                    // Try to make the iframe fullscreen
+                    if (gameIframe.requestFullscreen) {{
+                        gameIframe.requestFullscreen().catch(err => console.error("Error attempting to enable full-screen mode:", err));
+                    }} else if (gameIframe.mozRequestFullScreen) {{ /* Firefox */
+                        gameIframe.mozRequestFullScreen();
+                    }} else if (gameIframe.webkitRequestFullscreen) {{ /* Chrome, Safari & Opera */
+                        gameIframe.webkitRequestFullscreen();
+                    }} else if (gameIframe.msRequestFullscreen) {{ /* IE/Edge */
+                        gameIframe.msRequestFullscreen();
+                    }}
+                }} else {{
+                    if (document.exitFullscreen) {{
+                        document.exitFullscreen().catch(err => console.error("Error attempting to disable full-screen mode:", err));
+                    }}
+                }}
+            }});
+
+            document.addEventListener('fullscreenchange', () => {{
+                // Check if the iframe is the fullscreen element
+                if (document.fullscreenElement === gameIframe) {{
+                    fullscreenButton.textContent = '退出全屏'; // Exit Fullscreen in Chinese
+                }} else {{
+                    fullscreenButton.textContent = '进入全屏'; // Enter Fullscreen in Chinese
+                }}
+            }});
+            
+        }}
+    </script>
 </body>
 </html>

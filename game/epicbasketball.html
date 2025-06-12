@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play Epic Basketball - Free Online Game | Free Game Arcade</title>
-    <meta name="description" content="Play Epic Basketball for free! Test your skills in a fast-paced, 60-second streetball shootout. Aim true, sink as many baskets as you can, and unlock quirky characters. No download needed, play now!">
+    <meta name="description" content="Play Epic Basketball for free! Test your skills in this fast-paced street basketball shootout. Sink as many baskets as you can in 60 seconds, unlock unique characters, and aim for the high score. No download needed, play instantly in your browser.">
     <link rel="canonical" href="https://shaoneng.github.io/freegamearcade.space/game/epicbasketball.html">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -51,13 +51,69 @@
         <nav class="mb-6" aria-label="Breadcrumb"><ol class="flex items-center space-x-2 text-sm"><li><a href="../index.html" class="text-apple-light-gray-text hover:text-apple-blue">Home</a></li><li><span class="text-gray-400">/</span></li><li class="font-medium text-apple-text" aria-current="page">Epic Basketball</li></ol></nav>
         <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-apple-text mb-6 text-center">Epic Basketball</h1>
         <section class="mb-10"><div id="game-embed-container" class="aspect-16-9 bg-black rounded-lg shadow-2xl overflow-hidden mx-auto max-w-4xl"><iframe id="game-iframe" src="https://cloud.onlinegames.io/games/2024/shareddreams/epic-basketball/index.html" title="Epic Basketball" class="border-0" allowfullscreen allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy"></iframe></div></section>
-        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play Epic Basketball</h2><div class="text-apple-light-gray-text space-y-3 leading-relaxed text-sm sm:text-base">
-<p>Epic Basketball is a fun and quirky street-style sports game where the goal is simple: sink as many baskets as you can in just 60 seconds. But don't be fooled by the simple premise! The hoop is constantly on the move, and various distractions will try to throw off your aim. Stay focused, aim carefully, and let your shots fly!</p>
-<p>You'll start your basketball journey with Javi, but as you rack up points, you can unlock a whole crew of colorful players like Plin Plin, Bubu, Patty Wally, Bruce, and even an Alien. Each character brings their own unique style to the court. The ultimate prize is Nona, the grandma who's secretly the best baller around. To unlock her, you'll need to prove your skills by scoring an impressive 300 points.</p>
-<p>If you love the high-energy action and fun visuals of Epic Basketball, you should definitely check out Basket Random. It's another hilarious basketball game with wacky physics and pixel characters, perfect for taking your skills to an even funnier court.</p>
-</div></section>
+        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play Epic Basketball</h2><div class="text-apple-light-gray-text space-y-4 leading-relaxed text-sm sm:text-base"><p>Step onto the court in Epic Basketball, a fast-paced streetball challenge where your goal is to score as many points as you can within a 60-second time limit. It's not as simple as it sounds! The hoop moves around unpredictably, and various distractions will try to throw off your aim. You'll need sharp focus and a quick release to rack up a high score.</p><p>You'll begin your basketball journey as Javi, but as you play, you can unlock a whole crew of colorful and quirky characters. Collect players like Plin Plin, Bubu, Patty Wally, Bruce, and even an Alien to bring their unique style to the court. Each character adds a new visual flair to the game.</p><p>The ultimate baller to unlock is Nona. Don't let her grandma appearance fool you—she's a legend on the court. To add her to your roster, you'll need to prove your skills by scoring a total of 300 points. It's a tough challenge, so keep practicing your shots!</p><p>If you enjoy the high-energy, quirky physics of Epic Basketball, be sure to check out Basket Random for another hilarious take on the sport, perfect for challenging a friend.</p></div></section>
+    
+    <!-- You Might Also Like Section -->
+        {you_might_also_like_html}
     </main>
+    
     <footer class="bg-gray-800 text-gray-300 py-12 mt-auto"><div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center"><p class="text-sm">&copy; <span id="currentYear"></span> FreeGameArcade.space. All rights reserved.</p></div></footer>
-    <script>document.getElementById('currentYear').textContent = new Date().getFullYear();</script>
+    <script >
+        /**
+         * 网站功能脚本
+         * 包含了移动端菜单切换、页脚年份更新以及游戏全屏功能。
+        **/
+
+    # 当整个HTML文档加载完成后执行
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {{
+            mobileMenuButton.addEventListener('click', () => {{
+                mobileMenu.classList.toggle('hidden');
+            }});
+        }}
+
+        // Set current year in footer
+        const currentYearSpan = document.getElementById('currentYear');
+        if (currentYearSpan) {{
+            currentYearSpan.textContent = new Date().getFullYear();
+        }}
+
+        // Fullscreen functionality
+        const fullscreenButton = document.getElementById('fullscreen-button');
+        const gameIframe = document.getElementById('game-iframe'); // Target the iframe itself
+
+        if (fullscreenButton && gameIframe) {{
+            fullscreenButton.addEventListener('click', () => {{
+                if (!document.fullscreenElement) {{
+                    // Try to make the iframe fullscreen
+                    if (gameIframe.requestFullscreen) {{
+                        gameIframe.requestFullscreen().catch(err => console.error("Error attempting to enable full-screen mode:", err));
+                    }} else if (gameIframe.mozRequestFullScreen) {{ /* Firefox */
+                        gameIframe.mozRequestFullScreen();
+                    }} else if (gameIframe.webkitRequestFullscreen) {{ /* Chrome, Safari & Opera */
+                        gameIframe.webkitRequestFullscreen();
+                    }} else if (gameIframe.msRequestFullscreen) {{ /* IE/Edge */
+                        gameIframe.msRequestFullscreen();
+                    }}
+                }} else {{
+                    if (document.exitFullscreen) {{
+                        document.exitFullscreen().catch(err => console.error("Error attempting to disable full-screen mode:", err));
+                    }}
+                }}
+            }});
+
+            document.addEventListener('fullscreenchange', () => {{
+                // Check if the iframe is the fullscreen element
+                if (document.fullscreenElement === gameIframe) {{
+                    fullscreenButton.textContent = '退出全屏'; // Exit Fullscreen in Chinese
+                }} else {{
+                    fullscreenButton.textContent = '进入全屏'; // Enter Fullscreen in Chinese
+                }}
+            }});
+            
+        }}
+    </script>
 </body>
 </html>

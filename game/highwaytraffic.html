@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play Highway Traffic - Free Online Game | Free Game Arcade</title>
-    <meta name="description" content="Get behind the wheel in Highway Traffic! Dodge cars, avoid crashes, and race for a high score in this thrilling driving game. Customize your car, choose your weather, and master multiple game modes. Play for free directly in your browser at Free Game Arcade.">
+    <meta name="description" content="Get behind the wheel in Highway Traffic! Dodge cars, avoid crashes, and race for a high score. With multiple game modes, car upgrades, and weather options, the challenge never ends. Play for free directly in your browser at Free Game Arcade.">
     <link rel="canonical" href="https://shaoneng.github.io/freegamearcade.space/game/highwaytraffic.html">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -51,9 +51,69 @@
         <nav class="mb-6" aria-label="Breadcrumb"><ol class="flex items-center space-x-2 text-sm"><li><a href="../index.html" class="text-apple-light-gray-text hover:text-apple-blue">Home</a></li><li><span class="text-gray-400">/</span></li><li class="font-medium text-apple-text" aria-current="page">Highway Traffic</li></ol></nav>
         <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-apple-text mb-6 text-center">Highway Traffic</h1>
         <section class="mb-10"><div id="game-embed-container" class="aspect-16-9 bg-black rounded-lg shadow-2xl overflow-hidden mx-auto max-w-4xl"><iframe id="game-iframe" src="https://www.onlinegames.io/games/2022/unity/highway-traffic/index.html" title="Highway Traffic" class="border-0" allowfullscreen allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy"></iframe></div></section>
-        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play Highway Traffic</h2><div class="text-apple-light-gray-text space-y-3 leading-relaxed text-sm sm:text-base"><p>The goal in Highway Traffic is to drive as far as you can down a busy highway, skillfully dodging other cars to avoid a crash. The traffic is unpredictable—vehicles will speed up, slow down, and stop without warning, so you must stay alert and be ready to make split-second maneuvers.</p><p>The longer you survive on the road without an accident, the more points you'll earn. These points can be used for upgrades, which are essential for tackling the game's rapidly increasing difficulty. To add more variety and challenge, you can select from different car models, change the weather from sunny to rainy or night, and test your skills across four unique game modes.</p><p>Keep an eye on the on-screen display to track your score, speed, distance, and combos. If you master the highways here and are looking for a new challenge, try Highway Racer Pro for an experience with enhanced graphics and more customization options!</p></div></section>
+        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play Highway Traffic</h2><div class="text-apple-light-gray-text space-y-4 leading-relaxed text-sm sm:text-base"><p>The goal in Highway Traffic is simple but challenging: drive as far as you can down a busy highway without crashing. You'll need to stay alert, as other vehicles will change speed, switch lanes, or even stop suddenly, demanding quick reflexes to dodge and weave through the traffic.</p><p>Surviving longer on the road earns you more points. These points are crucial as they allow you to unlock cool upgrades and new vehicles, helping you tackle the increasing difficulty. The game quickly becomes a true test of your driving skills as you aim for higher levels and better scores.</p><p>To keep things fresh, Highway Traffic offers a variety of customization options. You can choose from different car models and even set the weather conditions. Test your abilities on a sunny day, navigate through the dark of night, or handle the slippery roads during a rainstorm. The game also features four distinct modes, each presenting its own unique set of challenges and objectives.</p><p>Keep an eye on your dashboard display to track your progress in real-time. You can monitor your score, current speed, distance traveled, and combo bonuses, helping you push for that new high score.</p></div></section>
+    
+    <!-- You Might Also Like Section -->
+        {you_might_also_like_html}
     </main>
+    
     <footer class="bg-gray-800 text-gray-300 py-12 mt-auto"><div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center"><p class="text-sm">&copy; <span id="currentYear"></span> FreeGameArcade.space. All rights reserved.</p></div></footer>
-    <script>document.getElementById('currentYear').textContent = new Date().getFullYear();</script>
+    <script >
+        /**
+         * 网站功能脚本
+         * 包含了移动端菜单切换、页脚年份更新以及游戏全屏功能。
+        **/
+
+    # 当整个HTML文档加载完成后执行
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {{
+            mobileMenuButton.addEventListener('click', () => {{
+                mobileMenu.classList.toggle('hidden');
+            }});
+        }}
+
+        // Set current year in footer
+        const currentYearSpan = document.getElementById('currentYear');
+        if (currentYearSpan) {{
+            currentYearSpan.textContent = new Date().getFullYear();
+        }}
+
+        // Fullscreen functionality
+        const fullscreenButton = document.getElementById('fullscreen-button');
+        const gameIframe = document.getElementById('game-iframe'); // Target the iframe itself
+
+        if (fullscreenButton && gameIframe) {{
+            fullscreenButton.addEventListener('click', () => {{
+                if (!document.fullscreenElement) {{
+                    // Try to make the iframe fullscreen
+                    if (gameIframe.requestFullscreen) {{
+                        gameIframe.requestFullscreen().catch(err => console.error("Error attempting to enable full-screen mode:", err));
+                    }} else if (gameIframe.mozRequestFullScreen) {{ /* Firefox */
+                        gameIframe.mozRequestFullScreen();
+                    }} else if (gameIframe.webkitRequestFullscreen) {{ /* Chrome, Safari & Opera */
+                        gameIframe.webkitRequestFullscreen();
+                    }} else if (gameIframe.msRequestFullscreen) {{ /* IE/Edge */
+                        gameIframe.msRequestFullscreen();
+                    }}
+                }} else {{
+                    if (document.exitFullscreen) {{
+                        document.exitFullscreen().catch(err => console.error("Error attempting to disable full-screen mode:", err));
+                    }}
+                }}
+            }});
+
+            document.addEventListener('fullscreenchange', () => {{
+                // Check if the iframe is the fullscreen element
+                if (document.fullscreenElement === gameIframe) {{
+                    fullscreenButton.textContent = '退出全屏'; // Exit Fullscreen in Chinese
+                }} else {{
+                    fullscreenButton.textContent = '进入全屏'; // Enter Fullscreen in Chinese
+                }}
+            }});
+            
+        }}
+    </script>
 </body>
 </html>
