@@ -37,7 +37,7 @@ def generate_game_page_with_gemini(game_data):
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q47TS07D8C"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag(){{dataLayer.push(arguments);}}
         gtag('js', new Date());
         gtag('config', 'G-Q47TS07D8C');
     </script>
@@ -48,21 +48,21 @@ def generate_game_page_with_gemini(game_data):
     <link rel="canonical" href="https://freegamearcade.space/game/kick-the-pirate.html">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
+        tailwind.config = {{
+            theme: {{
+                extend: {{
+                    colors: {{
                         'apple-bg': '#f5f5f7', 'apple-text': '#1d1d1f', 'apple-blue': '#007aff', 'apple-light-gray-text': '#6e6e73',
-                    }
-                },
-                fontFamily: {
+                    }}
+                }},
+                fontFamily: {{
                     sans: ['-apple-system', 'BlinkMacSystemFont', "Segoe UI", 'Roboto', "Helvetica Neue", 'Arial', "Noto Sans", 'sans-serif', "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
-                }
-            }
-        }
+                }}
+            }}
+        }}
     </script>
     <style>
-        html { height: 100%; } body { min-height: 100%; display: flex; flex-direction: column; } main { flex-grow: 1; } .aspect-16-9 { position: relative; width: 100%; padding-bottom: 56.25%; } .aspect-16-9 iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        html {{ height: 100%; }} body {{ min-height: 100%; display: flex; flex-direction: column; }} main {{ flex-grow: 1; }} .aspect-16-9 {{ position: relative; width: 100%; padding-bottom: 56.25%; }} .aspect-16-9 iframe {{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; }}
     </style>
 </head>
 <body class="bg-apple-bg text-apple-text antialiased">
