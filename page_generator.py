@@ -3,6 +3,7 @@ import json
 import os
 import time
 import google.generativeai as genai
+import random
 
 # --- 配置 ---
 GAMES_ARCHIVE_FILE = 'games_archive.json'
@@ -11,7 +12,7 @@ GAME_PAGE_DIR = 'game'
 SITE_BASE_URL = "https://shaoneng.github.io/freegamearcade.space" # 已为您更新
 
 # --- Gemini API 调用函数 ---
-def generate_game_page_with_gemini(game_data):
+def generate_game_page_with_gemini(game_data, all_games):
     """使用Gemini API为单个游戏生成完整的HTML页面。"""
     
     api_key = os.getenv("GEMINI_API_KEY")
