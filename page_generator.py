@@ -25,8 +25,11 @@ def generate_game_page_with_gemini(game_data):
         
         # --- 关键修改: Canonical URL 现在指向 game/ 文件夹 ---
         page_url = f"{SITE_BASE_URL}/game/{game_data['page_filename']}"
+
+        # 生成"猜你喜欢"部分的HTML
+        you_might_also_like_html = generate_you_might_also_like_section(game_data, all_games)
         
-        html_template = """
+        html_template = f"""
 <!DOCTYPE html>
 <html lang="en">
 <head>
