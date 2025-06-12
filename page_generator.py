@@ -97,13 +97,14 @@ def generate_game_page_with_gemini(game_data):
     </main>
     
     <footer class="bg-gray-800 text-gray-300 py-12 mt-auto"><div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center"><p class="text-sm">&copy; <span id="currentYear"></span> FreeGameArcade.space. All rights reserved.</p></div></footer>
-    <script >
-        /**
-         * 网站功能脚本
-         * 包含了移动端菜单切换、页脚年份更新以及游戏全屏功能。
-        **/
+    <script>
+    /**
+     * 网站功能脚本
+     * 包含了移动端菜单切换、页脚年份更新以及游戏全屏功能。
+    **/
 
-    # 当整个HTML文档加载完成后执行
+    // Wait for the HTML document to be fully loaded before running the script.
+    document.addEventListener('DOMContentLoaded', function() {{
         // Mobile menu toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -124,32 +125,35 @@ def generate_game_page_with_gemini(game_data):
         const gameIframe = document.getElementById('game-iframe'); // Target the iframe itself
 
         if (fullscreenButton && gameIframe) {{
-                fullscreenButton.addEventListener('click', () => {{
-                    if (!document.fullscreenElement) {{
-                        // Request fullscreen on the iframe
-                        const requestFullscreen = gameIframe.requestFullscreen || gameIframe.mozRequestFullScreen || gameIframe.webkitRequestFullscreen || gameIframe.msRequestFullscreen;
-                        if (requestFullscreen) {{
-                            requestFullscreen.call(gameIframe).catch(err => console.error(`Error attempting to enable full-screen mode: ${{err.message}} (${{err.name}})`));
-                        }}
-                    }} else {{
-                        // Exit fullscreen
-                        const exitFullscreen = document.exitFullscreen || document.mozCancelFullScreen || document.webkitExitFullscreen || document.msExitFullscreen;
-                        if (exitFullscreen) {{
-                           exitFullscreen.call(document).catch(err => console.error(`Error attempting to disable full-screen mode: ${{err.message}} (${{err.name}})`));
-                        }}
+            fullscreenButton.addEventListener('click', () => {{
+                if (!document.fullscreenElement) {{
+                    // Try to make the iframe fullscreen
+                    if (gameIframe.requestFullscreen) {{
+                        gameIframe.requestFullscreen().catch(err => console.error("Error attempting to enable full-screen mode:", err));
+                    }} else if (gameIframe.mozRequestFullScreen) {{ /* Firefox */
+                        gameIframe.mozRequestFullScreen();
+                    }} else if (gameIframe.webkitRequestFullscreen) {{ /* Chrome, Safari & Opera */
+                        gameIframe.webkitRequestFullscreen();
+                    }} else if (gameIframe.msRequestFullscreen) {{ /* IE/Edge */
+                        gameIframe.msRequestFullscreen();
                     }}
-                }});
-
-            document.addEventListener('fullscreenchange', () => {{
-                // Check if the iframe is the fullscreen element
-                if (document.fullscreenElement === gameIframe) {{
-                    fullscreenButton.textContent = 'Exit Full Screen'; // Exit Fullscreen in Chinese
                 }} else {{
-                    fullscreenButton.textContent = 'Enter Full Screen'; // Enter Fullscreen in Chinese
+                    if (document.exitFullscreen) {{
+                        document.exitFullscreen().catch(err => console.error("Error attempting to disable full-screen mode:", err));
+                    }}
                 }}
             }});
-            
+
+            document.addEventListener('fullscreenchange', () => {{
+                // Check if an element is in fullscreen
+                if (document.fullscreenElement) {{
+                    fullscreenButton.textContent = 'Exit Full Screen';
+                }} else {{
+                    fullscreenButton.textContent = 'Enter Full Screen';
+                }}
+            }});
         }}
+    }});
     </script>
 </body>
 </html>
