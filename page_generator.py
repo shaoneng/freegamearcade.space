@@ -250,7 +250,7 @@ def generate_you_might_also_like_section(current_game, all_games):
 def generate_pages():
     """读取存档，调用AI为每个游戏生成完整的HTML页面。"""
     print("\n开始生成网页...")
-    
+
     # --- 关键修改: 确保 'game' 文件夹存在 ---
     os.makedirs(GAME_PAGE_DIR, exist_ok=True)
     print(f"确保输出目录存在: {GAME_PAGE_DIR}")
@@ -265,18 +265,22 @@ def generate_pages():
     for game in all_games:
         # --- 关键修改: 文件路径现在指向 'game/' 文件夹 ---
         filepath = os.path.join(GAME_PAGE_DIR, game['page_filename'])
-        
+
         print(f"-> 正在为AI生成页面: {game['title']}")
-        page_html = generate_game_page_with_gemini(game)
         
+        # --- 这里是本次的关键修复 ---
+        # 确保在调用函数时，把 game 和 all_games 这两个参数都传进去
+        page_html = generate_game_page_with_gemini(game, all_games)
+
         if page_html:
             with open(filepath, 'w', encoding='utf-8') as f:
                 f.write(page_html)
             print(f"  -> 成功创建页面: {filepath}")
         else:
             print(f"  -> 跳过页面生成，因为AI调用失败: {game['title']}")
-        
-        time.sleep(2) 
+
+        # 这里的延时是为了避免过于频繁地调用API
+        time.sleep(2)
 
     generate_homepage(all_games)
 
