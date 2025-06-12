@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play Geometry Arrow - Free Online Game | Free Game Arcade</title>
-    <meta name="description" content="Play Geometry Arrow for free. Race your arrow through a dark tunnel in this sleek, rhythm-driven platformer. Test your reflexes across 12 challenging levels with a single tap. Play online in your browser now!">
+    <meta name="description" content="Test your reflexes in Geometry Arrow, a rhythm-driven platformer. Guide your arrow through 12 challenging levels with a single tap. Play for free online, no download required!">
     <link rel="canonical" href="https://shaoneng.github.io/freegamearcade.space/game/geometryarrow.html">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -50,11 +50,16 @@
     <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <nav class="mb-6" aria-label="Breadcrumb"><ol class="flex items-center space-x-2 text-sm"><li><a href="../index.html" class="text-apple-light-gray-text hover:text-apple-blue">Home</a></li><li><span class="text-gray-400">/</span></li><li class="font-medium text-apple-text" aria-current="page">Geometry Arrow</li></ol></nav>
         <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-apple-text mb-6 text-center">Geometry Arrow</h1>
-        <section class="mb-10"><div id="game-embed-container" class="aspect-16-9 bg-black rounded-lg shadow-2xl overflow-hidden mx-auto max-w-4xl"><iframe id="game-iframe" src="https://html5.gamedistribution.com/9ee26ba4405c456094c70af7dc31a524/?gd_sdk_referrer_url=https://www.onlinegames.io/geometry-arrow/" title="Geometry Arrow" class="border-0" allowfullscreen allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy"></iframe></div></section>
-        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play Geometry Arrow</h2><div class="text-apple-light-gray-text space-y-3 leading-relaxed text-sm sm:text-base"><p>Get ready for a test of pure reflex and rhythm in Geometry Arrow! The controls are deceptively simple: a single tap or click is all you need. When you tap, your arrow rises. When you release, it falls.</p><p>Your goal is to guide the sleek white arrow through a perilous, dark tunnel filled with sharp geometric obstacles and deadly spikes. Timing is everything. You must navigate the maze, syncing your taps to the upbeat music to survive and race against geometry itself.</p><p>Advance through 12 increasingly difficult levels, each with its own unique track and challenges. Can you master the rhythm and conquer all the stages, including the hidden bonus level? A word of advice: the game can get intense. Don't be afraid to take a short break if you feel the rage building!</p></div></section>
+        <section class="mb-10">
+            <div id="game-embed-container" class="aspect-16-9 bg-black rounded-lg shadow-2xl overflow-hidden mx-auto max-w-4xl"><iframe id="game-iframe" src="https://html5.gamedistribution.com/9ee26ba4405c456094c70af7dc31a524/?gd_sdk_referrer_url=https://www.onlinegames.io/geometry-arrow/" title="Geometry Arrow" class="border-0" allowfullscreen allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy"></iframe></div>
+            <div class="mt-5 text-center">
+                <button id="fullscreen-button" class="bg-apple-blue text-white font-semibold px-6 py-3 rounded-lg hover:bg-opacity-80 transition duration-150 ease-in-out text-sm sm:text-base">
+                    Enter Full Screen
+                </button>
+            </div>
+        </section>
+        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play Geometry Arrow</h2><div class="text-apple-light-gray-text space-y-3 leading-relaxed text-sm sm:text-base"><p>In Geometry Arrow, you become the arrow. This minimalist, rhythm-based platformer will challenge your focus and reflexes.</p><p><strong>Controls:</strong> The game uses a simple one-tap control system. Tap or click anywhere on the screen to make your arrow ascend. Release the tap or click to let it descend. Master this simple mechanic to navigate the environment.</p><p><strong>Objective:</strong> Your goal is to guide the white arrow safely through a dark, geometric tunnel. You must skillfully avoid hitting any sharp angles, spikes, or other obstacles that line the path. Timing your rises and falls to the beat of the music is key to survival.</p><p><strong>Levels:</strong> Race through 12 increasingly difficult levels, each with its own unique layout and upbeat soundtrack. For those who conquer the main stages, a hidden bonus level awaits. Remember to take a break if you feel the rage building!</p></div></section>
     
-    <!-- You Might Also Like Section -->
-        {you_might_also_like_html}
     </main>
     
     <footer class="bg-gray-800 text-gray-300 py-12 mt-auto"><div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center"><p class="text-sm">&copy; <span id="currentYear"></span> FreeGameArcade.space. All rights reserved.</p></div></footer>
@@ -107,9 +112,9 @@
             document.addEventListener('fullscreenchange', () => {{
                 // Check if the iframe is the fullscreen element
                 if (document.fullscreenElement === gameIframe) {{
-                    fullscreenButton.textContent = '退出全屏'; // Exit Fullscreen in Chinese
+                    fullscreenButton.textContent = 'Exit Full Screen';
                 }} else {{
-                    fullscreenButton.textContent = '进入全屏'; // Enter Fullscreen in Chinese
+                    fullscreenButton.textContent = 'Enter Full Screen';
                 }}
             }});
             
