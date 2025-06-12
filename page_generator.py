@@ -79,7 +79,14 @@ def generate_game_page_with_gemini(game_data):
     <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <nav class="mb-6" aria-label="Breadcrumb"><ol class="flex items-center space-x-2 text-sm"><li><a href="../index.html" class="text-apple-light-gray-text hover:text-apple-blue">Home</a></li><li><span class="text-gray-400">/</span></li><li class="font-medium text-apple-text" aria-current="page">Pac-Xon New Realms</li></ol></nav>
         <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-apple-text mb-6 text-center">Kick the Pirate</h1>
-        <section class="mb-10"><div id="game-embed-container" class="aspect-16-9 bg-black rounded-lg shadow-2xl overflow-hidden mx-auto max-w-4xl"><iframe id="game-iframe" src="https://cloud.onlinegames.io/games/2022/construct/92/kick-the-pirate/index-og.html" title="Kick the Pirate" class="border-0" allowfullscreen allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy"></iframe></div></section>
+        <section class="mb-10">
+            <div id="game-embed-container" class="aspect-16-9 bg-black rounded-lg shadow-2xl overflow-hidden mx-auto max-w-4xl"><iframe id="game-iframe" src="https://cloud.onlinegames.io/games/2022/construct/92/kick-the-pirate/index-og.html" title="Kick the Pirate" class="border-0" allowfullscreen allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy"></iframe></div>
+            <div class="mt-5 text-center">
+                <button id="fullscreen-button" class="bg-apple-blue text-white font-semibold px-6 py-3 rounded-lg hover:bg-opacity-80 transition duration-150 ease-in-out text-sm sm:text-base">
+                    Enter Full Screen
+                </button>
+            </div>
+        </section>
         <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play Kick the Pirate</h2><div class="text-apple-light-gray-text space-y-3 leading-relaxed text-sm sm:text-base"><p>Ahoy matey!...</p></div></section>
     
     <!-- You Might Also Like Section -->
