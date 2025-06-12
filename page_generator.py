@@ -81,9 +81,69 @@ def generate_game_page_with_gemini(game_data):
         <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-apple-text mb-6 text-center">Kick the Pirate</h1>
         <section class="mb-10"><div id="game-embed-container" class="aspect-16-9 bg-black rounded-lg shadow-2xl overflow-hidden mx-auto max-w-4xl"><iframe id="game-iframe" src="https://cloud.onlinegames.io/games/2022/construct/92/kick-the-pirate/index-og.html" title="Kick the Pirate" class="border-0" allowfullscreen allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy"></iframe></div></section>
         <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play Kick the Pirate</h2><div class="text-apple-light-gray-text space-y-3 leading-relaxed text-sm sm:text-base"><p>Ahoy matey!...</p></div></section>
+    
+    <!-- You Might Also Like Section -->
+        {you_might_also_like_html}
     </main>
+    
     <footer class="bg-gray-800 text-gray-300 py-12 mt-auto"><div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center"><p class="text-sm">&copy; <span id="currentYear"></span> FreeGameArcade.space. All rights reserved.</p></div></footer>
-    <script>document.getElementById('currentYear').textContent = new Date().getFullYear();</script>
+    <script >
+        /**
+         * 网站功能脚本
+         * 包含了移动端菜单切换、页脚年份更新以及游戏全屏功能。
+        **/
+
+    # 当整个HTML文档加载完成后执行
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {{
+            mobileMenuButton.addEventListener('click', () => {{
+                mobileMenu.classList.toggle('hidden');
+            }});
+        }}
+
+        // Set current year in footer
+        const currentYearSpan = document.getElementById('currentYear');
+        if (currentYearSpan) {{
+            currentYearSpan.textContent = new Date().getFullYear();
+        }}
+
+        // Fullscreen functionality
+        const fullscreenButton = document.getElementById('fullscreen-button');
+        const gameIframe = document.getElementById('game-iframe'); // Target the iframe itself
+
+        if (fullscreenButton && gameIframe) {{
+            fullscreenButton.addEventListener('click', () => {{
+                if (!document.fullscreenElement) {{
+                    // Try to make the iframe fullscreen
+                    if (gameIframe.requestFullscreen) {{
+                        gameIframe.requestFullscreen().catch(err => console.error("Error attempting to enable full-screen mode:", err));
+                    }} else if (gameIframe.mozRequestFullScreen) {{ /* Firefox */
+                        gameIframe.mozRequestFullScreen();
+                    }} else if (gameIframe.webkitRequestFullscreen) {{ /* Chrome, Safari & Opera */
+                        gameIframe.webkitRequestFullscreen();
+                    }} else if (gameIframe.msRequestFullscreen) {{ /* IE/Edge */
+                        gameIframe.msRequestFullscreen();
+                    }}
+                }} else {{
+                    if (document.exitFullscreen) {{
+                        document.exitFullscreen().catch(err => console.error("Error attempting to disable full-screen mode:", err));
+                    }}
+                }}
+            }});
+
+            document.addEventListener('fullscreenchange', () => {{
+                // Check if the iframe is the fullscreen element
+                if (document.fullscreenElement === gameIframe) {{
+                    fullscreenButton.textContent = '退出全屏'; // Exit Fullscreen in Chinese
+                }} else {{
+                    fullscreenButton.textContent = '进入全屏'; // Enter Fullscreen in Chinese
+                }}
+            }});
+            
+        }}
+    </script>
 </body>
 </html>
 """
@@ -125,6 +185,55 @@ def generate_game_page_with_gemini(game_data):
     except Exception as e:
         print(f"  -> 错误:调用 Gemini API 时出错: {e}")
         return None
+
+# 新增函数：生成"猜你喜欢"部分的HTML
+def generate_you_might_also_like_section(current_game, all_games):
+    """为当前游戏生成"猜你喜欢"部分，随机选择4个不同的游戏"""
+    # 创建一个不包含当前游戏的游戏列表
+    other_games = [game for game in all_games if game['id'] != current_game['id']]
+    
+    # 如果游戏数量不足4个，则使用所有可用的游戏
+    num_games_to_show = min(4, len(other_games))
+    
+    # 随机选择游戏
+    selected_games = random.sample(other_games, num_games_to_show)
+    
+    # 生成HTML
+    game_cards_html = ""
+    for game in selected_games:
+        # 获取游戏缩略图，如果没有则使用占位图
+        thumbnail = game.get('thumbnail', '')
+        if not thumbnail:
+            thumbnail = f"https://placehold.co/300x200/E2E8F0/1d1d1f?text={game['title'].replace(' ', '+')}" 
+        
+        # 获取游戏简短描述，如果没有则使用默认文本
+        short_desc = game.get('short_description', f"Play {game['title']} online for free!")
+        
+        # 生成游戏卡片HTML
+        game_cards_html += f"""
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+            <a href="/game/{game['page_filename']}">
+                <img src="{thumbnail}" alt="{game['title']}" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E2E8F0/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="{game['title']}">{game['title']}</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">{short_desc[:100]}...</p>
+                </div>
+            </a>
+        </div>
+        """
+    
+    # 完整的"猜你喜欢"部分HTML
+    you_might_also_like_html = f"""
+    <!-- You Might Also Like Section -->
+    <section class="mb-10">
+        <h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-8 text-center">You Might Also Like</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {game_cards_html}
+        </div>
+    </section>
+    """
+    
+    return you_might_also_like_html
 
 def generate_pages():
     """读取存档，调用AI为每个游戏生成完整的HTML页面。"""
