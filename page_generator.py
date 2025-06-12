@@ -121,31 +121,28 @@ def generate_game_page_with_gemini(game_data):
         const gameIframe = document.getElementById('game-iframe'); // Target the iframe itself
 
         if (fullscreenButton && gameIframe) {{
-            fullscreenButton.addEventListener('click', () => {{
-                if (!document.fullscreenElement) {{
-                    // Try to make the iframe fullscreen
-                    if (gameIframe.requestFullscreen) {{
-                        gameIframe.requestFullscreen().catch(err => console.error("Error attempting to enable full-screen mode:", err));
-                    }} else if (gameIframe.mozRequestFullScreen) {{ /* Firefox */
-                        gameIframe.mozRequestFullScreen();
-                    }} else if (gameIframe.webkitRequestFullscreen) {{ /* Chrome, Safari & Opera */
-                        gameIframe.webkitRequestFullscreen();
-                    }} else if (gameIframe.msRequestFullscreen) {{ /* IE/Edge */
-                        gameIframe.msRequestFullscreen();
+                fullscreenButton.addEventListener('click', () => {{
+                    if (!document.fullscreenElement) {{
+                        // Request fullscreen on the iframe
+                        const requestFullscreen = gameIframe.requestFullscreen || gameIframe.mozRequestFullScreen || gameIframe.webkitRequestFullscreen || gameIframe.msRequestFullscreen;
+                        if (requestFullscreen) {{
+                            requestFullscreen.call(gameIframe).catch(err => console.error(`Error attempting to enable full-screen mode: ${{err.message}} (${{err.name}})`));
+                        }}
+                    }} else {{
+                        // Exit fullscreen
+                        const exitFullscreen = document.exitFullscreen || document.mozCancelFullScreen || document.webkitExitFullscreen || document.msExitFullscreen;
+                        if (exitFullscreen) {{
+                           exitFullscreen.call(document).catch(err => console.error(`Error attempting to disable full-screen mode: ${{err.message}} (${{err.name}})`));
+                        }}
                     }}
-                }} else {{
-                    if (document.exitFullscreen) {{
-                        document.exitFullscreen().catch(err => console.error("Error attempting to disable full-screen mode:", err));
-                    }}
-                }}
-            }});
+                }});
 
             document.addEventListener('fullscreenchange', () => {{
                 // Check if the iframe is the fullscreen element
                 if (document.fullscreenElement === gameIframe) {{
-                    fullscreenButton.textContent = '退出全屏'; // Exit Fullscreen in Chinese
+                    fullscreenButton.textContent = 'Exit Full Screen'; // Exit Fullscreen in Chinese
                 }} else {{
-                    fullscreenButton.textContent = '进入全屏'; // Enter Fullscreen in Chinese
+                    fullscreenButton.textContent = 'Enter Full Screen'; // Enter Fullscreen in Chinese
                 }}
             }});
             
