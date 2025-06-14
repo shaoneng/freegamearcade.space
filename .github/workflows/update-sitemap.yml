@@ -1,0 +1,31 @@
+name: Update sitemap
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'   # 每 6 小时跑一次
+  workflow_dispatch:        # 你也可以手动点 ▶️
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install sitemap-generator-cli
+        run: npm i -g sitemap-generator-cli
+
+      - name: Generate sitemap
+        run: |
+          sitemap-generator https://freegamearcade.space \
+            --strip-querystring \
+            --exclude-images \
+            --maxdepth 0 \
+            --filepath ./sitemap.xml
+
+      - name: Commit & push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sitemap.xml
+          git commit -m "chore: 🤖 auto-update sitemap" || echo "No changes"
+          git push
