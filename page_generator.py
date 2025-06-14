@@ -35,7 +35,7 @@ def generate_game_page_with_gemini(game_data, all_games):
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q47TS07D8C"></script>
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-Q47TS07D8C"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){{dataLayer.push(arguments);}}
@@ -47,7 +47,7 @@ def generate_game_page_with_gemini(game_data, all_games):
     <title>Play Kick the Pirate - Free Online Game | Free Game Arcade</title>
     <meta name="description" content="Play Kick the Pirate for free at Free Game Arcade. Turn this grumpy pirate into your personal punching bag, unlock wacky weapons, and blow off some steam! No download required, play directly in your browser.">
     <link rel="canonical" href="https://freegamearcade.space/game/kick-the-pirate.html">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com" defer></script>
     <script>
         tailwind.config = {{
             theme: {{
@@ -225,7 +225,7 @@ def generate_you_might_also_like_section(current_game, all_games):
         game_cards_html += f"""
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
             <a href="/game/{game['page_filename']}">
-                <img src="{thumbnail}" alt="{game['title']}" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E2E8F0/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover">
+                <img src="{thumbnail}" alt="{game['title']}" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E2E8F0/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
                     <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="{game['title']}">{game['title']}</h3>
                     <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">{short_desc[:100]}...</p>
@@ -300,7 +300,7 @@ def generate_homepage(games):
         all_game_cards_html += f"""
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
                     <a href="./game/{game['page_filename']}">
-                        <img src="{game['thumbnail']}" alt="{game['title']}" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='[https://placehold.co/400x300/f5f5f7/6e6e73?text=Image+Not+Found](https://placehold.co/400x300/f5f5f7/6e6e73?text=Image+Not+Found)';">
+                        <img src="{game['thumbnail']}" alt="{game['title']}" class="w-full h-48 object-cover" loading="lazy" width="300" height="200" onerror="this.onerror=null;this.src='[https://placehold.co/400x300/f5f5f7/6e6e73?text=Image+Not+Found](https://placehold.co/400x300/f5f5f7/6e6e73?text=Image+Not+Found)';">
                         <div class="p-5">
                             <h3 class="text-xl font-semibold text-apple-text mb-2">{game['title']}</h3>
                             <p class="text-sm text-apple-light-gray-text">{short_desc}</p>
