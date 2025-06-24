@@ -254,37 +254,74 @@ def generate_pages():
     """读取存档，调用AI为每个游戏生成完整的HTML页面。"""
     print("\n开始生成网页...")
 
-    # --- 关键修改: 确保 'game' 文件夹存在 ---
-    os.makedirs(GAME_PAGE_DIR, exist_ok=True)
-    print(f"确保输出目录存在: {GAME_PAGE_DIR}")
+    # 定义记录已处理游戏的文件
+    PROCESSED_GAMES_FILE = 'processed_games.txt'
 
+    # 1. 加载已经处理过的游戏ID
+    processed_ids = set()
+    try:
+        # 确保文件存在，如果不存在则创建一个空文件
+        if not os.path.exists(PROCESSED_GAMES_FILE):
+            open(PROCESSED_GAMES_FILE, 'w').close()
+            
+        with open(PROCESSED_GAMES_FILE, 'r', encoding='utf-8') as f:
+            processed_ids = set(line.strip() for line in f if line.strip())
+        print(f"已加载 {len(processed_ids)} 个已处理的游戏记录。")
+    except Exception as e:
+        print(f"读取 {PROCESSED_GAMES_FILE} 文件时出错: {e}。将继续执行，但可能重复生成页面。")
+
+    # 确保 'game' 文件夹存在
+    os.makedirs(GAME_PAGE_DIR, exist_ok=True)
+
+    # 读取所有游戏数据
     if not os.path.exists(GAMES_ARCHIVE_FILE):
-        print(f"警告: 未找到 {GAMES_ARCHIVE_FILE} 文件。将只生成一个空的主页。")
+        print(f"警告: 未找到 {GAMES_ARCHIVE_FILE} 文件。")
         all_games = []
     else:
         with open(GAMES_ARCHIVE_FILE, 'r', encoding='utf-8') as f:
             all_games = json.load(f)
 
+    new_pages_generated_count = 0
+    # 遍历所有游戏，寻找新游戏
     for game in all_games:
-        # --- 关键修改: 文件路径现在指向 'game/' 文件夹 ---
-        filepath = os.path.join(GAME_PAGE_DIR, game['page_filename'])
+        # 使用 'id' 作为唯一标识符，并确保是字符串类型
+        game_id = str(game.get('id'))
+        if not game_id:
+            print(f"警告: 游戏 '{game.get('title', '未知')}' 缺少 'id'，已跳过。")
+            continue
 
-        print(f"-> 正在为AI生成页面: {game['title']}")
+        # 2. 检查游戏是否已经被处理过
+        if game_id in processed_ids:
+            continue # 如果已处理，则跳到下一个游戏
+
+        # 3. 如果是新游戏，则生成页面
+        print(f"-> 发现新游戏，正在为其生成页面: {game['title']} (ID: {game_id})")
         
-        # --- 这里是本次的关键修复 ---
-        # 确保在调用函数时，把 game 和 all_games 这两个参数都传进去
+        filepath = os.path.join(GAME_PAGE_DIR, game['page_filename'])
         page_html = generate_game_page_with_gemini(game, all_games)
 
         if page_html:
             with open(filepath, 'w', encoding='utf-8') as f:
                 f.write(page_html)
             print(f"  -> 成功创建页面: {filepath}")
+
+            # 4. 将新生成的游戏ID记录到文件中
+            with open(PROCESSED_GAMES_FILE, 'a', encoding='utf-8') as f:
+                f.write(f"{game_id}\n")
+            print(f"  -> 已将游戏 '{game['title']}' 标记为已处理。")
+            new_pages_generated_count += 1
         else:
             print(f"  -> 跳过页面生成，因为AI调用失败: {game['title']}")
 
-        # 这里的延时是为了避免过于频繁地调用API
+        # 保留延时以避免过于频繁地调用API
         time.sleep(2)
 
+    if new_pages_generated_count == 0:
+        print("\n没有发现需要生成的新游戏页面。")
+    else:
+        print(f"\n总共为 {new_pages_generated_count} 个新游戏生成了页面。")
+
+    # 5. 无论如何都重新生成主页，以确保游戏列表是最新的
     generate_homepage(all_games)
 
 
