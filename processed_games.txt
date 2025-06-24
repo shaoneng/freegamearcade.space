@@ -196,3 +196,11 @@ https://www.onlinegames.io/police-chase-drifter/
 fpssimulator
 driftboss
 policechasedrifter
+https://www.onlinegames.io/crazy-shooters/
+https://www.onlinegames.io/fireboy-and-watergirl/
+https://www.onlinegames.io/burnout-city/
+https://www.onlinegames.io/highway-racer-pro/
+crazyshooters
+fireboyandwatergirl
+burnoutcity
+highwayracerpro
