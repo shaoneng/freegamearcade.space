@@ -22,7 +22,7 @@ def generate_game_page_with_gemini(game_data, all_games):
 
     try:
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel('gemini-2.5-pro-preview-06-05')
+        model = genai.GenerativeModel('gemini-2.5-pro')
         
         # --- 关键修改: Canonical URL 现在指向 game/ 文件夹 ---
         page_url = f"{SITE_BASE_URL}/game/{game_data['page_filename']}"
