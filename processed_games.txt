@@ -228,3 +228,11 @@ suroi
 onlyupobby
 warstrike
 vehiclessimulator
+https://www.onlinegames.io/edys-car-simulator/
+https://www.onlinegames.io/stunt-rider/
+https://www.onlinegames.io/slow-roads/
+https://www.onlinegames.io/ultimate-flying-car/
+edyscarsimulator
+stuntrider
+slowroads
+ultimateflyingcar
