@@ -252,3 +252,11 @@ drifthunters
 driftrider
 snowrider3d
 highwayroadracing
+https://www.onlinegames.io/gangsters/
+https://www.onlinegames.io/mega-soccer/
+https://www.onlinegames.io/drift-city/
+https://www.onlinegames.io/wasteland-shooters/
+gangsters
+megasoccer
+driftcity
+wastelandshooters

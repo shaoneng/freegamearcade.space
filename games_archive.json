@@ -1268,5 +1268,45 @@
         "description": "Join the challenge and speed the car to complete missions inHighway Road Racing. Experience the risky overcomes while you enjoy the dynamic environments and powerful graphics. Win every race and reach the best score ever.Â\nSelect your machineÂThere 12 cars ready to be tested.Every car has a specific level of speed, handling and brake.Select your modeÂâ¢ One WayÂâ¢ Two Waysâ¢ Time AttackÂSelect your themeÂâ¢ Grand Canyonâ¢ Santa Monicaâ¢ Bryce CanyonHighway Road Racing DisplayÂ includes:â¢ Score (displayed on the top left)â¢ Camera, Pause, Speed and Distance (displayed on the top right)â¢ Wrong Way (displayed on the center left)Make sure you don't crash your car. If it happens you will be able to see thefinal scoredetails:â¢ Total Distanceâ¢ Near MissÂâ¢ Keep Above 100kmphâ¢ Opposite Direction\nUse Arrow keys/WASD to control the car",
         "short_description": "Join the challenge and speed the car to complete missions in Highway Road Racing. Experience the risky overcomes while you…",
         "page_filename": "highwayroadracing.html"
+    },
+    {
+        "id": "gangsters",
+        "title": "Gangsters",
+        "url": "https://www.onlinegames.io/gangsters/",
+        "iframe_url": "https://cloud.onlinegames.io/games/2024/shareddreams/gangsters/index.html",
+        "thumbnail": "https://www.onlinegames.io/media/posts/1037/gangsters-game.webp",
+        "description": "A pixelated street fight begins!Gangstersis a two-player online game where two tiny gangs shuffle, leap, and blast each other with whatever falls from the sky. With only two buttons per player, it feels silly at first. But one round is all it takes to spark best-friend rivalries and endless rematches. Grab a crate, steady those shaky arms, and see who can fill the scoreboard first.\nPick a mode on the title screen:P1 vs CPUfor solo practice orP1 vs P2to battle a friend on the same keyboard. Each side begins with three blocky fighters lined up shoulder-to-shoulder.\nPress thejump keyonce, and the whole trio hops together, tilting left or right depending on their balance. They slide a short distance every time, so gentle taps work better than holding the key.\nHold theshoot keyto lift every arm at the same time. Release to fire; bullets travel in the direction the arms point when you let go. Because the gang sways, time your release for straight shots.\nWooden boxes drift down on parachutes throughout each round. Touch a box to break it and auto-equip its surprise: pistols, machine guns, chainsaws, swords, or the crowd-favorite bazooka.\nEarly stages are flat city streets, but later maps add lava floors, rock piles, or tall water walls that block bullets. Falling into lava or water traps knocks a character out instantly, so jumping at the wrong moment can cost a round, even without gunfire.\nWhen all three rivals drop, you score one point, and teams reset for the next skirmish. The scoreboard sits above each crew first to fill it (default is five points) and wins the match.\nIn P1 vs CPU, hold jump without shooting to see how far your gang moves. Then, test arm-raising speed. Short taps send quick sprays; long holds can arc shots downward for tricky angles. Switch maps every couple of rounds for new hazards. Play best-of-three sets with different house rules: melee-only, no jumping, or first player to grab a bazooka wins.\nThe whole loop jumps, grabs, shoots, and repeats takes seconds to learn but takes a long time to master. Because both gangs share the same two-button scheme, everyone plays on equal footing, and silliness stays high from the first crate drop to the final rocket splash.\nGangsters was created by Shared Dreams, the team behind several other two-player games hosted right here onOnlineGames.io.",
+        "short_description": "Play Gangsters, a chaotic pixel shooting game where you control a gang with just two buttons!",
+        "page_filename": "gangsters.html"
+    },
+    {
+        "id": "megasoccer",
+        "title": "Mega Soccer",
+        "url": "https://www.onlinegames.io/mega-soccer/",
+        "iframe_url": "https://cloud.onlinegames.io/games/2024/unity2/mega-soccer/index-og.html",
+        "thumbnail": "https://www.onlinegames.io/media/posts/1036/mega-soccer-game.webp",
+        "description": "Mega Socceris a small-squad online soccer game. You take three players: a keeper, a defender and a striker. Take them onto compact pitches and try to out-score the other side before the clock runs out. Matches feel lively because each team member has his own speed, power and technique ratings, and rarer characters come with tricks such as rainbow flicks or bicycle kicks. Stadium, weather, kit colours and even the match ball are all changeable in the main menu, so you can customize your soccer game fully.\nPC\nMobile / Tablet\nYour squad is three strong: a keeper, a utility midfielder, and a striker. In the Players / Kits menu each athlete shows Speed, Power, and Technic bars plus a level. Spend pink gems to bump stats or unlock rarer card tiers. Outstanding kits come with flashy rainbow flicks, while Legendary kits add a blistering Power Shot.\nYou can collect gems by completing achievements (like â50 Dribblesâ) and end-match rewards, so every bicycle kick you land inches you toward the next upgrade.\nBefore kick-off, customise the vibe. Slide over to Stadiums / Balls / Weather:\nMatches themselves are simple: win the sprint for possession, weave around markers, and steer the shot past diving keepers before the 60-second timer up top hits zero. Each goal nets coins, and consecutive wins rack up an XP bar under your player name for even more goodies.\nMega Soccer is built by FreezeNova Games. They specialise in fast, kid-friendly sports titles that fit neatly inside your browser.\nFeeling the football fever? Hop over toFish Socceron OnlineGames.io for another quick, quirky kick-about featuring funtastic sound effects and same-screen two-player fun.",
+        "short_description": "Play Mega Soccer - fast-paced arcade football with full customization. Unlock skills, earn rewards, and score stylish goals to climb the ranks!",
+        "page_filename": "megasoccer.html"
+    },
+    {
+        "id": "driftcity",
+        "title": "Drift City",
+        "url": "https://www.onlinegames.io/drift-city/",
+        "iframe_url": "https://cloud.onlinegames.io/games/2024/gm/games2/drift-city/index.html",
+        "thumbnail": "https://www.onlinegames.io/media/posts/837/Drift-City.jpg",
+        "description": "If you'd like to learn drifting techniques, improve them, or test your drifting skills by completing missions, you're in the right spot.Drift Cityis a browser-based driving game that'll challenge you with diverse missions then reward you with coins and customization cards.\nDrift City was developed by MeyaGames.\nIf you like the concept and gameplay of Drift City, next playBurnout Racersand enjoy a wide array of tuning options plus multiplayer rooms.OnlineGames.io is the perfect place to inhale the smell of burning tires! Let the drift begin!",
+        "short_description": "Learn drifting from scratch, complete missions and tune your car in Drift City, free online game!",
+        "page_filename": "driftcity.html"
+    },
+    {
+        "id": "wastelandshooters",
+        "title": "Wasteland Shooters",
+        "url": "https://www.onlinegames.io/wasteland-shooters/",
+        "iframe_url": "https://www.onlinegames.io/games/2021/unity2/wasteland-shooters/index.html",
+        "thumbnail": "https://www.onlinegames.io/media/posts/218/Wasteland-Shooters.jpg",
+        "description": "Wasteland Shootersis a game where you make your own way to the journey of shooters.Your mission is to keep the coordination right and be vigilant as you shoot the enemies.Each area in the game gives the opportunity to find spaces to hide, hunt and attack the opponents. The weapons will help you reach the best player in the shooter world.Become the master and proove that your skill are always evolving.\nIn order to start playing the game you first need to create a room.You can name the room, choose the maximum players that can join and select the game mode FFA or Team.You can also join other players' rooms.ÂThere are4 maps:â¢ Dustyâ¢ RedWasteâ¢ Wastelandâ¢ WasteTwonWeapons:â¢ BallisticKnifeÂâ¢ DeagleÂâ¢ MP5KA4â¢ STW-25â¢ M87Tâ¢ Blaser R93â¢ RPGÂâ¢ M79â¢ M67Wasteland Shooters Display:â¢ Kill feed (displayed on the top right)â¢ Weapons (displayed on the center)â¢ Health & Ammo (displayed on the bottom right)â¢ Time & leading player (displayed on the center)â¢ Chat (displayed on the center left)Statistics section:In statistics you will see the following details:â¢ Number of games playedâ¢ Number of winsâ¢ Number of killsâ¢ ScoreÂ\nWasteland Shooters Controls:WASD or arrow keys to moveLeft mouse button to fireR to reloadSpace to jumpArrow keys to switch weapons",
+        "short_description": "Wasteland Shooters is a game where you make your own way to the journey of shooters. Your mission is to…",
+        "page_filename": "wastelandshooters.html"
     }
 ]
