@@ -260,3 +260,11 @@ gangsters
 megasoccer
 driftcity
 wastelandshooters
+https://www.onlinegames.io/jeep-driver/
+https://www.onlinegames.io/obby-bike-trials/
+https://www.onlinegames.io/tic-tac-toe/
+https://www.onlinegames.io/craftnite/
+jeepdriver
+obbybiketrials
+tictactoe
+craftnite
