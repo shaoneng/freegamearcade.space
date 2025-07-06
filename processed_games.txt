@@ -292,3 +292,11 @@ supermarketsimulator
 voxiom
 winterella
 fivenightsatfreddys4
+https://www.onlinegames.io/cat-simulator/
+https://www.onlinegames.io/elastic-man/
+https://www.onlinegames.io/home-design/
+https://www.onlinegames.io/tractor-farming-simulator/
+catsimulator
+elasticman
+homedesign
+tractorfarmingsimulator
