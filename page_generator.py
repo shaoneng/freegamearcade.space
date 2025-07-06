@@ -164,27 +164,45 @@ def generate_game_page_with_gemini(game_data, all_games):
 """
 
         prompt = f"""
-        You are a ten-year full-stack engineer proficient in Google SEO, HTML, and Tailwind CSS.
-        Your task is to populate the provided HTML template with the new game data to create a complete and unique HTML page.
+        You are a creative game review blogger and SEO expert. 
+        Your task is to take the provided game data and HTML template to generate a unique, engaging, and SEO-optimized game page. 
+        Your writing style should be lively and appealing to casual gamers.
 
         **New Game Data:**
         - Title: "{game_data['title']}"
         - Iframe URL: "{game_data['iframe_url']}"
         - Canonical URL: "{page_url}"
-        - Description for context: "{game_data.get('description', 'A fun and exciting game.')}"
+        - Original Description (for context and inspiration): "{game_data.get('description', 'A fun and exciting game.')}"
 
         **HTML Template to use:**
         ```html
         {html_template}
         ```
 
-        **Instructions:**
-        1.  Take the HTML template and replace the placeholder content (like "Kick the Pirate") with the new game data.
-        2.  **SEO Title:** Create a new, compelling `<title>` tag in the format: "Play {game_data['title']} - Free Online Game | Free Game Arcade".
-        3.  **Meta Description:** Write a new, engaging `<meta name="description">` based on the provided description context.
-        4.  **Canonical URL:** Set the `<link rel="canonical">` href to the new Canonical URL.
-        5.  **Content:** Update the breadcrumb, the `<h1>` title, the `<iframe>` src and title, the `<h2>` title, and write a new "How to Play" section in fluent English based on the description context.
-        6.  **Output:** Provide only the final, complete, raw HTML code. Do not add any comments, explanations, or markdown formatting like ```html.
+        **Your Task & Instructions:**
+
+        1.  **SEO Title (`<title>`)**: Create a compelling title using this exact format: "Play {game_data['title']} - Free Online Game | Free Game Arcade".
+
+        2.  **Meta Description (`<meta name="description">`)**:
+            - Write a completely **original and engaging summary** of the game in 80-120 words.
+            - **This is crucial for SEO**: You MUST naturally include the keywords "free browser game" and "play online for free" in this description.
+            - Do not just copy the original description. Use it as inspiration to write something new and exciting that encourages clicks.
+
+        3.  **Canonical URL (`<link rel="canonical">`)**: Ensure the `href` attribute is set to: `{page_url}`.
+
+        4.  **Page Content**:
+            -   **Breadcrumb**: Update the last breadcrumb item to be the game's title: `{game_data['title']}`.
+            -   **Main Title (`<h1>`)**: Write a fun and catchy H1 title for the game, for example: "Unleash the Fun in {game_data['title']}!". Make it different from the SEO title.
+            -   **Iframe**: Set the `src` to `{game_data['iframe_url']}` and the `title` to `{game_data['title']}`.
+            -   **How to Play Section**:
+                -   Change the `<h2>` title to something more engaging, like "How to Master {game_data['title']}".
+                -   Based on the original description, write a clear, friendly, and easy-to-understand "How to Play" guide in English. Use paragraphs (`<p>`) for readability.
+
+        5.  **Final Output**:
+            -   Carefully populate the entire HTML template with the new content you've created.
+            -   **Provide ONLY the final, complete, raw HTML code.**
+            -   Do not include any extra text, comments, explanations, or markdown formatting like ```html before or after the code.
+        Let's create the best game page for "{game_data['title']}"!
         """
         
         response = model.generate_content(prompt)
