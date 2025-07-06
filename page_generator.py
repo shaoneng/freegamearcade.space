@@ -325,36 +325,23 @@ def generate_pages():
     generate_homepage(all_games)
 
 
+# page_generator.py
+
 def generate_homepage(games):
-    """根据所有游戏数据生成主页。"""
+    """根据所有游戏数据生成主页, 并将游戏数据直接嵌入到HTML中。"""
     print("\n正在生成主页 index.html...")
     # 对游戏进行反向排序，以便最新的游戏显示在最前面
     games_for_homepage = sorted(games, key=lambda x: x.get('id'), reverse=True)
 
-    # 生成所有游戏卡片
-    all_game_cards_html = ""
-    for game in games_for_homepage:
-        # 使用新抓取的 short_description 字段
-        short_desc = game.get('short_description', 'Play this exciting game for free!')
-        # --- 关键修改: 链接现在指向 './game/...' ---
-        all_game_cards_html += f"""
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                    <a href="./game/{game['page_filename']}">
-                        <img src="{game['thumbnail']}" alt="{game['title']}" class="w-full h-48 object-cover" loading="lazy" width="300" height="200" onerror="this.onerror=null;this.src='[https://placehold.co/400x300/f5f5f7/6e6e73?text=Image+Not+Found](https://placehold.co/400x300/f5f5f7/6e6e73?text=Image+Not+Found)';">
-                        <div class="p-5">
-                            <h3 class="text-xl font-semibold text-apple-text mb-2">{game['title']}</h3>
-                            <p class="text-sm text-apple-light-gray-text">{short_desc}</p>
-                        </div>
-                    </a>
-                </div>
-        """
+    # 1. 将游戏数据安全地转换为JSON字符串
+    games_json_string = json.dumps(games_for_homepage)
 
     # 主页HTML模板
     homepage_html = f"""
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
+    {'''
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q47TS07D8C"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -365,6 +352,7 @@ def generate_homepage(games):
     </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9886602787991072"
      crossorigin="anonymous"></script>
+    '''}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free Game Arcade - Play The Best Free Online Games</title>
@@ -416,9 +404,8 @@ def generate_homepage(games):
         </section>
         <section id="all-games" class="py-12">
             <h2 class="text-3xl font-bold text-apple-text mb-8 text-center">All Games</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                {all_game_cards_html}
-            </div>
+            <div id="game-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                </div>
         </section>
         <section class="py-12 mt-8">
             <div class="bg-white p-8 rounded-xl shadow-lg max-w-3xl mx-auto text-center">
@@ -437,10 +424,15 @@ def generate_homepage(games):
     <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
+    
+    <script>
+        window.GAMES_DATA = {games_json_string};
+    </script>
+
+    <script src="homepage.js"></script>
 </body>
 </html>
     """
-    # --- 关键修改: 主页文件现在生成在根目录 ---
     homepage_filepath = 'index.html'
     with open(homepage_filepath, 'w', encoding='utf-8') as f:
         f.write(homepage_html)
