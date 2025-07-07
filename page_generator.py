@@ -4,59 +4,61 @@ import os
 import time
 import google.generativeai as genai
 import random
+from bs4 import BeautifulSoup
 
-# --- 配置 ---
+# --- 配置 (Configuration) ---
 GAMES_ARCHIVE_FILE = 'games_archive.json'
-# --- 关键修改: 输出目录现在是 'game' ---
 GAME_PAGE_DIR = 'game'  
-SITE_BASE_URL = "https://shaoneng.github.io/freegamearcade.space" # 已为您更新
+SITE_BASE_URL = "https://shaoneng.github.io/freegamearcade.space"
 
-# --- Gemini API 调用函数 ---
+# --- Gemini API 调用函数 (Gemini API Call Function) ---
 def generate_game_page_with_gemini(game_data, all_games):
-    """使用Gemini API为单个游戏生成完整的HTML页面。"""
-    
+    """
+    使用Gemini API为单个游戏生成具备“Apple”风格外观的HTML页面。
+    Uses the Gemini API to generate an "Apple" style HTML page for a single game.
+    """
     api_key = os.getenv("GEMINI_API_KEY")
     if not api_key:
-        print("  -> 警告: 未设置 GEMINI_API_KEY 环境变量。无法生成页面。")
+        print("  -> 警告: 未设置 GEMINI_API_KEY 环境变量。")
         return None
 
     try:
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel('gemini-2.5-pro')
+        model = genai.GenerativeModel('gemini-2.5-flash')
         
-        # --- 关键修改: Canonical URL 现在指向 game/ 文件夹 ---
         page_url = f"{SITE_BASE_URL}/game/{game_data['page_filename']}"
-
-        # 生成"猜你喜欢"部分的HTML
         you_might_also_like_html = generate_you_might_also_like_section(game_data, all_games)
         
+        # **关键修改 (CRITICAL CHANGE)**: 使用了你提供的明亮风格HTML模板
+        # Used the light-themed HTML template you provided
         html_template = f"""
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-Q47TS07D8C"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q47TS07D8C"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){{dataLayer.push(arguments);}}
         gtag('js', new Date());
+
         gtag('config', 'G-Q47TS07D8C');
     </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9886602787991072"
-     crossorigin="anonymous">
-     </script>
+     crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Play Kick the Pirate - Free Online Game | Free Game Arcade</title>
-    <meta name="description" content="Play Kick the Pirate for free at Free Game Arcade. Turn this grumpy pirate into your personal punching bag, unlock wacky weapons, and blow off some steam! No download required, play directly in your browser.">
-    <link rel="canonical" href="https://freegamearcade.space/game/kick-the-pirate.html">
-    <script src="https://cdn.tailwindcss.com" defer></script>
+    <title>Placeholder Title</title>
+    <meta name="description" content="Placeholder description.">
+    <link rel="canonical" href="{page_url}">
+    <!--JSON-LD-PLACEHOLDER-->
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {{
             theme: {{
                 extend: {{
                     colors: {{
-                        'apple-bg': '#f5f5f7', 'apple-text': '#1d1d1f', 'apple-blue': '#007aff', 'apple-light-gray-text': '#6e6e73',
+                        'apple-bg': '#f5f5f7', 'apple-text': '#1d1d1f', 'apple-blue': '#007aff', 
+                        'apple-light-gray-text': '#6e6e73',
                     }}
                 }},
                 fontFamily: {{
@@ -67,6 +69,7 @@ def generate_game_page_with_gemini(game_data, all_games):
     </script>
     <style>
         html {{ height: 100%; }} body {{ min-height: 100%; display: flex; flex-direction: column; }} main {{ flex-grow: 1; }} .aspect-16-9 {{ position: relative; width: 100%; padding-bottom: 56.25%; }} .aspect-16-9 iframe {{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; }}
+        .game-card-thumbnail {{ aspect-ratio: 300 / 200; background-color: #f0f0f0; }}
     </style>
 </head>
 <body class="bg-apple-bg text-apple-text antialiased">
@@ -84,169 +87,126 @@ def generate_game_page_with_gemini(game_data, all_games):
         </div>
     </header>
     <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <nav class="mb-6" aria-label="Breadcrumb"><ol class="flex items-center space-x-2 text-sm"><li><a href="../index.html" class="text-apple-light-gray-text hover:text-apple-blue">Home</a></li><li><span class="text-gray-400">/</span></li><li class="font-medium text-apple-text" aria-current="page">Pac-Xon New Realms</li></ol></nav>
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-apple-text mb-6 text-center">Kick the Pirate</h1>
+        <nav class="mb-6" aria-label="Breadcrumb"><ol class="flex items-center space-x-2 text-sm"><li><a href="../index.html" class="text-apple-light-gray-text hover:text-apple-blue">Home</a></li><li><span class="text-gray-400">/</span></li><li class="font-medium text-apple-text" aria-current="page">Placeholder Game</li></ol></nav>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-apple-text mb-6 text-center">Placeholder Title</h1>
         <section class="mb-10">
-            <div id="game-embed-container" class="aspect-16-9 bg-black rounded-lg shadow-2xl overflow-hidden mx-auto max-w-4xl"><iframe id="game-iframe" src="https://cloud.onlinegames.io/games/2022/construct/92/kick-the-pirate/index-og.html" title="Kick the Pirate" class="border-0" allowfullscreen allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy"></iframe></div>
+            <div id="game-embed-container" class="aspect-16-9 bg-black rounded-lg shadow-2xl overflow-hidden mx-auto max-w-4xl"><iframe id="game-iframe" src="" title="Placeholder" class="border-0" allowfullscreen loading="lazy"></iframe></div>
             <div class="mt-5 text-center">
-                <button id="fullscreen-button" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition duration-150 ease-in-out text-sm sm:text-base">
-                    Enter Full Screen
-                </button>
+                <button id="fullscreen-button" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition duration-150 ease-in-out text-sm sm:text-base">Enter Full Screen</button>
             </div>
         </section>
-        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play Kick the Pirate</h2><div class="text-apple-light-gray-text space-y-3 leading-relaxed text-sm sm:text-base"><p>Ahoy matey!...</p></div></section>
-    
-    <!-- You Might Also Like Section -->
+        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play</h2><div class="text-apple-light-gray-text space-y-3 leading-relaxed text-sm sm:text-base"><p>Placeholder how-to-play content...</p></div></section>
         {you_might_also_like_html}
     </main>
-    
     <footer class="bg-gray-800 text-gray-300 py-12 mt-auto"><div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center"><p class="text-sm">&copy; <span id="currentYear"></span> FreeGameArcade.space. All rights reserved.</p></div></footer>
-    <script>
-    /**
-     * 网站功能脚本
-     * 包含了移动端菜单切换、页脚年份更新以及游戏全屏功能。
-    **/
-
-    // Wait for the HTML document to be fully loaded before running the script.
-    document.addEventListener('DOMContentLoaded', function() {{
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (mobileMenuButton && mobileMenu) {{
-            mobileMenuButton.addEventListener('click', () => {{
-                mobileMenu.classList.toggle('hidden');
-            }});
-        }}
-
-        // Set current year in footer
-        const currentYearSpan = document.getElementById('currentYear');
-        if (currentYearSpan) {{
-            currentYearSpan.textContent = new Date().getFullYear();
-        }}
-
-        // Fullscreen functionality
-        const fullscreenButton = document.getElementById('fullscreen-button');
-        const gameIframe = document.getElementById('game-iframe'); // Target the iframe itself
-
-        if (fullscreenButton && gameIframe) {{
-            fullscreenButton.addEventListener('click', () => {{
-                if (!document.fullscreenElement) {{
-                    // Try to make the iframe fullscreen
-                    if (gameIframe.requestFullscreen) {{
-                        gameIframe.requestFullscreen().catch(err => console.error("Error attempting to enable full-screen mode:", err));
-                    }} else if (gameIframe.mozRequestFullScreen) {{ /* Firefox */
-                        gameIframe.mozRequestFullScreen();
-                    }} else if (gameIframe.webkitRequestFullscreen) {{ /* Chrome, Safari & Opera */
-                        gameIframe.webkitRequestFullscreen();
-                    }} else if (gameIframe.msRequestFullscreen) {{ /* IE/Edge */
-                        gameIframe.msRequestFullscreen();
-                    }}
-                }} else {{
-                    if (document.exitFullscreen) {{
-                        document.exitFullscreen().catch(err => console.error("Error attempting to disable full-screen mode:", err));
-                    }}
-                }}
-            }});
-
-            document.addEventListener('fullscreenchange', () => {{
-                // Check if an element is in fullscreen
-                if (document.fullscreenElement) {{
-                    fullscreenButton.textContent = 'Exit Full Screen';
-                }} else {{
-                    fullscreenButton.textContent = 'Enter Full Screen';
-                }}
-            }});
-        }}
-    }});
-    </script>
+    <script src="../scripts.js"></script>
 </body>
 </html>
 """
-
+        # **关键修改 (CRITICAL CHANGE)**: Prompt也改回更通用的版本
         prompt = f"""
-        You are a creative game review blogger and SEO expert. 
-        Your task is to take the provided game data and HTML template to generate a unique, engaging, and SEO-optimized game page. 
-        Your writing style should be lively and appealing to casual gamers.
+        You are an expert content creator for a gaming website, skilled in writing engaging and SEO-friendly content.
+        Your task is to populate the provided HTML template for the game "{game_data['title']}".
 
-        **New Game Data:**
+        **Game Data for Context:**
         - Title: "{game_data['title']}"
         - Iframe URL: "{game_data['iframe_url']}"
         - Canonical URL: "{page_url}"
-        - Original Description (for context and inspiration): "{game_data.get('description', 'A fun and exciting game.')}"
+        - Original Description (for inspiration): "{game_data.get('description', 'A fun and exciting game.')}"
 
         **HTML Template to use:**
         ```html
         {html_template}
         ```
 
-        **Your Task & Instructions:**
+        **Your Content Generation Instructions:**
 
-        1.  **SEO Title (`<title>`)**: Create a compelling title using this exact format: "Play {game_data['title']} - Free Online Game | Free Game Arcade".
+        1.  **SEO Title (`<title>`)**: Use this exact format: "Play {game_data['title']} - Free Online Game | Free Game Arcade".
 
         2.  **Meta Description (`<meta name="description">`)**:
-            - Write a completely **original and engaging summary** of the game in 80-120 words.
-            - **This is crucial for SEO**: You MUST naturally include the keywords "free browser game" and "play online for free" in this description.
-            - Do not just copy the original description. Use it as inspiration to write something new and exciting that encourages clicks.
+            - Write a clear and concise summary of the game (80-120 words).
+            - Naturally include keywords like "free browser game" and "play online for free".
+            - The goal is to inform the user what the game is about.
 
         3.  **Canonical URL (`<link rel="canonical">`)**: Ensure the `href` attribute is set to: `{page_url}`.
 
         4.  **Page Content**:
-            -   **Breadcrumb**: Update the last breadcrumb item to be the game's title: `{game_data['title']}`.
-            -   **Main Title (`<h1>`)**: Write a fun and catchy H1 title for the game, for example: "Unleash the Fun in {game_data['title']}!". Make it different from the SEO title.
+            -   **Breadcrumb**: Update the last item to be the game's title: `{game_data['title']}`.
+            -   **Main Title (`<h1>`)**: Use the game's title: `{game_data['title']}`.
             -   **Iframe**: Set the `src` to `{game_data['iframe_url']}` and the `title` to `{game_data['title']}`.
             -   **How to Play Section**:
-                -   Change the `<h2>` title to something more engaging, like "How to Master {game_data['title']}".
-                -   Based on the original description, write a clear, friendly, and easy-to-understand "How to Play" guide in English. Use paragraphs (`<p>`) for readability.
+                -   Set the `<h2>` title to "How to Play {game_data['title']}".
+                -   Based on the original description, write a simple and clear "How to Play" guide in English using paragraphs (`<p>`).
 
         5.  **Final Output**:
-            -   Carefully populate the entire HTML template with the new content you've created.
-            -   **Provide ONLY the final, complete, raw HTML code.**
-            -   Do not include any extra text, comments, explanations, or markdown formatting like ```html before or after the code.
-        Let's create the best game page for "{game_data['title']}"!
+            -   Populate the entire HTML template with the new content.
+            -   Provide ONLY the final, complete, raw HTML code.
         """
         
         response = model.generate_content(prompt)
-        generated_html = response.text.strip()
+        generated_html_raw = response.text.strip()
+        
+        generated_html = generated_html_raw
         if generated_html.startswith('```html'):
             generated_html = generated_html[7:]
         if generated_html.endswith('```'):
             generated_html = generated_html[:-3]
         
-        print(f"  -> 成功为 '{game_data['title']}' 生成HTML页面。")
-        return generated_html.strip()
+        soup = BeautifulSoup(generated_html, 'html.parser')
+        
+        meta_description_tag = soup.find('meta', attrs={'name': 'description'})
+        meta_description_content = ""
+        if meta_description_tag:
+            meta_description_content = meta_description_tag.get('content', '')
+
+        json_ld_data = {
+          "@context": "https://schema.org",
+          "@type": "VideoGame",
+          "name": game_data['title'],
+          "url": page_url,
+          "image": game_data['thumbnail'],
+          "description": meta_description_content,
+          "gamePlatform": "PC",
+          "operatingSystem": "Any",
+          "applicationCategory": "Game",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        }
+
+        json_ld_script_string = f'<script type="application/ld+json">{json.dumps(json_ld_data, indent=2)}</script>'
+        final_html = generated_html.replace('<!--JSON-LD-PLACEHOLDER-->', json_ld_script_string)
+        
+        print(f"  -> Successfully generated HTML and injected structured data for '{game_data['title']}'.")
+        return final_html.strip()
 
     except Exception as e:
-        print(f"  -> 错误:调用 Gemini API 时出错: {e}")
+        print(f"  -> ERROR: An error occurred when calling Gemini API or processing HTML: {e}")
         return None
 
-# 新增函数：生成"猜你喜欢"部分的HTML
 def generate_you_might_also_like_section(current_game, all_games):
-    """为当前游戏生成"猜你喜欢"部分，随机选择4个不同的游戏"""
-    # 创建一个不包含当前游戏的游戏列表
+    """Generates the 'You Might Also Like' section with corrected relative paths and light theme styling."""
     other_games = [game for game in all_games if game['id'] != current_game['id']]
-    
-    # 如果游戏数量不足4个，则使用所有可用的游戏
     num_games_to_show = min(4, len(other_games))
-    
-    # 随机选择游戏
+    if num_games_to_show < 1:
+        return ""
+        
     selected_games = random.sample(other_games, num_games_to_show)
     
-    # 生成HTML
     game_cards_html = ""
     for game in selected_games:
-        # 获取游戏缩略图，如果没有则使用占位图
-        thumbnail = game.get('thumbnail', '')
-        if not thumbnail:
-            thumbnail = f"https://placehold.co/300x200/E2E8F0/1d1d1f?text={game['title'].replace(' ', '+')}" 
-        
-        # 获取游戏简短描述，如果没有则使用默认文本
+        thumbnail_path = game.get('thumbnail', '')
+        if thumbnail_path.startswith("assets/"):
+            thumbnail_path = f"../{thumbnail_path}"
+
         short_desc = game.get('short_description', f"Play {game['title']} online for free!")
         
-        # 生成游戏卡片HTML
         game_cards_html += f"""
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="/game/{game['page_filename']}">
-                <img src="{thumbnail}" alt="{game['title']}" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E2E8F0/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/{game['page_filename']}" class="game-card-thumbnail">
+                <img src="{thumbnail_path}" alt="{game['title']}" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
                     <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="{game['title']}">{game['title']}</h3>
                     <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">{short_desc[:100]}...</p>
@@ -255,9 +215,7 @@ def generate_you_might_also_like_section(current_game, all_games):
         </div>
         """
     
-    # 完整的"猜你喜欢"部分HTML
-    you_might_also_like_html = f"""
-    <!-- You Might Also Like Section -->
+    return f"""
     <section class="mb-10">
         <h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-8 text-center">You Might Also Like</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -265,55 +223,29 @@ def generate_you_might_also_like_section(current_game, all_games):
         </div>
     </section>
     """
-    
-    return you_might_also_like_html
 
 def generate_pages():
-    """读取存档，调用AI为每个游戏生成完整的HTML页面。"""
-    print("\n开始生成网页...")
+    """Reads the archive and calls the AI to generate a complete HTML page for each game."""
+    print("\nStarting to generate web pages...")
 
-    # 定义记录已处理游戏的文件
-    PROCESSED_GAMES_FILE = 'processed_games.txt'
-
-    # 1. 加载已经处理过的游戏ID
-    processed_ids = set()
-    try:
-        # 确保文件存在，如果不存在则创建一个空文件
-        if not os.path.exists(PROCESSED_GAMES_FILE):
-            open(PROCESSED_GAMES_FILE, 'w').close()
-            
-        with open(PROCESSED_GAMES_FILE, 'r', encoding='utf-8') as f:
-            processed_ids = set(line.strip() for line in f if line.strip())
-        print(f"已加载 {len(processed_ids)} 个已处理的游戏记录。")
-    except Exception as e:
-        print(f"读取 {PROCESSED_GAMES_FILE} 文件时出错: {e}。将继续执行，但可能重复生成页面。")
-
-    # 确保 'game' 文件夹存在
-    os.makedirs(GAME_PAGE_DIR, exist_ok=True)
-
-    # 读取所有游戏数据
     if not os.path.exists(GAMES_ARCHIVE_FILE):
-        print(f"警告: 未找到 {GAMES_ARCHIVE_FILE} 文件。")
-        all_games = []
-    else:
-        with open(GAMES_ARCHIVE_FILE, 'r', encoding='utf-8') as f:
-            all_games = json.load(f)
+        print(f"ERROR: Archive file {GAMES_ARCHIVE_FILE} not found. Please run scraper.py first.")
+        return
 
-    new_pages_generated_count = 0
-    # 遍历所有游戏，寻找新游戏
+    with open(GAMES_ARCHIVE_FILE, 'r', encoding='utf-8') as f:
+        all_games = json.load(f)
+
+    os.makedirs(GAME_PAGE_DIR, exist_ok=True)
+    
+    print("Regenerating all game pages to apply latest optimizations...")
+    
     for game in all_games:
-        # 使用 'id' 作为唯一标识符，并确保是字符串类型
         game_id = str(game.get('id'))
         if not game_id:
-            print(f"警告: 游戏 '{game.get('title', '未知')}' 缺少 'id'，已跳过。")
+            print(f"WARNING: Game '{game.get('title', 'Unknown')}' is missing 'id', skipping.")
             continue
 
-        # 2. 检查游戏是否已经被处理过
-        if game_id in processed_ids:
-            continue # 如果已处理，则跳到下一个游戏
-
-        # 3. 如果是新游戏，则生成页面
-        print(f"-> 发现新游戏，正在为其生成页面: {game['title']} (ID: {game_id})")
+        print(f"-> Generating page for game: {game['title']} (ID: {game_id})")
         
         filepath = os.path.join(GAME_PAGE_DIR, game['page_filename'])
         page_html = generate_game_page_with_gemini(game, all_games)
@@ -321,45 +253,25 @@ def generate_pages():
         if page_html:
             with open(filepath, 'w', encoding='utf-8') as f:
                 f.write(page_html)
-            print(f"  -> 成功创建页面: {filepath}")
-
-            # 4. 将新生成的游戏ID记录到文件中
-            with open(PROCESSED_GAMES_FILE, 'a', encoding='utf-8') as f:
-                f.write(f"{game_id}\n")
-            print(f"  -> 已将游戏 '{game['title']}' 标记为已处理。")
-            new_pages_generated_count += 1
+            print(f"  -> Successfully created/updated page: {filepath}")
         else:
-            print(f"  -> 跳过页面生成，因为AI调用失败: {game['title']}")
+            print(f"  -> Page generation failed for: {game['title']}")
 
-        # 保留延时以避免过于频繁地调用API
-        time.sleep(2)
+        time.sleep(1)
 
-    if new_pages_generated_count == 0:
-        print("\n没有发现需要生成的新游戏页面。")
-    else:
-        print(f"\n总共为 {new_pages_generated_count} 个新游戏生成了页面。")
-
-    # 5. 无论如何都重新生成主页，以确保游戏列表是最新的
+    print("\nAll game pages have been regenerated.")
     generate_homepage(all_games)
 
-
-# page_generator.py
-
 def generate_homepage(games):
-    """根据所有游戏数据生成主页, 并将游戏数据直接嵌入到HTML中。"""
-    print("\n正在生成主页 index.html...")
-    # 对游戏进行反向排序，以便最新的游戏显示在最前面
-    games_for_homepage = sorted(games, key=lambda x: x.get('id'), reverse=True)
-
-    # 1. 将游戏数据安全地转换为JSON字符串
+    """Generates the homepage with a light, Apple-like theme."""
+    print("\nGenerating homepage index.html...")
+    games_for_homepage = sorted(games, key=lambda x: str(x.get('id', '')), reverse=True)
     games_json_string = json.dumps(games_for_homepage)
 
-    # 主页HTML模板
     homepage_html = f"""
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {'''
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q47TS07D8C"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -370,7 +282,6 @@ def generate_homepage(games):
     </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9886602787991072"
      crossorigin="anonymous"></script>
-    '''}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free Game Arcade - Play The Best Free Online Games</title>
@@ -388,49 +299,35 @@ def generate_homepage(games):
                         'apple-light-gray-text': '#6e6e73',
                     }}
                 }},
-                fontFamily: {{
+                 fontFamily: {{
                     sans: ['-apple-system', 'BlinkMacSystemFont', "Segoe UI", 'Roboto', "Helvetica Neue", 'Arial', "Noto Sans", 'sans-serif', "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
                 }}
             }}
         }}
     </script>
     <style>
-        html, body {{ height: 100%; }}
-        body {{ display: flex; flex-direction: column; }}
-        main {{ flex-grow: 1; }}
+        html, body {{ height: 100%; }} body {{ display: flex; flex-direction: column; }} main {{ flex-grow: 1; }}
+        .game-card-thumbnail {{ aspect-ratio: 300 / 200; background-color: #f0f0f0; }}
     </style>
 </head>
 <body class="bg-apple-bg text-apple-text antialiased">
     <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-                <a href="#" class="text-2xl font-bold text-apple-blue">FGA</a>
+                <a href="/" class="text-2xl font-bold text-apple-blue">FGA</a>
             </div>
         </div>
     </header>
     <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <section class="text-center py-12 md:py-20 bg-white rounded-xl shadow-lg">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-apple-text mb-6">
-                Free Game Arcade: <span class="text-apple-blue">Your Ultimate Hub</span> for Online Games
-            </h1>
-            <p class="text-lg text-apple-light-gray-text mb-8 max-w-2xl mx-auto">
-                Dive into a world of endless fun! Hundreds of free HTML5 games await, ready to play instantly on any device.
-            </p>
-            <a href="#all-games" class="bg-apple-blue text-white font-semibold px-8 py-3 rounded-lg text-lg hover:bg-opacity-90 transition duration-150 ease-in-out transform hover:scale-105">
-                Play Now
-            </a>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-apple-text mb-6">Free Game Arcade: <span class="text-apple-blue">Your Ultimate Hub</span> for Online Games</h1>
+            <p class="text-lg text-apple-light-gray-text mb-8 max-w-2xl mx-auto">Dive into a world of endless fun! Hundreds of free HTML5 games await, ready to play instantly on any device.</p>
+            <a href="#all-games" class="bg-apple-blue text-white font-semibold px-8 py-3 rounded-lg text-lg hover:bg-opacity-90 transition duration-150 ease-in-out transform hover:scale-105">Play Now</a>
         </section>
         <section id="all-games" class="py-12">
             <h2 class="text-3xl font-bold text-apple-text mb-8 text-center">All Games</h2>
             <div id="game-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                </div>
-        </section>
-        <section class="py-12 mt-8">
-            <div class="bg-white p-8 rounded-xl shadow-lg max-w-3xl mx-auto text-center">
-                <h2 class="text-3xl font-bold text-apple-text mb-4">Welcome to FreeGameArcade.space</h2>
-                <p class="text-apple-light-gray-text leading-relaxed">
-                    FreeGameArcade.space is your premier destination for an extensive collection of free online HTML5 games. Our mission is to provide instant access to a diverse range of games that you can enjoy on any device – PC, tablet, or mobile – without the need for downloads or installations. From action-packed adventures and brain-teasing puzzles to classic arcade hits and competitive sports games, we've got something for everyone. New games are added regularly, so there's always something new to discover. Start playing and have fun!
-                </p>
+                <!-- Game cards will be dynamically loaded here by JavaScript -->
             </div>
         </section>
     </main>
@@ -442,11 +339,9 @@ def generate_homepage(games):
     <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
-    
     <script>
         window.GAMES_DATA = {games_json_string};
     </script>
-
     <script src="homepage.js"></script>
 </body>
 </html>
@@ -454,7 +349,7 @@ def generate_homepage(games):
     homepage_filepath = 'index.html'
     with open(homepage_filepath, 'w', encoding='utf-8') as f:
         f.write(homepage_html)
-    print(f"主页 index.html 已成功生成/更新于: {homepage_filepath}")
+    print(f"Homepage index.html has been successfully generated/updated.")
 
 if __name__ == '__main__':
     generate_pages()
