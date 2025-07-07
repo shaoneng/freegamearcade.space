@@ -316,3 +316,11 @@ kickthedummy
 mobcity
 monopoly
 ultimateflyingcar2
+https://www.onlinegames.io/pool-challenge/
+https://www.onlinegames.io/fps-strike/
+https://www.onlinegames.io/squid-shooter/
+https://www.onlinegames.io/stabfish-io-2/
+poolchallenge
+fpsstrike
+squidshooter
+stabfishio2
