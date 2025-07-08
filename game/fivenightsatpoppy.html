@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-Q47TS07D8C"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q47TS07D8C"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
+
         gtag('config', 'G-Q47TS07D8C');
     </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9886602787991072"
-     crossorigin="anonymous">
-     </script>
+     crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play Five Nights at Poppy - Free Online Game | Free Game Arcade</title>
-    <meta name="description" content="Survive five terrifying nights as a security guard in an abandoned hospital with the animatronic Poppy. Monitor cameras, manage power, and avoid jump scares in this thrilling free online horror game. Can you last until 6 AM?">
+    <meta name="description" content="Dive into the chilling world of Five Nights at Poppy, a free browser game where you're a night shift security guard trapped in an abandoned mental hospital. Your mission? Survive five terrifying nights from 12 AM to 6 AM while the animatronic Poppy, angrier and smarter than ever, hunts you down. Monitor flickering cameras, manage your limited power, and react quickly to Poppy's movements. This creepy online horror game delivers intense jump scares and unsettling atmosphere. Can you outwit Poppy before she strikes? Play Five Nights at Poppy online for free and test your courage!">
     <link rel="canonical" href="https://shaoneng.github.io/freegamearcade.space/game/fivenightsatpoppy.html">
-    <script src="https://cdn.tailwindcss.com" defer></script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Five Nights at Poppy",
+  "url": "https://shaoneng.github.io/freegamearcade.space/game/fivenightsatpoppy.html",
+  "image": "https://www.onlinegames.io/media/posts/992/Five-Nights-at-Poppy.jpg",
+  "description": "Dive into the chilling world of Five Nights at Poppy, a free browser game where you're a night shift security guard trapped in an abandoned mental hospital. Your mission? Survive five terrifying nights from 12 AM to 6 AM while the animatronic Poppy, angrier and smarter than ever, hunts you down. Monitor flickering cameras, manage your limited power, and react quickly to Poppy's movements. This creepy online horror game delivers intense jump scares and unsettling atmosphere. Can you outwit Poppy before she strikes? Play Five Nights at Poppy online for free and test your courage!",
+  "gamePlatform": "PC",
+  "operatingSystem": "Any",
+  "applicationCategory": "Game",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}</script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'apple-bg': '#f5f5f7', 'apple-text': '#1d1d1f', 'apple-blue': '#007aff', 'apple-light-gray-text': '#6e6e73',
+                        'apple-bg': '#f5f5f7', 'apple-text': '#1d1d1f', 'apple-blue': '#007aff', 
+                        'apple-light-gray-text': '#6e6e73',
                     }
                 },
                 fontFamily: {
@@ -34,6 +50,7 @@
     </script>
     <style>
         html { height: 100%; } body { min-height: 100%; display: flex; flex-direction: column; } main { flex-grow: 1; } .aspect-16-9 { position: relative; width: 100%; padding-bottom: 56.25%; } .aspect-16-9 iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .game-card-thumbnail { aspect-ratio: 300 / 200; background-color: #f0f0f0; }
     </style>
 </head>
 <body class="bg-apple-bg text-apple-text antialiased">
@@ -54,58 +71,53 @@
         <nav class="mb-6" aria-label="Breadcrumb"><ol class="flex items-center space-x-2 text-sm"><li><a href="../index.html" class="text-apple-light-gray-text hover:text-apple-blue">Home</a></li><li><span class="text-gray-400">/</span></li><li class="font-medium text-apple-text" aria-current="page">Five Nights at Poppy</li></ol></nav>
         <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-apple-text mb-6 text-center">Five Nights at Poppy</h1>
         <section class="mb-10">
-            <div id="game-embed-container" class="aspect-16-9 bg-black rounded-lg shadow-2xl overflow-hidden mx-auto max-w-4xl"><iframe id="game-iframe" src="https://cloud.onlinegames.io/games/2025/unity2/five-nights-at-poppy/index-og.html" title="Five Nights at Poppy" class="border-0" allowfullscreen allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy"></iframe></div>
+            <div id="game-embed-container" class="aspect-16-9 bg-black rounded-lg shadow-2xl overflow-hidden mx-auto max-w-4xl"><iframe id="game-iframe" src="https://cloud.onlinegames.io/games/2025/unity2/five-nights-at-poppy/index-og.html" title="Five Nights at Poppy" class="border-0" allowfullscreen loading="lazy"></iframe></div>
             <div class="mt-5 text-center">
-                <button id="fullscreen-button" class="bg-apple-blue text-white font-semibold px-6 py-3 rounded-lg hover:bg-opacity-80 transition duration-150 ease-in-out text-sm sm:text-base">
-                    Enter Full Screen
-                </button>
+                <button id="fullscreen-button" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition duration-150 ease-in-out text-sm sm:text-base">Enter Full Screen</button>
             </div>
         </section>
-        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">About & How to Play Five Nights at Poppy</h2><div class="text-apple-light-gray-text space-y-4 leading-relaxed text-sm sm:text-base"><p>Step into the eerie silence of an abandoned mental hospital in Five Nights at Poppy. You are the new night shift security guard, and your job is simple: survive five nights, from 12:00 AM to 6:00 AM. But you are not alone. The animatronic Poppy, with her wide glowing eyes and a haunting smile, is lurking in the shadows, and she's not here to play.</p><p>This creepy online horror game puts your nerves to the test. From your security office, you must use a limited power supply to watch security cameras, turn on lights, and secure the doors. Each action consumes precious energy. If you run out, the darkness—and Poppy—will find you.</p><h3 class="text-xl font-bold text-apple-text mt-5 mb-2">Your Survival Guide:</h3><ul class="list-disc list-inside space-y-2"><li><strong>Monitor Cameras:</strong> Keep a constant watch on the hospital's rooms and hallways to track Poppy's movements. She gets faster and smarter each night.</li><li><strong>Manage Power:</strong> Conserve your electricity. Every light switch flipped and camera checked brings you closer to a blackout. Use your resources wisely.</li><li><strong>Stay Alert:</strong> Listen for footsteps, static on the screens, and other audio cues. One mistake can lead to a terrifying jump scare. Your goal is to make it to 6 AM.</li></ul><p class="mt-4 font-semibold text-red-600">Warning: This game contains intense horror themes, including sudden jump scares, flashing lights, and unsettling imagery. It is intended for mature audiences. Parental guidance is recommended.</p></div></section>
-    
-    <!-- You Might Also Like Section -->
+        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play Five Nights at Poppy</h2><div class="text-apple-light-gray-text space-y-3 leading-relaxed text-sm sm:text-base"><p>In Five Nights at Poppy, you take on the role of a night shift security guard at an abandoned mental hospital. Your primary objective is to survive five terrifying nights, each lasting from 12:00 AM to 6:00 AM, while the animatronic Poppy roams the facility.</p><p>You are stationed in a small security office, surrounded by monitors. Each screen displays different areas of the hospital, including patient rooms, hallways, and the morgue. Your main task is to keep a vigilant eye on Poppy's movements through these cameras.</p><p>Poppy's behavior changes as the nights progress; she starts slow but becomes faster, sneakier, and more aggressive. You'll need to manage your limited power supply wisely and ensure your cameras are functioning. If cameras break for too long or you waste power, Poppy will seize the opportunity to strike. React quickly to her appearances and keep track of her location at all times. One misstep can lead to a sudden and terrifying jumpscare!</p></div></section>
         
-    <!-- You Might Also Like Section -->
     <section class="mb-10">
         <h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-8 text-center">You Might Also Like</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="/game/juliebeautysalon.html">
-                <img src="https://www.onlinegames.io/media/posts/1011/Julie-Beauty-Salon.jpg" alt="Julie Beauty Salon" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E2E8F0/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/voxiom.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/673/Voxiom-io.jpg" alt="Voxiom" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Julie Beauty Salon">Julie Beauty Salon</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Play the ultimate glam-up makeover game online for free at OnlineGames.io!...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Voxiom">Voxiom</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Take your part in Voxiom io, a multiplayer first-person shooter game! Be the last man standing in th...</p>
                 </div>
             </a>
         </div>
         
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="/game/smashkarts.html">
-                <img src="https://www.onlinegames.io/media/posts/373/smash-karts-online.jpg" alt="Smash Karts" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E2E8F0/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/obbybiketrials.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/1038/obby-bike-trials-game.webp" alt="Obby Bike Trials" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Smash Karts">Smash Karts</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Smash Karts is a 3D multiplayer go-kart battle game where you drive on wacky maps and smash other ka...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Obby Bike Trials">Obby Bike Trials</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Jump, race, and ride across wild floating platforms in Obby Bike Trials! Customize your rider, unloc...</p>
                 </div>
             </a>
         </div>
         
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="/game/granny.html">
-                <img src="https://www.onlinegames.io/media/posts/884/granny.jpg" alt="Granny" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E2E8F0/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/ovo.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/398/OvO-Game.jpg" alt="OvO" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Granny">Granny</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Trapped in Granny's eerie house, you must outsmart her razor-sharp hearing and escape before it's to...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="OvO">OvO</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">You are faced with time! OvO Game is a strategic arcade game that requires stamina. It would help if...</p>
                 </div>
             </a>
         </div>
         
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="/game/fishsoccer.html">
-                <img src="https://www.onlinegames.io/media/posts/1030/fish-soccer.jpg" alt="Fish Soccer" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E2E8F0/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/obbyprisonescape.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/863/obby-prison-escape.jpg" alt="Obby Prison Escape" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Fish Soccer">Fish Soccer</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Play Fish Soccer on OnlineGames.io! Glide koi fish, drop snacks, and score in 60-second underwater f...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Obby Prison Escape">Obby Prison Escape</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Play Obby Prison Escape, a Roblox like parkour game that is free to play online!...</p>
                 </div>
             </a>
         </div>
@@ -114,65 +126,7 @@
     </section>
     
     </main>
-    
     <footer class="bg-gray-800 text-gray-300 py-12 mt-auto"><div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center"><p class="text-sm">&copy; <span id="currentYear"></span> FreeGameArcade.space. All rights reserved.</p></div></footer>
-    <script>
-    /**
-     * 网站功能脚本
-     * 包含了移动端菜单切换、页脚年份更新以及游戏全屏功能。
-    **/
-
-    // Wait for the HTML document to be fully loaded before running the script.
-    document.addEventListener('DOMContentLoaded', function() {
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        }
-
-        // Set current year in footer
-        const currentYearSpan = document.getElementById('currentYear');
-        if (currentYearSpan) {
-            currentYearSpan.textContent = new Date().getFullYear();
-        }
-
-        // Fullscreen functionality
-        const fullscreenButton = document.getElementById('fullscreen-button');
-        const gameIframe = document.getElementById('game-iframe'); // Target the iframe itself
-
-        if (fullscreenButton && gameIframe) {
-            fullscreenButton.addEventListener('click', () => {
-                if (!document.fullscreenElement) {
-                    // Try to make the iframe fullscreen
-                    if (gameIframe.requestFullscreen) {
-                        gameIframe.requestFullscreen().catch(err => console.error("Error attempting to enable full-screen mode:", err));
-                    } else if (gameIframe.mozRequestFullScreen) { /* Firefox */
-                        gameIframe.mozRequestFullScreen();
-                    } else if (gameIframe.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-                        gameIframe.webkitRequestFullscreen();
-                    } else if (gameIframe.msRequestFullscreen) { /* IE/Edge */
-                        gameIframe.msRequestFullscreen();
-                    }
-                } else {
-                    if (document.exitFullscreen) {
-                        document.exitFullscreen().catch(err => console.error("Error attempting to disable full-screen mode:", err));
-                    }
-                }
-            });
-
-            document.addEventListener('fullscreenchange', () => {
-                // Check if an element is in fullscreen
-                if (document.fullscreenElement) {
-                    fullscreenButton.textContent = 'Exit Full Screen';
-                } else {
-                    fullscreenButton.textContent = 'Enter Full Screen';
-                }
-            });
-        }
-    });
-    </script>
+    <script src="../scripts.js"></script>
 </body>
 </html>

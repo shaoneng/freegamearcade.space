@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-Q47TS07D8C"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q47TS07D8C"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
+
         gtag('config', 'G-Q47TS07D8C');
     </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9886602787991072"
-     crossorigin="anonymous">
-     </script>
+     crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play Sprunked - Free Online Game | Free Game Arcade</title>
-    <meta name="description" content="Play Sprunked for free! Mix and match costumes on quirky characters to create unique music loops. Discover funky beats, enter the spooky Horror Mode, and unleash your inner DJ. No download required, play now!">
+    <meta name="description" content="Dive into the vibrant world of Sprunked, a captivating music mixing free browser game! Also known as Sprunkin Sprunked 2.0, this remix puts you in the DJ chair, styling seven unique Polo Sprunks with flashier costumes and smoother music loops. Discover new beats by dragging and dropping outfits to alter sound loops – adding elements like Beats, Effects, Melodies, or Vocals. Explore seven extra characters and a thrilling horror mode for a spooky twist. Perfect for creative players and music enthusiasts, you can play online for free and unleash your inner DJ. Get ready to mix, explore, and get chilled!">
     <link rel="canonical" href="https://shaoneng.github.io/freegamearcade.space/game/sprunked.html">
-    <script src="https://cdn.tailwindcss.com" defer></script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Sprunked",
+  "url": "https://shaoneng.github.io/freegamearcade.space/game/sprunked.html",
+  "image": "https://www.onlinegames.io/media/posts/973/sprunked-online.jpg",
+  "description": "Dive into the vibrant world of Sprunked, a captivating music mixing free browser game! Also known as Sprunkin Sprunked 2.0, this remix puts you in the DJ chair, styling seven unique Polo Sprunks with flashier costumes and smoother music loops. Discover new beats by dragging and dropping outfits to alter sound loops \u2013 adding elements like Beats, Effects, Melodies, or Vocals. Explore seven extra characters and a thrilling horror mode for a spooky twist. Perfect for creative players and music enthusiasts, you can play online for free and unleash your inner DJ. Get ready to mix, explore, and get chilled!",
+  "gamePlatform": "PC",
+  "operatingSystem": "Any",
+  "applicationCategory": "Game",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}</script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'apple-bg': '#f5f5f7', 'apple-text': '#1d1d1f', 'apple-blue': '#007aff', 'apple-light-gray-text': '#6e6e73',
+                        'apple-bg': '#f5f5f7', 'apple-text': '#1d1d1f', 'apple-blue': '#007aff', 
+                        'apple-light-gray-text': '#6e6e73',
                     }
                 },
                 fontFamily: {
@@ -34,6 +50,7 @@
     </script>
     <style>
         html { height: 100%; } body { min-height: 100%; display: flex; flex-direction: column; } main { flex-grow: 1; } .aspect-16-9 { position: relative; width: 100%; padding-bottom: 56.25%; } .aspect-16-9 iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .game-card-thumbnail { aspect-ratio: 300 / 200; background-color: #f0f0f0; }
     </style>
 </head>
 <body class="bg-apple-bg text-apple-text antialiased">
@@ -54,68 +71,53 @@
         <nav class="mb-6" aria-label="Breadcrumb"><ol class="flex items-center space-x-2 text-sm"><li><a href="../index.html" class="text-apple-light-gray-text hover:text-apple-blue">Home</a></li><li><span class="text-gray-400">/</span></li><li class="font-medium text-apple-text" aria-current="page">Sprunked</li></ol></nav>
         <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-apple-text mb-6 text-center">Sprunked</h1>
         <section class="mb-10">
-            <div id="game-embed-container" class="aspect-16-9 bg-black rounded-lg shadow-2xl overflow-hidden mx-auto max-w-4xl"><iframe id="game-iframe" src="https://cloud.onlinegames.io/games/2024/more2/sprunked/index.html" title="Sprunked" class="border-0" allowfullscreen allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy"></iframe></div>
+            <div id="game-embed-container" class="aspect-16-9 bg-black rounded-lg shadow-2xl overflow-hidden mx-auto max-w-4xl"><iframe id="game-iframe" src="https://cloud.onlinegames.io/games/2024/more2/sprunked/index.html" title="Sprunked" class="border-0" allowfullscreen loading="lazy"></iframe></div>
             <div class="mt-5 text-center">
-                <button id="fullscreen-button" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition duration-150 ease-in-out text-sm sm:text-base">
-                    Enter Full Screen
-                </button>
+                <button id="fullscreen-button" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition duration-150 ease-in-out text-sm sm:text-base">Enter Full Screen</button>
             </div>
         </section>
-        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play Sprunked</h2><div class="text-apple-light-gray-text space-y-3 leading-relaxed text-sm sm:text-base">
-            <p>Welcome to Sprunked, the ultimate music remix game where you become the DJ! Your goal is to create unique and funky musical tracks by styling a crew of seven quirky characters called Sprunks. Each costume you add changes their sound, letting you build complex and groovy beats from scratch.</p>
-            <p><strong>Controls:</strong></p>
-            <ul class="list-disc list-inside space-y-1">
-                <li><strong>Add Costumes:</strong> Use your mouse or trackpad to drag an outfit or accessory from the bottom menu onto one of the seven polo Sprunks.</li>
-                <li><strong>Remove Costumes:</strong> Simply click on a dressed-up Sprunk to remove its costume and silence its sound.</li>
-            </ul>
-            <p>Each of the seven polo Sprunks represents a different sound set. The costumes are divided into categories that alter the music: Beats, Effects, Melodies, and Vocals. Mix and match to find your perfect combo! On top of that, there are seven bonus costumes, like Draker and Woboloy Bop, that add their own special flair to the mix.</p>
-            <p><strong>Horror Mode:</strong> Feeling brave? Click the black button in the bottom right corner to activate Horror Mode. This transforms the game with a spooky atmosphere, haunting visuals, and eerie sounds. It's a thrilling twist for those who love a good chill, but be warned—it can be a bit scary!</p>
-            <p>Dive in, start dragging those outfits, and see what kind of musical masterpiece (or spooky symphony) you can create!</p>
-        </div></section>
-    
-    <!-- You Might Also Like Section -->
+        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play Sprunked</h2><div class="text-apple-light-gray-text space-y-3 leading-relaxed text-sm sm:text-base"><p>Sprunked invites you to become a DJ and create unique musical compositions.</p><p>To play, use your mouse or trackpad to drag outfits and accessories, then drop them onto your chosen Sprunk character. Each of the seven main Sprunks is tied to a specific sound set, and applying different costumes will alter their unique music loop, adding elements like Beats, Effects, Melodies, or Vocals. To remove a costume, simply click on the Sprunk.</p><p>You'll also find seven bonus costumes that offer special sounds. For an extra thrill, locate the black button on the bottom right corner of your screen. Clicking this will activate Horror Mode, transforming the game's atmosphere, visuals, and sounds into a spooky experience. Enjoy mixing and discovering new sounds!</p></div></section>
         
-    <!-- You Might Also Like Section -->
     <section class="mb-10">
         <h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-8 text-center">You Might Also Like</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="/game/gtcarscityracing.html">
-                <img src="https://www.onlinegames.io/media/posts/1019/gt-cars-city-racing.jpg" alt="GT Cars City Racing" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E2E8F0/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/unpacking.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/481/Unpacking.jpg" alt="Unpacking" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="GT Cars City Racing">GT Cars City Racing</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Buckle up, customize your ride, and play GT Cars City Racing for free now on OnlineGames.io!...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Unpacking">Unpacking</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Hey there, neat freaks! We are offering you a great mess to tidy up!Â Unpacking is a free online hom...</p>
                 </div>
             </a>
         </div>
         
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="/game/solitaire.html">
-                <img src="https://www.onlinegames.io/media/posts/1007/solitaire.jpg" alt="Solitaire" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E2E8F0/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/ultimateflyingcar.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/667/Ultiate-Flying-Car.jpg" alt="Ultimate Flying Car" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Solitaire">Solitaire</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Play free Solitaire online at OnlineGames.io. Enjoy classic Klondike gameplay, test your fortune, an...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Ultimate Flying Car">Ultimate Flying Car</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Can you imagine a car can fly? Yes, it can! Ultimate Flying Car, a driving game, calls you to take y...</p>
                 </div>
             </a>
         </div>
         
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="/game/lovetester.html">
-                <img src="https://www.onlinegames.io/media/posts/152/love-tester.jpg" alt="Love Tester" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E2E8F0/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/fastfoodrush.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/979/fast-food-rush.jpg" alt="Fast Food Rush" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Love Tester">Love Tester</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Do you want to know how much your crush falls for you? Here is a way to test the love…...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Fast Food Rush">Fast Food Rush</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Play Fast Food Rush online and run your own restaurant . Start with selling burgers, unlock coffee a...</p>
                 </div>
             </a>
         </div>
         
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="/game/apocalypsetruck.html">
-                <img src="https://www.onlinegames.io/media/posts/1015/apocalypse-truck.jpg" alt="Apocalypse Truck" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E2E8F0/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/stabfishio2.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/869/stabfish.jpg" alt="StabFish io 2" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Apocalypse Truck">Apocalypse Truck</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Play Apocalypse Truck for free now on OnlineGames.io Smash the undead, flip for extra rewards, and s...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="StabFish io 2">StabFish io 2</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Dive into underwater action in StabFish.io 2! Play now!...</p>
                 </div>
             </a>
         </div>
@@ -124,65 +126,7 @@
     </section>
     
     </main>
-    
     <footer class="bg-gray-800 text-gray-300 py-12 mt-auto"><div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center"><p class="text-sm">&copy; <span id="currentYear"></span> FreeGameArcade.space. All rights reserved.</p></div></footer>
-    <script>
-    /**
-     * 网站功能脚本
-     * 包含了移动端菜单切换、页脚年份更新以及游戏全屏功能。
-    **/
-
-    // Wait for the HTML document to be fully loaded before running the script.
-    document.addEventListener('DOMContentLoaded', function() {
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        }
-
-        // Set current year in footer
-        const currentYearSpan = document.getElementById('currentYear');
-        if (currentYearSpan) {
-            currentYearSpan.textContent = new Date().getFullYear();
-        }
-
-        // Fullscreen functionality
-        const fullscreenButton = document.getElementById('fullscreen-button');
-        const gameIframe = document.getElementById('game-iframe'); // Target the iframe itself
-
-        if (fullscreenButton && gameIframe) {
-            fullscreenButton.addEventListener('click', () => {
-                if (!document.fullscreenElement) {
-                    // Try to make the iframe fullscreen
-                    if (gameIframe.requestFullscreen) {
-                        gameIframe.requestFullscreen().catch(err => console.error("Error attempting to enable full-screen mode:", err));
-                    } else if (gameIframe.mozRequestFullScreen) { /* Firefox */
-                        gameIframe.mozRequestFullScreen();
-                    } else if (gameIframe.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-                        gameIframe.webkitRequestFullscreen();
-                    } else if (gameIframe.msRequestFullscreen) { /* IE/Edge */
-                        gameIframe.msRequestFullscreen();
-                    }
-                } else {
-                    if (document.exitFullscreen) {
-                        document.exitFullscreen().catch(err => console.error("Error attempting to disable full-screen mode:", err));
-                    }
-                }
-            });
-
-            document.addEventListener('fullscreenchange', () => {
-                // Check if an element is in fullscreen
-                if (document.fullscreenElement) {
-                    fullscreenButton.textContent = 'Exit Full Screen';
-                } else {
-                    fullscreenButton.textContent = 'Enter Full Screen';
-                }
-            });
-        }
-    });
-    </script>
+    <script src="../scripts.js"></script>
 </body>
 </html>

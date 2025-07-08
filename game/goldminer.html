@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-Q47TS07D8C"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q47TS07D8C"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
+
         gtag('config', 'G-Q47TS07D8C');
     </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9886602787991072"
-     crossorigin="anonymous">
-     </script>
+     crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play Gold Miner - Free Online Game | Free Game Arcade</title>
-    <meta name="description" content="Play the classic Gold Miner game for free online! Drop your claw to haul up gold, diamonds, and other treasures to meet your goal before the timer runs out. No downloads, just pure nostalgic fun.">
+    <meta name="description" content="Dive into Gold Miner, the classic browser game where you use a claw to mine for gold, diamonds, and valuable treasures. Time your drops, avoid worthless rocks, and meet your money goal before the clock runs out. This legendary Flash game, now revived for modern browsers, offers addictive gameplay and strategic shop buys between levels. Play Gold Miner online for free and experience hours of nostalgic fun as you dig for riches in this engaging free browser game.">
     <link rel="canonical" href="https://shaoneng.github.io/freegamearcade.space/game/goldminer.html">
-    <script src="https://cdn.tailwindcss.com" defer></script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Gold Miner",
+  "url": "https://shaoneng.github.io/freegamearcade.space/game/goldminer.html",
+  "image": "https://www.onlinegames.io/media/posts/1027/gold-miner.jpg",
+  "description": "Dive into Gold Miner, the classic browser game where you use a claw to mine for gold, diamonds, and valuable treasures. Time your drops, avoid worthless rocks, and meet your money goal before the clock runs out. This legendary Flash game, now revived for modern browsers, offers addictive gameplay and strategic shop buys between levels. Play Gold Miner online for free and experience hours of nostalgic fun as you dig for riches in this engaging free browser game.",
+  "gamePlatform": "PC",
+  "operatingSystem": "Any",
+  "applicationCategory": "Game",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}</script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'apple-bg': '#f5f5f7', 'apple-text': '#1d1d1f', 'apple-blue': '#007aff', 'apple-light-gray-text': '#6e6e73',
+                        'apple-bg': '#f5f5f7', 'apple-text': '#1d1d1f', 'apple-blue': '#007aff', 
+                        'apple-light-gray-text': '#6e6e73',
                     }
                 },
                 fontFamily: {
@@ -34,6 +50,7 @@
     </script>
     <style>
         html { height: 100%; } body { min-height: 100%; display: flex; flex-direction: column; } main { flex-grow: 1; } .aspect-16-9 { position: relative; width: 100%; padding-bottom: 56.25%; } .aspect-16-9 iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .game-card-thumbnail { aspect-ratio: 300 / 200; background-color: #f0f0f0; }
     </style>
 </head>
 <body class="bg-apple-bg text-apple-text antialiased">
@@ -54,58 +71,53 @@
         <nav class="mb-6" aria-label="Breadcrumb"><ol class="flex items-center space-x-2 text-sm"><li><a href="../index.html" class="text-apple-light-gray-text hover:text-apple-blue">Home</a></li><li><span class="text-gray-400">/</span></li><li class="font-medium text-apple-text" aria-current="page">Gold Miner</li></ol></nav>
         <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-apple-text mb-6 text-center">Gold Miner</h1>
         <section class="mb-10">
-            <div id="game-embed-container" class="aspect-16-9 bg-black rounded-lg shadow-2xl overflow-hidden mx-auto max-w-4xl"><iframe id="game-iframe" src="https://cloud.onlinegames.io/games/2024/flash/gold-miner/index.html" title="Gold Miner" class="border-0" allowfullscreen allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy"></iframe></div>
+            <div id="game-embed-container" class="aspect-16-9 bg-black rounded-lg shadow-2xl overflow-hidden mx-auto max-w-4xl"><iframe id="game-iframe" src="https://cloud.onlinegames.io/games/2024/flash/gold-miner/index.html" title="Gold Miner" class="border-0" allowfullscreen loading="lazy"></iframe></div>
             <div class="mt-5 text-center">
-                <button id="fullscreen-button" class="bg-apple-blue text-white font-semibold px-6 py-3 rounded-lg hover:bg-opacity-80 transition duration-150 ease-in-out text-sm sm:text-base">
-                    Enter Full Screen
-                </button>
+                <button id="fullscreen-button" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition duration-150 ease-in-out text-sm sm:text-base">Enter Full Screen</button>
             </div>
         </section>
-        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play Gold Miner</h2><div class="text-apple-light-gray-text space-y-3 leading-relaxed text-sm sm:text-base"><p>Gold Miner is a legendary flash game where you drop your claw, grab gold, and haul it up before time runs out. Each level presents you with a specific money goal, and it's your job to collect valuable treasures like gold nuggets and shiny diamonds while avoiding worthless rocks.</p><p>The claw swings back and forth automatically. Your task is to time your drop perfectly to grab the items below. Be mindful that larger items, like massive gold chunks, are more valuable but take significantly longer to reel in. Small gold is quicker but less valuable, so you'll need to make strategic decisions to beat the clock.</p><p>If you accidentally hook a rock, you can use dynamite to blow it up by pressing the up arrow key. However, dynamite is a limited resource. Between levels, you can visit the in-game shop to spend your earnings on helpful items like more dynamite, strength potions, or lucky clovers to improve your chances in the next round.</p><p>Originally a hit Flash game from 2003, Gold Miner has been revived for modern browsers, allowing a new generation to experience one of the most beloved online arcade titles of all time.</p></div></section>
-    
-    <!-- You Might Also Like Section -->
+        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play Gold Miner</h2><div class="text-apple-light-gray-text space-y-3 leading-relaxed text-sm sm:text-base"><p>In Gold Miner, your primary objective is to collect a target amount of money by mining gold, diamonds, and other treasures before the time runs out in each level.</p><p>The claw at the top of the screen swings back and forth. Press the down arrow key (or click the screen) to drop your claw. Timing is crucial – aim carefully to grab valuable items like large gold nuggets, diamonds, or mystery bags. Larger items take longer to reel in, while smaller gold pieces are quicker but less valuable.</p><p>Be careful not to hook onto worthless rocks, as they take up valuable time to pull up. If you accidentally grab a rock, you can use a stick of dynamite (by pressing the up arrow key) to blow it up and release your claw. Remember, dynamite is limited and costs money to restock.</p><p>Between levels, you'll visit an in-game shop. Here, you can spend the money you've earned on power-ups and helpful items like stronger ropes, increased dynamite, or lucky clovers, which can make the next level easier. Plan your purchases wisely to maximize your mining efficiency and become the ultimate gold miner!</p></div></section>
         
-    <!-- You Might Also Like Section -->
     <section class="mb-10">
         <h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-8 text-center">You Might Also Like</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="/game/trafficjam3d.html">
-                <img src="https://www.onlinegames.io/media/posts/784/Traffic-Jam.jpg" alt="Traffic Jam 3D" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E2E8F0/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/gulperio.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/660/Gulper-io.jpg" alt="Gulper io" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Traffic Jam 3D">Traffic Jam 3D</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Steer your car on the highway at full speed without crashing any other vehicle in Traffic Jam 3D, a ...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Gulper io">Gulper io</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">As a gulper, you will participate in snake wars in the multiplayer snake game Gulper io. Take all th...</p>
                 </div>
             </a>
         </div>
         
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="/game/asmallworldcup.html">
-                <img src="https://www.onlinegames.io/media/posts/909/a-small-world-cp.jpg" alt="A Small World Cup" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E2E8F0/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/crazyshooters.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/81/Crazy-Shooters-Online.jpg" alt="Crazy Shooters" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="A Small World Cup">A Small World Cup</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Play A Small World Cup on OnlineGames.io! Control ragdoll footballers in funny 1v1 soccer matches. S...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Crazy Shooters">Crazy Shooters</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Let's play one of the most captivating shooting game, Crazy Shooters. First you need to adapt in any...</p>
                 </div>
             </a>
         </div>
         
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="/game/swordplayninjaslicerunner.html">
-                <img src="https://www.onlinegames.io/media/posts/1016/sword-play.jpg" alt="Sword Play Ninja Slice Runner" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E2E8F0/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/stabfishio2.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/869/stabfish.jpg" alt="StabFish io 2" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Sword Play Ninja Slice Runner">Sword Play Ninja Slice Runner</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Play Sword Play! Ninja Slice Runner online! Slice enemies, dodge traps, and unlock epic swords and t...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="StabFish io 2">StabFish io 2</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Dive into underwater action in StabFish.io 2! Play now!...</p>
                 </div>
             </a>
         </div>
         
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="/game/soldierlegend.html">
-                <img src="https://www.onlinegames.io/media/posts/1033/soldier-legend.jpg" alt="Soldier Legend" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E2E8F0/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/crazymotorcycle.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/1013/Crazy-Motorcycle.jpg" alt="Crazy Motorcycle" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Soldier Legend">Soldier Legend</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Defend Earth in Soldier Legend, a free online rogue-lite shooting game! Survive enemy waves, unlock ...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Crazy Motorcycle">Crazy Motorcycle</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Play Crazy Motorcycle for free on OnlineGames.io and see how far your noob biker can go before gravi...</p>
                 </div>
             </a>
         </div>
@@ -114,65 +126,7 @@
     </section>
     
     </main>
-    
     <footer class="bg-gray-800 text-gray-300 py-12 mt-auto"><div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center"><p class="text-sm">&copy; <span id="currentYear"></span> FreeGameArcade.space. All rights reserved.</p></div></footer>
-    <script>
-    /**
-     * 网站功能脚本
-     * 包含了移动端菜单切换、页脚年份更新以及游戏全屏功能。
-    **/
-
-    // Wait for the HTML document to be fully loaded before running the script.
-    document.addEventListener('DOMContentLoaded', function() {
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        }
-
-        // Set current year in footer
-        const currentYearSpan = document.getElementById('currentYear');
-        if (currentYearSpan) {
-            currentYearSpan.textContent = new Date().getFullYear();
-        }
-
-        // Fullscreen functionality
-        const fullscreenButton = document.getElementById('fullscreen-button');
-        const gameIframe = document.getElementById('game-iframe'); // Target the iframe itself
-
-        if (fullscreenButton && gameIframe) {
-            fullscreenButton.addEventListener('click', () => {
-                if (!document.fullscreenElement) {
-                    // Try to make the iframe fullscreen
-                    if (gameIframe.requestFullscreen) {
-                        gameIframe.requestFullscreen().catch(err => console.error("Error attempting to enable full-screen mode:", err));
-                    } else if (gameIframe.mozRequestFullScreen) { /* Firefox */
-                        gameIframe.mozRequestFullScreen();
-                    } else if (gameIframe.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-                        gameIframe.webkitRequestFullscreen();
-                    } else if (gameIframe.msRequestFullscreen) { /* IE/Edge */
-                        gameIframe.msRequestFullscreen();
-                    }
-                } else {
-                    if (document.exitFullscreen) {
-                        document.exitFullscreen().catch(err => console.error("Error attempting to disable full-screen mode:", err));
-                    }
-                }
-            });
-
-            document.addEventListener('fullscreenchange', () => {
-                // Check if an element is in fullscreen
-                if (document.fullscreenElement) {
-                    fullscreenButton.textContent = 'Exit Full Screen';
-                } else {
-                    fullscreenButton.textContent = 'Enter Full Screen';
-                }
-            });
-        }
-    });
-    </script>
+    <script src="../scripts.js"></script>
 </body>
 </html>

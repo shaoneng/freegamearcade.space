@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-Q47TS07D8C"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q47TS07D8C"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
+
         gtag('config', 'G-Q47TS07D8C');
     </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9886602787991072"
-     crossorigin="anonymous">
-     </script>
+     crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play Mega Soccer - Free Online Game | Free Game Arcade</title>
-    <meta name="description" content="Play Mega Soccer for free! Control a 3-player squad in fast-paced matches. Customize your team, stadium, and ball, and unleash special moves like bicycle kicks. Play instantly in your browser, no download needed.">
+    <meta name="description" content="Dive into the fast-paced world of Mega Soccer, a thrilling small-squad online soccer game where strategy meets skill! Control a team of three – a keeper, defender, and striker – on compact pitches, aiming to outscore your opponent before the clock runs out. Customize your team with unique players boasting different speed, power, and technique ratings, unlocking special moves like rainbow flicks and bicycle kicks. Personalize your game further by changing stadiums, weather, kit colors, and even the match ball. Collect gems to upgrade player stats and unlock rare character tiers. Mega Soccer is a free browser game, easy to pick up and play online for free, offering quick, action-packed matches perfect for any football fan.">
     <link rel="canonical" href="https://shaoneng.github.io/freegamearcade.space/game/megasoccer.html">
-    <script src="https://cdn.tailwindcss.com" defer></script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Mega Soccer",
+  "url": "https://shaoneng.github.io/freegamearcade.space/game/megasoccer.html",
+  "image": "https://www.onlinegames.io/media/posts/1036/mega-soccer-game.webp",
+  "description": "Dive into the fast-paced world of Mega Soccer, a thrilling small-squad online soccer game where strategy meets skill! Control a team of three \u2013 a keeper, defender, and striker \u2013 on compact pitches, aiming to outscore your opponent before the clock runs out. Customize your team with unique players boasting different speed, power, and technique ratings, unlocking special moves like rainbow flicks and bicycle kicks. Personalize your game further by changing stadiums, weather, kit colors, and even the match ball. Collect gems to upgrade player stats and unlock rare character tiers. Mega Soccer is a free browser game, easy to pick up and play online for free, offering quick, action-packed matches perfect for any football fan.",
+  "gamePlatform": "PC",
+  "operatingSystem": "Any",
+  "applicationCategory": "Game",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}</script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'apple-bg': '#f5f5f7', 'apple-text': '#1d1d1f', 'apple-blue': '#007aff', 'apple-light-gray-text': '#6e6e73',
+                        'apple-bg': '#f5f5f7', 'apple-text': '#1d1d1f', 'apple-blue': '#007aff', 
+                        'apple-light-gray-text': '#6e6e73',
                     }
                 },
                 fontFamily: {
@@ -34,6 +50,7 @@
     </script>
     <style>
         html { height: 100%; } body { min-height: 100%; display: flex; flex-direction: column; } main { flex-grow: 1; } .aspect-16-9 { position: relative; width: 100%; padding-bottom: 56.25%; } .aspect-16-9 iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .game-card-thumbnail { aspect-ratio: 300 / 200; background-color: #f0f0f0; }
     </style>
 </head>
 <body class="bg-apple-bg text-apple-text antialiased">
@@ -54,58 +71,53 @@
         <nav class="mb-6" aria-label="Breadcrumb"><ol class="flex items-center space-x-2 text-sm"><li><a href="../index.html" class="text-apple-light-gray-text hover:text-apple-blue">Home</a></li><li><span class="text-gray-400">/</span></li><li class="font-medium text-apple-text" aria-current="page">Mega Soccer</li></ol></nav>
         <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-apple-text mb-6 text-center">Mega Soccer</h1>
         <section class="mb-10">
-            <div id="game-embed-container" class="aspect-16-9 bg-black rounded-lg shadow-2xl overflow-hidden mx-auto max-w-4xl"><iframe id="game-iframe" src="https://cloud.onlinegames.io/games/2024/unity2/mega-soccer/index-og.html" title="Mega Soccer" class="border-0" allowfullscreen allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy"></iframe></div>
+            <div id="game-embed-container" class="aspect-16-9 bg-black rounded-lg shadow-2xl overflow-hidden mx-auto max-w-4xl"><iframe id="game-iframe" src="https://cloud.onlinegames.io/games/2024/unity2/mega-soccer/index-og.html" title="Mega Soccer" class="border-0" allowfullscreen loading="lazy"></iframe></div>
             <div class="mt-5 text-center">
-                <button id="fullscreen-button" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition duration-150 ease-in-out text-sm sm:text-base">
-                    Enter Full Screen
-                </button>
+                <button id="fullscreen-button" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition duration-150 ease-in-out text-sm sm:text-base">Enter Full Screen</button>
             </div>
         </section>
-        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play Mega Soccer</h2><div class="text-apple-light-gray-text space-y-3 leading-relaxed text-sm sm:text-base"><p>Welcome to the pitch in Mega Soccer, a fast-paced, small-squad soccer game! Your goal is simple: outscore your opponent before the 60-second timer runs out. You'll control a team of three players—a goalkeeper, a defender, and a striker—each with unique stats for speed, power, and technique.</p><p>Sprint to gain possession of the ball, skillfully weave past defenders, and aim your shot to get it past the keeper. Each goal you score earns you valuable coins. Winning consecutive matches fills up your XP bar, unlocking even more rewards.</p><p>Use the gems and coins you earn to upgrade your squad. In the "Players / Kits" menu, you can boost player stats or unlock rarer player cards. Special kits grant your players awesome moves like rainbow flicks and powerful bicycle kicks, giving you an edge on the field.</p><p>Before you kick off, personalize your match experience. Head to the "Stadiums / Balls / Weather" menu to change the look and feel of the game, from the pitch to the match ball and even the weather conditions.</p></div></section>
-    
-    <!-- You Might Also Like Section -->
+        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play Mega Soccer</h2><div class="text-apple-light-gray-text space-y-3 leading-relaxed text-sm sm:text-base"><p>Mega Soccer is a fast-paced 3v3 online soccer game where your objective is to outscore your opponent on compact pitches before the 60-second timer runs out. Engage in lively matches, winning possession, weaving around markers, and expertly steering your shots past diving keepers.</p><p>You'll control a squad of three players: a keeper, a utility midfielder/defender, and a striker. Each player has unique Speed, Power, and Technique ratings, which you can enhance. Visit the Players/Kits menu to spend pink gems, earned from completing achievements and end-match rewards, to bump up stats or unlock rarer card tiers. Discover special moves like flashy rainbow flicks or blistering power shots with outstanding and legendary kits.</p><p>Before kick-off, customize your game experience! Dive into the Stadiums, Balls, and Weather menus to change the environment, match ball, and even your team's kit colors. Every goal nets you coins, and consecutive wins contribute to your XP bar, leading to even more goodies as you progress.</p></div></section>
         
-    <!-- You Might Also Like Section -->
     <section class="mb-10">
         <h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-8 text-center">You Might Also Like</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="/game/apocalypsetruck.html">
-                <img src="https://www.onlinegames.io/media/posts/1015/apocalypse-truck.jpg" alt="Apocalypse Truck" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E2E8F0/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/solitaire.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/1007/solitaire.jpg" alt="Solitaire" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Apocalypse Truck">Apocalypse Truck</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Play Apocalypse Truck for free now on OnlineGames.io Smash the undead, flip for extra rewards, and s...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Solitaire">Solitaire</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Play free Solitaire online at OnlineGames.io. Enjoy classic Klondike gameplay, test your fortune, an...</p>
                 </div>
             </a>
         </div>
         
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="/game/bloxdio.html">
-                <img src="https://www.onlinegames.io/media/posts/722/Bloxd-io-Play.jpg" alt="Bloxd io" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E2E8F0/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/slowroads.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/725/Slow-Roads-io-Play.jpg" alt="Slow Roads" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Bloxd io">Bloxd io</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Welcome to Bloxd io, an ultimate online Minecraft game with diverse modes. Whether you're interested...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Slow Roads">Slow Roads</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Slow Roads is a chill driving game where you take a break from reality and ride endlessly from hills...</p>
                 </div>
             </a>
         </div>
         
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="/game/drifthunterspro.html">
-                <img src="https://www.onlinegames.io/media/posts/397/Drift-Hunters-Pro.jpg" alt="Drift Hunters Pro" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E2E8F0/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/squidshooter.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/968/squid-Shooter-online.jpg" alt="Squid Shooter" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Drift Hunters Pro">Drift Hunters Pro</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Can you hear the engine moaning? Drift Hunters Pro is a thrilling 3D game with high-quality graphics...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Squid Shooter">Squid Shooter</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Play Squid Shooter, a free online game inspired by Squid Game! Fight green-suited players, pink guar...</p>
                 </div>
             </a>
         </div>
         
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="/game/thiefpuzzle.html">
-                <img src="https://www.onlinegames.io/media/posts/1009/Thief-Puzzle.jpg" alt="Thief Puzzle" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E2E8F0/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/drifthunters.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/637/Drift-Hunters-Game.jpg" alt="Drift Hunters" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Thief Puzzle">Thief Puzzle</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Start playing Thief Puzzle today and see if your stretchy hand can get you out of trouble or into it...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Drift Hunters">Drift Hunters</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Drift Hunters, a thrilling drift game, offers you a variety of sports cars and race tracks to burn y...</p>
                 </div>
             </a>
         </div>
@@ -114,65 +126,7 @@
     </section>
     
     </main>
-    
     <footer class="bg-gray-800 text-gray-300 py-12 mt-auto"><div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center"><p class="text-sm">&copy; <span id="currentYear"></span> FreeGameArcade.space. All rights reserved.</p></div></footer>
-    <script>
-    /**
-     * 网站功能脚本
-     * 包含了移动端菜单切换、页脚年份更新以及游戏全屏功能。
-    **/
-
-    // Wait for the HTML document to be fully loaded before running the script.
-    document.addEventListener('DOMContentLoaded', function() {
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        }
-
-        // Set current year in footer
-        const currentYearSpan = document.getElementById('currentYear');
-        if (currentYearSpan) {
-            currentYearSpan.textContent = new Date().getFullYear();
-        }
-
-        // Fullscreen functionality
-        const fullscreenButton = document.getElementById('fullscreen-button');
-        const gameIframe = document.getElementById('game-iframe'); // Target the iframe itself
-
-        if (fullscreenButton && gameIframe) {
-            fullscreenButton.addEventListener('click', () => {
-                if (!document.fullscreenElement) {
-                    // Try to make the iframe fullscreen
-                    if (gameIframe.requestFullscreen) {
-                        gameIframe.requestFullscreen().catch(err => console.error("Error attempting to enable full-screen mode:", err));
-                    } else if (gameIframe.mozRequestFullScreen) { /* Firefox */
-                        gameIframe.mozRequestFullScreen();
-                    } else if (gameIframe.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-                        gameIframe.webkitRequestFullscreen();
-                    } else if (gameIframe.msRequestFullscreen) { /* IE/Edge */
-                        gameIframe.msRequestFullscreen();
-                    }
-                } else {
-                    if (document.exitFullscreen) {
-                        document.exitFullscreen().catch(err => console.error("Error attempting to disable full-screen mode:", err));
-                    }
-                }
-            });
-
-            document.addEventListener('fullscreenchange', () => {
-                // Check if an element is in fullscreen
-                if (document.fullscreenElement) {
-                    fullscreenButton.textContent = 'Exit Full Screen';
-                } else {
-                    fullscreenButton.textContent = 'Enter Full Screen';
-                }
-            });
-        }
-    });
-    </script>
+    <script src="../scripts.js"></script>
 </body>
 </html>

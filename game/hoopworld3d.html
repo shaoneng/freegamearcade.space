@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-Q47TS07D8C"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q47TS07D8C"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
+
         gtag('config', 'G-Q47TS07D8C');
     </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9886602787991072"
-     crossorigin="anonymous">
-     </script>
+     crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play Hoop World 3D - Free Online Game | Free Game Arcade</title>
-    <meta name="description" content="Flip, jump, and dunk through wild 3D levels in Hoop World 3D! Master wacky physics, fly through portals, and land epic slam dunks. Play for free directly in your browser, no download needed.">
+    <meta name="description" content="Get ready to flip, jump, and dunk your way to victory in Hoop World 3D, a thrilling 3D basketball game! Experience high-flying action with trampolines, wormholes, and wacky physics as you aim for the perfect slam dunk. Master your timing to perform incredible flips, earning more coins with each successful trick. Unlock cool characters like Hulk or Spiderman and navigate challenging levels, bouncing across platforms and soaring through portals. This addictive free browser game offers engaging gameplay and vibrant graphics. Play Hoop World 3D online for free and become the ultimate dunking champion!">
     <link rel="canonical" href="https://shaoneng.github.io/freegamearcade.space/game/hoopworld3d.html">
-    <script src="https://cdn.tailwindcss.com" defer></script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Hoop World 3D",
+  "url": "https://shaoneng.github.io/freegamearcade.space/game/hoopworld3d.html",
+  "image": "https://www.onlinegames.io/media/posts/976/Hoop-World.jpg",
+  "description": "Get ready to flip, jump, and dunk your way to victory in Hoop World 3D, a thrilling 3D basketball game! Experience high-flying action with trampolines, wormholes, and wacky physics as you aim for the perfect slam dunk. Master your timing to perform incredible flips, earning more coins with each successful trick. Unlock cool characters like Hulk or Spiderman and navigate challenging levels, bouncing across platforms and soaring through portals. This addictive free browser game offers engaging gameplay and vibrant graphics. Play Hoop World 3D online for free and become the ultimate dunking champion!",
+  "gamePlatform": "PC",
+  "operatingSystem": "Any",
+  "applicationCategory": "Game",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}</script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'apple-bg': '#f5f5f7', 'apple-text': '#1d1d1f', 'apple-blue': '#007aff', 'apple-light-gray-text': '#6e6e73',
+                        'apple-bg': '#f5f5f7', 'apple-text': '#1d1d1f', 'apple-blue': '#007aff', 
+                        'apple-light-gray-text': '#6e6e73',
                     }
                 },
                 fontFamily: {
@@ -34,6 +50,7 @@
     </script>
     <style>
         html { height: 100%; } body { min-height: 100%; display: flex; flex-direction: column; } main { flex-grow: 1; } .aspect-16-9 { position: relative; width: 100%; padding-bottom: 56.25%; } .aspect-16-9 iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .game-card-thumbnail { aspect-ratio: 300 / 200; background-color: #f0f0f0; }
     </style>
 </head>
 <body class="bg-apple-bg text-apple-text antialiased">
@@ -54,58 +71,53 @@
         <nav class="mb-6" aria-label="Breadcrumb"><ol class="flex items-center space-x-2 text-sm"><li><a href="../index.html" class="text-apple-light-gray-text hover:text-apple-blue">Home</a></li><li><span class="text-gray-400">/</span></li><li class="font-medium text-apple-text" aria-current="page">Hoop World 3D</li></ol></nav>
         <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-apple-text mb-6 text-center">Hoop World 3D</h1>
         <section class="mb-10">
-            <div id="game-embed-container" class="aspect-16-9 bg-black rounded-lg shadow-2xl overflow-hidden mx-auto max-w-4xl"><iframe id="game-iframe" src="https://html5.gamedistribution.com/27f311ee037a4df5a300b486cdbf9c63/?gd_sdk_referrer_url=https://gamedistribution.com/games/hoop-world-3d/" title="Hoop World 3D" class="border-0" allowfullscreen allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy"></iframe></div>
+            <div id="game-embed-container" class="aspect-16-9 bg-black rounded-lg shadow-2xl overflow-hidden mx-auto max-w-4xl"><iframe id="game-iframe" src="https://html5.gamedistribution.com/27f311ee037a4df5a300b486cdbf9c63/?gd_sdk_referrer_url=https://gamedistribution.com/games/hoop-world-3d/" title="Hoop World 3D" class="border-0" allowfullscreen loading="lazy"></iframe></div>
             <div class="mt-5 text-center">
-                <button id="fullscreen-button" class="bg-apple-blue text-white font-semibold px-6 py-3 rounded-lg hover:bg-opacity-80 transition duration-150 ease-in-out text-sm sm:text-base">
-                    Enter Full Screen
-                </button>
+                <button id="fullscreen-button" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition duration-150 ease-in-out text-sm sm:text-base">Enter Full Screen</button>
             </div>
         </section>
-        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play Hoop World 3D</h2><div class="text-apple-light-gray-text space-y-3 leading-relaxed text-sm sm:text-base"><p>Get ready to flip, jump, and dunk your way through a world of high-flying basketball madness! In Hoop World 3D, your goal is to navigate your player through a series of wild levels, using trampolines, portals, and your own sense of timing to land the perfect slam dunk.</p><p>The gameplay is all about timing your jumps and flips correctly. As you launch from one platform to another, you can perform flips mid-air. The more flips you successfully complete before dunking, the more coins you'll earn. These coins can be used to unlock cool new characters!</p><p>Each level presents a unique and increasingly difficult challenge. You'll bounce across floating platforms, fly through wormholes that transport you across the map, and contend with some seriously wacky physics. A missed jump will send you crashing down, but nailing a complex sequence feels incredibly rewarding.</p><h3 class="text-xl font-bold text-apple-text mt-4 mb-2">Controls</h3><ul class="list-disc list-inside"><li><strong>Mouse/Touch:</strong> Click or tap and hold to flip, release to dive towards the hoop.</li></ul></div></section>
-    
-    <!-- You Might Also Like Section -->
+        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play Hoop World 3D</h2><div class="text-apple-light-gray-text space-y-3 leading-relaxed text-sm sm:text-base"><p>Hoop World 3D is a unique basketball game where timing is everything. Your primary goal is to guide your player across platforms and through various obstacles to perform an epic slam dunk.</p><p>To jump and flip, you'll need to carefully time your clicks or taps. A well-timed action will propel your character forward, allowing them to bounce off trampolines, fly through wormholes, and land precisely on the next platform. The more flips you execute before a dunk, the more coins you'll earn.</p><p>Be cautious with your timing – a misstep can lead to hilarious falls! Experiment to find the perfect rhythm for each jump and land your dunks with style. Collect coins to unlock new characters and conquer all the challenging levels.</p></div></section>
         
-    <!-- You Might Also Like Section -->
     <section class="mb-10">
         <h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-8 text-center">You Might Also Like</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="/game/fivenightsatpoppy.html">
-                <img src="https://www.onlinegames.io/media/posts/992/Five-Nights-at-Poppy.jpg" alt="Five Nights at Poppy" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E2E8F0/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/minibloxio.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/595/MiniBlox.io.jpg" alt="Miniblox io" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Five Nights at Poppy">Five Nights at Poppy</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Spend five terrifying nights in a haunted hospital with Poppy watching your every move. Play Five Ni...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Miniblox io">Miniblox io</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Miniblox io, a fantastic sandbox game, allows you to define your own gaming experience. Play with on...</p>
                 </div>
             </a>
         </div>
         
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="/game/motortour.html">
-                <img src="https://www.onlinegames.io/media/posts/980/Motor-Tour.jpg" alt="Motor Tour" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E2E8F0/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/smashkarts.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/373/smash-karts-online.jpg" alt="Smash Karts" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Motor Tour">Motor Tour</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Play Motor Tour for free on OnlineGames.io! Roll out your ride, rev that engine, and show off your m...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Smash Karts">Smash Karts</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Smash Karts is a 3D multiplayer go-kart battle game where you drive on wacky maps and smash other ka...</p>
                 </div>
             </a>
         </div>
         
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="/game/vexx3m2.html">
-                <img src="https://www.onlinegames.io/media/posts/984/Vex-X3M-2.jpg" alt="Vex X3M 2" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E2E8F0/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/granny.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/884/granny.jpg" alt="Granny" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Vex X3M 2">Vex X3M 2</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Race, flip, and survive deadly traps in Vex X3M 2, where Moto X3M meets Vex! Play this parkour stunt...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Granny">Granny</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Trapped in Granny's eerie house, you must outsmart her razor-sharp hearing and escape before it's to...</p>
                 </div>
             </a>
         </div>
         
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="/game/rooftopduel.html">
-                <img src="https://www.onlinegames.io/media/posts/1002/Rooftop-Duel-Online.jpg" alt="Rooftop Duel" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E2E8F0/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/ultimatemoto.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/1020/ultimate-moto.jpg" alt="Ultimate Moto" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Rooftop Duel">Rooftop Duel</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Play Rooftop Duel free on OnlineGames.io jump, aim, and blast rivals off the roof in seconds. Hit Pl...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Ultimate Moto">Ultimate Moto</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Race through glowing tracks in Ultimate Moto, free online bike game on OnlineGames.io!...</p>
                 </div>
             </a>
         </div>
@@ -114,65 +126,7 @@
     </section>
     
     </main>
-    
     <footer class="bg-gray-800 text-gray-300 py-12 mt-auto"><div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center"><p class="text-sm">&copy; <span id="currentYear"></span> FreeGameArcade.space. All rights reserved.</p></div></footer>
-    <script>
-    /**
-     * 网站功能脚本
-     * 包含了移动端菜单切换、页脚年份更新以及游戏全屏功能。
-    **/
-
-    // Wait for the HTML document to be fully loaded before running the script.
-    document.addEventListener('DOMContentLoaded', function() {
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        }
-
-        // Set current year in footer
-        const currentYearSpan = document.getElementById('currentYear');
-        if (currentYearSpan) {
-            currentYearSpan.textContent = new Date().getFullYear();
-        }
-
-        // Fullscreen functionality
-        const fullscreenButton = document.getElementById('fullscreen-button');
-        const gameIframe = document.getElementById('game-iframe'); // Target the iframe itself
-
-        if (fullscreenButton && gameIframe) {
-            fullscreenButton.addEventListener('click', () => {
-                if (!document.fullscreenElement) {
-                    // Try to make the iframe fullscreen
-                    if (gameIframe.requestFullscreen) {
-                        gameIframe.requestFullscreen().catch(err => console.error("Error attempting to enable full-screen mode:", err));
-                    } else if (gameIframe.mozRequestFullScreen) { /* Firefox */
-                        gameIframe.mozRequestFullScreen();
-                    } else if (gameIframe.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-                        gameIframe.webkitRequestFullscreen();
-                    } else if (gameIframe.msRequestFullscreen) { /* IE/Edge */
-                        gameIframe.msRequestFullscreen();
-                    }
-                } else {
-                    if (document.exitFullscreen) {
-                        document.exitFullscreen().catch(err => console.error("Error attempting to disable full-screen mode:", err));
-                    }
-                }
-            });
-
-            document.addEventListener('fullscreenchange', () => {
-                // Check if an element is in fullscreen
-                if (document.fullscreenElement) {
-                    fullscreenButton.textContent = 'Exit Full Screen';
-                } else {
-                    fullscreenButton.textContent = 'Enter Full Screen';
-                }
-            });
-        }
-    });
-    </script>
+    <script src="../scripts.js"></script>
 </body>
 </html>

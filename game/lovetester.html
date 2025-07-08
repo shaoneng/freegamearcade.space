@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-Q47TS07D8C"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q47TS07D8C"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
+
         gtag('config', 'G-Q47TS07D8C');
     </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9886602787991072"
-     crossorigin="anonymous">
-     </script>
+     crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play Love Tester - Free Online Game | Free Game Arcade</title>
-    <meta name="description" content="Find out your love compatibility with Love Tester! Enter your and your crush's names to get a fun love percentage. Play this free online game directly in your browser, no download needed.">
+    <meta name="description" content="Curious about your crush's feelings? Play Love Tester, a fun and free browser game where you can instantly check the compatibility between you and your special someone. Simply enter your names and let the game calculate your potential love percentage. Get instant insights into your romantic future! While it's all for fun, this unique love calculator offers an entertaining way to explore relationships. Enjoy this exciting game and play online for free, perfect for a quick, lighthearted break!">
     <link rel="canonical" href="https://shaoneng.github.io/freegamearcade.space/game/lovetester.html">
-    <script src="https://cdn.tailwindcss.com" defer></script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Love Tester",
+  "url": "https://shaoneng.github.io/freegamearcade.space/game/lovetester.html",
+  "image": "https://www.onlinegames.io/media/posts/152/love-tester.jpg",
+  "description": "Curious about your crush's feelings? Play Love Tester, a fun and free browser game where you can instantly check the compatibility between you and your special someone. Simply enter your names and let the game calculate your potential love percentage. Get instant insights into your romantic future! While it's all for fun, this unique love calculator offers an entertaining way to explore relationships. Enjoy this exciting game and play online for free, perfect for a quick, lighthearted break!",
+  "gamePlatform": "PC",
+  "operatingSystem": "Any",
+  "applicationCategory": "Game",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}</script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'apple-bg': '#f5f5f7', 'apple-text': '#1d1d1f', 'apple-blue': '#007aff', 'apple-light-gray-text': '#6e6e73',
+                        'apple-bg': '#f5f5f7', 'apple-text': '#1d1d1f', 'apple-blue': '#007aff', 
+                        'apple-light-gray-text': '#6e6e73',
                     }
                 },
                 fontFamily: {
@@ -34,6 +50,7 @@
     </script>
     <style>
         html { height: 100%; } body { min-height: 100%; display: flex; flex-direction: column; } main { flex-grow: 1; } .aspect-16-9 { position: relative; width: 100%; padding-bottom: 56.25%; } .aspect-16-9 iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .game-card-thumbnail { aspect-ratio: 300 / 200; background-color: #f0f0f0; }
     </style>
 </head>
 <body class="bg-apple-bg text-apple-text antialiased">
@@ -54,58 +71,53 @@
         <nav class="mb-6" aria-label="Breadcrumb"><ol class="flex items-center space-x-2 text-sm"><li><a href="../index.html" class="text-apple-light-gray-text hover:text-apple-blue">Home</a></li><li><span class="text-gray-400">/</span></li><li class="font-medium text-apple-text" aria-current="page">Love Tester</li></ol></nav>
         <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-apple-text mb-6 text-center">Love Tester</h1>
         <section class="mb-10">
-            <div id="game-embed-container" class="aspect-16-9 bg-black rounded-lg shadow-2xl overflow-hidden mx-auto max-w-4xl"><iframe id="game-iframe" src="https://www.onlinegames.io/games/2021/3/love-tester/index.html" title="Love Tester" class="border-0" allowfullscreen allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy"></iframe></div>
+            <div id="game-embed-container" class="aspect-16-9 bg-black rounded-lg shadow-2xl overflow-hidden mx-auto max-w-4xl"><iframe id="game-iframe" src="https://www.onlinegames.io/games/2021/3/love-tester/index.html" title="Love Tester" class="border-0" allowfullscreen loading="lazy"></iframe></div>
             <div class="mt-5 text-center">
-                <button id="fullscreen-button" class="bg-apple-blue text-white font-semibold px-6 py-3 rounded-lg hover:bg-opacity-80 transition duration-150 ease-in-out text-sm sm:text-base">
-                    Enter Full Screen
-                </button>
+                <button id="fullscreen-button" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition duration-150 ease-in-out text-sm sm:text-base">Enter Full Screen</button>
             </div>
         </section>
-        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play Love Tester</h2><div class="text-apple-light-gray-text space-y-3 leading-relaxed text-sm sm:text-base"><p>Curious about your crush? Love Tester is a fun, simple game that calculates your potential love compatibility. Just enter your name and your crush's name into the designated fields to begin.</p><p>Once you've entered the names, the love meter will do its work and present you with a percentage. This score represents your compatibility, and you'll also get a short evaluation of your potential as a couple. Don't be discouraged if the result isn't what you hoped for—you can always try again with another crush!</p><p>Remember, this is just a game for fun! True love can't be measured by an algorithm. Think of it as a modern-day fortune teller, meant to be enjoyed lightheartedly. The best way to know if someone likes you is to trust your instincts. Have fun playing!</p></div></section>
-    
-    <!-- You Might Also Like Section -->
+        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play Love Tester</h2><div class="text-apple-light-gray-text space-y-3 leading-relaxed text-sm sm:text-base"><p>Love Tester is a simple and engaging online game designed to give you a playful insight into your romantic compatibility. To begin, navigate to the game interface.</p><p>You will find input fields where you can enter your name and the name of your crush. Type both names accurately into the designated spaces.</p><p>Once you've entered both names, activate the "test" or "calculate" button (the exact button text may vary, but it will be clear). The game will then process the names and perform its unique "love calculation."</p><p>After a brief moment, your results will be displayed. You'll see a percentage indicating the love compatibility between the two names, often accompanied by a short evaluation or message. Remember, Love Tester is for entertainment purposes – enjoy the fun and see what your names reveal!</p></div></section>
         
-    <!-- You Might Also Like Section -->
     <section class="mb-10">
         <h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-8 text-center">You Might Also Like</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="/game/highwaytraffic.html">
-                <img src="https://www.onlinegames.io/media/posts/32/Highway-Traffic-2.jpg" alt="Highway Traffic" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E2E8F0/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/warstrike.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/870/WarStrike-Online.jpg" alt="WarStrike" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Highway Traffic">Highway Traffic</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Highway TrafficÂ game is centered around driving down the highway, dodging other cars, and avoiding ...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="WarStrike">WarStrike</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">WarStrike will give you the taste of playing Call of Duty: Modern Warfare, all from the comfort of y...</p>
                 </div>
             </a>
         </div>
         
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="/game/soldierlegend.html">
-                <img src="https://www.onlinegames.io/media/posts/1033/soldier-legend.jpg" alt="Soldier Legend" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E2E8F0/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/watermelongame.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/928/Watermelon-Game-Online.jpg" alt="Watermelon Game" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Soldier Legend">Soldier Legend</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Defend Earth in Soldier Legend, a free online rogue-lite shooting game! Survive enemy waves, unlock ...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Watermelon Game">Watermelon Game</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Stack fruits, strategize, and have fun with Watermelon Game! A colorful merging puzzle perfect for a...</p>
                 </div>
             </a>
         </div>
         
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="/game/extremerun3d.html">
-                <img src="https://www.onlinegames.io/media/posts/839/Extreme-Run-3D.jpg" alt="Extreme Run 3D" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E2E8F0/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/ultimatemoto.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/1020/ultimate-moto.jpg" alt="Ultimate Moto" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Extreme Run 3D">Extreme Run 3D</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Take control of a rolling ball and face various obstacles as you race through 11 levels. Start playi...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Ultimate Moto">Ultimate Moto</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Race through glowing tracks in Ultimate Moto, free online bike game on OnlineGames.io!...</p>
                 </div>
             </a>
         </div>
         
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="/game/smashkarts.html">
-                <img src="https://www.onlinegames.io/media/posts/373/smash-karts-online.jpg" alt="Smash Karts" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E2E8F0/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/winterella.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/681/Winterella.jpg" alt="Winterella" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Smash Karts">Smash Karts</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Smash Karts is a 3D multiplayer go-kart battle game where you drive on wacky maps and smash other ka...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Winterella">Winterella</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Prepare the girls for the winter ball in Winterella, a 2D makeup game. Add icy touches to them!...</p>
                 </div>
             </a>
         </div>
@@ -114,65 +126,7 @@
     </section>
     
     </main>
-    
     <footer class="bg-gray-800 text-gray-300 py-12 mt-auto"><div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center"><p class="text-sm">&copy; <span id="currentYear"></span> FreeGameArcade.space. All rights reserved.</p></div></footer>
-    <script>
-    /**
-     * 网站功能脚本
-     * 包含了移动端菜单切换、页脚年份更新以及游戏全屏功能。
-    **/
-
-    // Wait for the HTML document to be fully loaded before running the script.
-    document.addEventListener('DOMContentLoaded', function() {
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        }
-
-        // Set current year in footer
-        const currentYearSpan = document.getElementById('currentYear');
-        if (currentYearSpan) {
-            currentYearSpan.textContent = new Date().getFullYear();
-        }
-
-        // Fullscreen functionality
-        const fullscreenButton = document.getElementById('fullscreen-button');
-        const gameIframe = document.getElementById('game-iframe'); // Target the iframe itself
-
-        if (fullscreenButton && gameIframe) {
-            fullscreenButton.addEventListener('click', () => {
-                if (!document.fullscreenElement) {
-                    // Try to make the iframe fullscreen
-                    if (gameIframe.requestFullscreen) {
-                        gameIframe.requestFullscreen().catch(err => console.error("Error attempting to enable full-screen mode:", err));
-                    } else if (gameIframe.mozRequestFullScreen) { /* Firefox */
-                        gameIframe.mozRequestFullScreen();
-                    } else if (gameIframe.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-                        gameIframe.webkitRequestFullscreen();
-                    } else if (gameIframe.msRequestFullscreen) { /* IE/Edge */
-                        gameIframe.msRequestFullscreen();
-                    }
-                } else {
-                    if (document.exitFullscreen) {
-                        document.exitFullscreen().catch(err => console.error("Error attempting to disable full-screen mode:", err));
-                    }
-                }
-            });
-
-            document.addEventListener('fullscreenchange', () => {
-                // Check if an element is in fullscreen
-                if (document.fullscreenElement) {
-                    fullscreenButton.textContent = 'Exit Full Screen';
-                } else {
-                    fullscreenButton.textContent = 'Enter Full Screen';
-                }
-            });
-        }
-    });
-    </script>
+    <script src="../scripts.js"></script>
 </body>
 </html>

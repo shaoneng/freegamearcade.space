@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-Q47TS07D8C"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q47TS07D8C"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
+
         gtag('config', 'G-Q47TS07D8C');
     </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9886602787991072"
-     crossorigin="anonymous">
-     </script>
+     crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play Epic Basketball - Free Online Game | Free Game Arcade</title>
-    <meta name="description" content="Shoot some hoops in Epic Basketball! A fast-paced, quirky street-style game. Score as many baskets as you can in 60 seconds, unlock unique characters, and aim for the high score. Play for free in your browser at Free Game Arcade.">
+    <meta name="description" content="Dive into Epic Basketball, a fun and quirky street-style sports game where you challenge yourself to sink as many baskets as possible in 60 seconds. This free browser game offers a dynamic hoop that moves and plenty of distractions to keep you on your toes. Unlock a vibrant cast of characters, from Javi to the legendary Nona, by honing your skills and scoring big. Can you master the moving hoop and unlock all the ballers? Play Epic Basketball online for free and prove your shooting prowess!">
     <link rel="canonical" href="https://shaoneng.github.io/freegamearcade.space/game/epicbasketball.html">
-    <script src="https://cdn.tailwindcss.com" defer></script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Epic Basketball",
+  "url": "https://shaoneng.github.io/freegamearcade.space/game/epicbasketball.html",
+  "image": "https://www.onlinegames.io/media/posts/1023/epic-basketball.jpg",
+  "description": "Dive into Epic Basketball, a fun and quirky street-style sports game where you challenge yourself to sink as many baskets as possible in 60 seconds. This free browser game offers a dynamic hoop that moves and plenty of distractions to keep you on your toes. Unlock a vibrant cast of characters, from Javi to the legendary Nona, by honing your skills and scoring big. Can you master the moving hoop and unlock all the ballers? Play Epic Basketball online for free and prove your shooting prowess!",
+  "gamePlatform": "PC",
+  "operatingSystem": "Any",
+  "applicationCategory": "Game",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}</script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'apple-bg': '#f5f5f7', 'apple-text': '#1d1d1f', 'apple-blue': '#007aff', 'apple-light-gray-text': '#6e6e73',
+                        'apple-bg': '#f5f5f7', 'apple-text': '#1d1d1f', 'apple-blue': '#007aff', 
+                        'apple-light-gray-text': '#6e6e73',
                     }
                 },
                 fontFamily: {
@@ -34,6 +50,7 @@
     </script>
     <style>
         html { height: 100%; } body { min-height: 100%; display: flex; flex-direction: column; } main { flex-grow: 1; } .aspect-16-9 { position: relative; width: 100%; padding-bottom: 56.25%; } .aspect-16-9 iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .game-card-thumbnail { aspect-ratio: 300 / 200; background-color: #f0f0f0; }
     </style>
 </head>
 <body class="bg-apple-bg text-apple-text antialiased">
@@ -54,58 +71,53 @@
         <nav class="mb-6" aria-label="Breadcrumb"><ol class="flex items-center space-x-2 text-sm"><li><a href="../index.html" class="text-apple-light-gray-text hover:text-apple-blue">Home</a></li><li><span class="text-gray-400">/</span></li><li class="font-medium text-apple-text" aria-current="page">Epic Basketball</li></ol></nav>
         <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-apple-text mb-6 text-center">Epic Basketball</h1>
         <section class="mb-10">
-            <div id="game-embed-container" class="aspect-16-9 bg-black rounded-lg shadow-2xl overflow-hidden mx-auto max-w-4xl"><iframe id="game-iframe" src="https://cloud.onlinegames.io/games/2024/shareddreams/epic-basketball/index.html" title="Epic Basketball" class="border-0" allowfullscreen allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy"></iframe></div>
+            <div id="game-embed-container" class="aspect-16-9 bg-black rounded-lg shadow-2xl overflow-hidden mx-auto max-w-4xl"><iframe id="game-iframe" src="https://cloud.onlinegames.io/games/2024/shareddreams/epic-basketball/index.html" title="Epic Basketball" class="border-0" allowfullscreen loading="lazy"></iframe></div>
             <div class="mt-5 text-center">
-                <button id="fullscreen-button" class="bg-apple-blue text-white font-semibold px-6 py-3 rounded-lg hover:bg-opacity-80 transition duration-150 ease-in-out text-sm sm:text-base">
-                    Enter Full Screen
-                </button>
+                <button id="fullscreen-button" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition duration-150 ease-in-out text-sm sm:text-base">Enter Full Screen</button>
             </div>
         </section>
-        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play Epic Basketball</h2><div class="text-apple-light-gray-text space-y-3 leading-relaxed text-sm sm:text-base"><p>Epic Basketball is a fast-paced street basketball game where your goal is to score as many points as possible in 60 seconds. The challenge? The hoop moves, and various distractions will try to break your focus. Keep your eyes on the prize, aim carefully, and let the shots fly!</p><p>Begin your career as Javi and work your way up by unlocking a roster of unique characters, including Plin Plin, Bubu, and even an Alien. Each character brings their own style to the court. The ultimate unlockable player is Nona, the grandma baller. To get her on your team, you'll need to prove your skills by scoring an impressive 300 points. Get practicing!</p><p>If you enjoy the high-energy, quirky action of Epic Basketball, be sure to check out Basket Random for more hilarious physics-based basketball fun.</p></div></section>
-    
-    <!-- You Might Also Like Section -->
+        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play Epic Basketball</h2><div class="text-apple-light-gray-text space-y-3 leading-relaxed text-sm sm:text-base"><p>Epic Basketball is a fast-paced, street-style basketball shootout game designed to test your aiming skills under pressure.</p><p>Your main goal is to sink as many baskets as possible within a 60-second time limit. Sounds simple? Not quite! The hoop moves around, and various distractions will try to throw off your aim. Stay sharp and focus on your shots to maximize your score.</p><p>You start with the character Javi, but you can unlock a colorful cast of new players as you progress, each with their unique style. The ultimate challenge is to unlock Nona, the legendary baller grandma, who requires you to score an impressive 300 points. Keep practicing your aim and timing to unlock all characters and become the ultimate basketball legend!</p></div></section>
         
-    <!-- You Might Also Like Section -->
     <section class="mb-10">
         <h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-8 text-center">You Might Also Like</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="/game/ultimatemoto.html">
-                <img src="https://www.onlinegames.io/media/posts/1020/ultimate-moto.jpg" alt="Ultimate Moto" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E2E8F0/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/asiancupsoccer.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/1029/asian-cup-soccer.jpg" alt="Asian Cup Soccer" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Ultimate Moto">Ultimate Moto</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Race through glowing tracks in Ultimate Moto, free online bike game on OnlineGames.io!...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Asian Cup Soccer">Asian Cup Soccer</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Play Asian Cup Soccer online for free on OnlineGames.io! Choose your team, take epic free kicks, and...</p>
                 </div>
             </a>
         </div>
         
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="/game/juliebeautysalon.html">
-                <img src="https://www.onlinegames.io/media/posts/1011/Julie-Beauty-Salon.jpg" alt="Julie Beauty Salon" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E2E8F0/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/guerrillasio.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/423/Guerillas-io.jpg" alt="Guerrillas io" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Julie Beauty Salon">Julie Beauty Salon</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Play the ultimate glam-up makeover game online for free at OnlineGames.io!...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Guerrillas io">Guerrillas io</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">You are a particular elite team member and are called into battle. Your weapons are ready, and your ...</p>
                 </div>
             </a>
         </div>
         
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="/game/thiefpuzzle.html">
-                <img src="https://www.onlinegames.io/media/posts/1009/Thief-Puzzle.jpg" alt="Thief Puzzle" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E2E8F0/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/gulperio.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/660/Gulper-io.jpg" alt="Gulper io" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Thief Puzzle">Thief Puzzle</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Start playing Thief Puzzle today and see if your stretchy hand can get you out of trouble or into it...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Gulper io">Gulper io</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">As a gulper, you will participate in snake wars in the multiplayer snake game Gulper io. Take all th...</p>
                 </div>
             </a>
         </div>
         
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="/game/skribblio.html">
-                <img src="https://www.onlinegames.io/media/posts/385/Skribblio.jpg" alt="Skribblio" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E2E8F0/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/fpssimulator.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/680/Fps-simulator.jpg" alt="FPS Simulator" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Skribblio">Skribblio</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Scribble, scribble, scribble!âœ âœ âœ Skribblio is a great online game for word game lovers with ext...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="FPS Simulator">FPS Simulator</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Grab your sniper rifle, climb up the ladders and crouch! Take your enemies down one by one in the ac...</p>
                 </div>
             </a>
         </div>
@@ -114,65 +126,7 @@
     </section>
     
     </main>
-    
     <footer class="bg-gray-800 text-gray-300 py-12 mt-auto"><div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center"><p class="text-sm">&copy; <span id="currentYear"></span> FreeGameArcade.space. All rights reserved.</p></div></footer>
-    <script>
-    /**
-     * 网站功能脚本
-     * 包含了移动端菜单切换、页脚年份更新以及游戏全屏功能。
-    **/
-
-    // Wait for the HTML document to be fully loaded before running the script.
-    document.addEventListener('DOMContentLoaded', function() {
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        }
-
-        // Set current year in footer
-        const currentYearSpan = document.getElementById('currentYear');
-        if (currentYearSpan) {
-            currentYearSpan.textContent = new Date().getFullYear();
-        }
-
-        // Fullscreen functionality
-        const fullscreenButton = document.getElementById('fullscreen-button');
-        const gameIframe = document.getElementById('game-iframe'); // Target the iframe itself
-
-        if (fullscreenButton && gameIframe) {
-            fullscreenButton.addEventListener('click', () => {
-                if (!document.fullscreenElement) {
-                    // Try to make the iframe fullscreen
-                    if (gameIframe.requestFullscreen) {
-                        gameIframe.requestFullscreen().catch(err => console.error("Error attempting to enable full-screen mode:", err));
-                    } else if (gameIframe.mozRequestFullScreen) { /* Firefox */
-                        gameIframe.mozRequestFullScreen();
-                    } else if (gameIframe.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-                        gameIframe.webkitRequestFullscreen();
-                    } else if (gameIframe.msRequestFullscreen) { /* IE/Edge */
-                        gameIframe.msRequestFullscreen();
-                    }
-                } else {
-                    if (document.exitFullscreen) {
-                        document.exitFullscreen().catch(err => console.error("Error attempting to disable full-screen mode:", err));
-                    }
-                }
-            });
-
-            document.addEventListener('fullscreenchange', () => {
-                // Check if an element is in fullscreen
-                if (document.fullscreenElement) {
-                    fullscreenButton.textContent = 'Exit Full Screen';
-                } else {
-                    fullscreenButton.textContent = 'Enter Full Screen';
-                }
-            });
-        }
-    });
-    </script>
+    <script src="../scripts.js"></script>
 </body>
 </html>

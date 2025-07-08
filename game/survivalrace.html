@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-Q47TS07D8C"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q47TS07D8C"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
+
         gtag('config', 'G-Q47TS07D8C');
     </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9886602787991072"
-     crossorigin="anonymous">
-     </script>
+     crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play Survival Race - Free Online Game | Free Game Arcade</title>
-    <meta name="description" content="Experience the ultimate battle royale on wheels in Survival Race! Steer at full speed, crash your opponents, and be the last car standing in the arena. Play this thrilling 3D car game for free, no download required.">
+    <meta name="description" content="Dive into the thrilling world of Survival Race, a high-octane 3D car game where the goal is simple: be the last car standing in the arena! Steer your vehicle at full speed, strategically crash into opponents, and force them off the platform to win. Collect coins as you pull off daring stunts, navigate narrow turns, loops, and steep slopes. This action-packed battle royale racing experience offers stunning 3D visuals and intense music, pushing your driving skills to the limit. Play Survival Race online for free and prove your dominance in this exciting free browser game.">
     <link rel="canonical" href="https://shaoneng.github.io/freegamearcade.space/game/survivalrace.html">
-    <script src="https://cdn.tailwindcss.com" defer></script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Survival Race",
+  "url": "https://shaoneng.github.io/freegamearcade.space/game/survivalrace.html",
+  "image": "https://www.onlinegames.io/media/posts/768/Survival-Race.jpg",
+  "description": "Dive into the thrilling world of Survival Race, a high-octane 3D car game where the goal is simple: be the last car standing in the arena! Steer your vehicle at full speed, strategically crash into opponents, and force them off the platform to win. Collect coins as you pull off daring stunts, navigate narrow turns, loops, and steep slopes. This action-packed battle royale racing experience offers stunning 3D visuals and intense music, pushing your driving skills to the limit. Play Survival Race online for free and prove your dominance in this exciting free browser game.",
+  "gamePlatform": "PC",
+  "operatingSystem": "Any",
+  "applicationCategory": "Game",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}</script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'apple-bg': '#f5f5f7', 'apple-text': '#1d1d1f', 'apple-blue': '#007aff', 'apple-light-gray-text': '#6e6e73',
+                        'apple-bg': '#f5f5f7', 'apple-text': '#1d1d1f', 'apple-blue': '#007aff', 
+                        'apple-light-gray-text': '#6e6e73',
                     }
                 },
                 fontFamily: {
@@ -34,6 +50,7 @@
     </script>
     <style>
         html { height: 100%; } body { min-height: 100%; display: flex; flex-direction: column; } main { flex-grow: 1; } .aspect-16-9 { position: relative; width: 100%; padding-bottom: 56.25%; } .aspect-16-9 iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .game-card-thumbnail { aspect-ratio: 300 / 200; background-color: #f0f0f0; }
     </style>
 </head>
 <body class="bg-apple-bg text-apple-text antialiased">
@@ -54,58 +71,53 @@
         <nav class="mb-6" aria-label="Breadcrumb"><ol class="flex items-center space-x-2 text-sm"><li><a href="../index.html" class="text-apple-light-gray-text hover:text-apple-blue">Home</a></li><li><span class="text-gray-400">/</span></li><li class="font-medium text-apple-text" aria-current="page">Survival Race</li></ol></nav>
         <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-apple-text mb-6 text-center">Survival Race</h1>
         <section class="mb-10">
-            <div id="game-embed-container" class="aspect-16-9 bg-black rounded-lg shadow-2xl overflow-hidden mx-auto max-w-4xl"><iframe id="game-iframe" src="https://playhop.com/app/288720?utm_source=distrib&is-united-page=1&skip-guard=1&header=no&utm_medium=cristian-ovidiu&clid=8531463" title="Survival Race" class="border-0" allowfullscreen allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy"></iframe></div>
+            <div id="game-embed-container" class="aspect-16-9 bg-black rounded-lg shadow-2xl overflow-hidden mx-auto max-w-4xl"><iframe id="game-iframe" src="https://playhop.com/app/288720?utm_source=distrib&is-united-page=1&skip-guard=1&header=no&utm_medium=cristian-ovidiu&clid=8531463" title="Survival Race" class="border-0" allowfullscreen loading="lazy"></iframe></div>
             <div class="mt-5 text-center">
-                <button id="fullscreen-button" class="bg-apple-blue text-white font-semibold px-6 py-3 rounded-lg hover:bg-opacity-80 transition duration-150 ease-in-out text-sm sm:text-base">
-                    Enter Full Screen
-                </button>
+                <button id="fullscreen-button" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition duration-150 ease-in-out text-sm sm:text-base">Enter Full Screen</button>
             </div>
         </section>
-        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play Survival Race</h2><div class="text-apple-light-gray-text space-y-4 leading-relaxed text-sm sm:text-base"><p>Welcome to the ultimate automotive battle royale! In Survival Race, the goal is simple: be the last car driving. Navigate the treacherous arena at top speed, ram into your opponents, and knock them off the platform to claim victory. It's a high-octane test of skill and aggression where only one can survive.</p><p>Immerse yourself in stunning 3D graphics as you perform incredible stunts, leap over dangerous gaps, and collect coins scattered across the battlefield. The intense music fuels your need for speed, while a variety of challenges will push your driving abilities to the absolute limit. This free online car game is perfect for both desktop and laptop players looking for a unique racing thrill.</p><p>If you enjoy the chaos of Survival Race, you might also love other intense driving games. We recommend checking out our action and sports categories for more free-to-play titles. Don't forget to bookmark Free Game Arcade (Ctrl+D) to easily find your next favorite game!</p></div></section>
-    
-    <!-- You Might Also Like Section -->
+        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play Survival Race</h2><div class="text-apple-light-gray-text space-y-3 leading-relaxed text-sm sm:text-base"><p>Welcome to Survival Race! Your objective is to be the sole survivor in a dynamic arena.</p><p>To play, you'll need to steer your car at full speed across the platform. The main strategy is to crash into other cars, aiming to knock them off the arena. Every opponent you eliminate brings you closer to victory.</p><p>As you race, be on the lookout for opportunities to collect coins. You can also perform exciting stunts or navigate challenging terrain like holes, narrow turns, loops, and steep slopes. Master your driving skills to outmaneuver rivals and achieve the highest score!</p></div></section>
         
-    <!-- You Might Also Like Section -->
     <section class="mb-10">
         <h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-8 text-center">You Might Also Like</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="/game/sprunki.html">
-                <img src="https://www.onlinegames.io/media/posts/911/Sprunki.jpg" alt="Sprunki" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E2E8F0/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/getontop.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/697/Get-on-Top.jpg" alt="Get On Top" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Sprunki">Sprunki</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Create haunting soundscapes with Sprunki! Mix beats, melodies, and vocals using quirky characters in...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Get On Top">Get On Top</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Get on Top is a 2-player stickman game where players combat with a friend, trying to get on top and ...</p>
                 </div>
             </a>
         </div>
         
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="/game/fivenightsatpoppy.html">
-                <img src="https://www.onlinegames.io/media/posts/992/Five-Nights-at-Poppy.jpg" alt="Five Nights at Poppy" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E2E8F0/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/italianbrainrotclicker.html" class="game-card-thumbnail">
+                <img src="../assets/images/italianbrainrotclicker.webp" alt="Italian Brainrot Clicker" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Five Nights at Poppy">Five Nights at Poppy</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Spend five terrifying nights in a haunted hospital with Poppy watching your every move. Play Five Ni...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Italian Brainrot Clicker">Italian Brainrot Clicker</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Unleash chaos in this hilarious Italian Brainrot clicker game! Unlock wild skins, power-ups, and lea...</p>
                 </div>
             </a>
         </div>
         
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="/game/rooftopduel.html">
-                <img src="https://www.onlinegames.io/media/posts/1002/Rooftop-Duel-Online.jpg" alt="Rooftop Duel" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E2E8F0/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/papasscooperia.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/818/Papas-Scooperia.jpg" alt="Papa's Scooperia" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Rooftop Duel">Rooftop Duel</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Play Rooftop Duel free on OnlineGames.io jump, aim, and blast rivals off the roof in seconds. Hit Pl...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Papa's Scooperia">Papa's Scooperia</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">In Papa's Scooperia, you'll be baking hot cookies, adding scoops of ice cream, syrups, sprinkling ch...</p>
                 </div>
             </a>
         </div>
         
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="/game/cubeworlds.html">
-                <img src="https://www.onlinegames.io/media/posts/986/Cube-Worlds.jpg" alt="Cube Worlds" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E2E8F0/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/pixelbattleroyale.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/2/Pixel-Battle-Royale-Game.jpg" alt="Pixel Battle Royale" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Cube Worlds">Cube Worlds</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Play Cube Worlds online for free! Perfect Minecraft game to play on your browser!...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Pixel Battle Royale">Pixel Battle Royale</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Pixel Battle Royale is an amazing 3D shooting game where you join the intense battles against the op...</p>
                 </div>
             </a>
         </div>
@@ -114,65 +126,7 @@
     </section>
     
     </main>
-    
     <footer class="bg-gray-800 text-gray-300 py-12 mt-auto"><div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center"><p class="text-sm">&copy; <span id="currentYear"></span> FreeGameArcade.space. All rights reserved.</p></div></footer>
-    <script>
-    /**
-     * 网站功能脚本
-     * 包含了移动端菜单切换、页脚年份更新以及游戏全屏功能。
-    **/
-
-    // Wait for the HTML document to be fully loaded before running the script.
-    document.addEventListener('DOMContentLoaded', function() {
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        }
-
-        // Set current year in footer
-        const currentYearSpan = document.getElementById('currentYear');
-        if (currentYearSpan) {
-            currentYearSpan.textContent = new Date().getFullYear();
-        }
-
-        // Fullscreen functionality
-        const fullscreenButton = document.getElementById('fullscreen-button');
-        const gameIframe = document.getElementById('game-iframe'); // Target the iframe itself
-
-        if (fullscreenButton && gameIframe) {
-            fullscreenButton.addEventListener('click', () => {
-                if (!document.fullscreenElement) {
-                    // Try to make the iframe fullscreen
-                    if (gameIframe.requestFullscreen) {
-                        gameIframe.requestFullscreen().catch(err => console.error("Error attempting to enable full-screen mode:", err));
-                    } else if (gameIframe.mozRequestFullScreen) { /* Firefox */
-                        gameIframe.mozRequestFullScreen();
-                    } else if (gameIframe.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-                        gameIframe.webkitRequestFullscreen();
-                    } else if (gameIframe.msRequestFullscreen) { /* IE/Edge */
-                        gameIframe.msRequestFullscreen();
-                    }
-                } else {
-                    if (document.exitFullscreen) {
-                        document.exitFullscreen().catch(err => console.error("Error attempting to disable full-screen mode:", err));
-                    }
-                }
-            });
-
-            document.addEventListener('fullscreenchange', () => {
-                // Check if an element is in fullscreen
-                if (document.fullscreenElement) {
-                    fullscreenButton.textContent = 'Exit Full Screen';
-                } else {
-                    fullscreenButton.textContent = 'Enter Full Screen';
-                }
-            });
-        }
-    });
-    </script>
+    <script src="../scripts.js"></script>
 </body>
 </html>
