@@ -24,7 +24,7 @@ def generate_game_page_with_gemini(game_data, all_games):
 
     try:
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel('gemini-2.5-flash')
+        model = genai.GenerativeModel('gemini-2.5-pro')
         
         page_url = f"{SITE_BASE_URL}/game/{game_data['page_filename']}"
         you_might_also_like_html = generate_you_might_also_like_section(game_data, all_games)
