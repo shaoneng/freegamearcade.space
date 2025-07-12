@@ -14,24 +14,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play ShooterZ.io - Free Online Game | Free Game Arcade</title>
-    <meta name="description" content="Dive into the action-packed world of ShooterZ.io, a thrilling multiplayer first-person shooter! As a free browser game, ShooterZ.io lets you test your marksmanship against players from across the globe. Create your own custom match by setting the room name, player count, and game mode (Free-For-All or Team), or jump straight into an existing game. With 11 diverse maps and a wide arsenal of weapons including knives, pistols, rifles, and even RPGs, every match is a new challenge. Ready to dominate the battlefield? Play online for free and prove you're the ultimate soldier!">
+    <meta name="description" content="Dive into the action-packed world of ShooterZ.io, a thrilling multiplayer first-person shooter! In this free browser game, you'll test your tactical skills against players from across the globe. Create your own custom match or jump into an existing one across 11 diverse maps. Choose from a wide arsenal of weapons to dominate the battlefield in Free-For-All or Team-based modes. Track your progress with detailed stats and climb the leaderboards. Play online for free and prove you're the ultimate soldier!">
     <link rel="canonical" href="https://shaoneng.github.io/freegamearcade.space/game/shooterzio.html">
-    <script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "VideoGame",
-  "name": "ShooterZ.io",
-  "url": "https://shaoneng.github.io/freegamearcade.space/game/shooterzio.html",
-  "image": "https://www.onlinegames.io/media/posts/72/ShooterZ.io-game.jpg",
-  "description": "Dive into the action-packed world of ShooterZ.io, a thrilling multiplayer first-person shooter! As a free browser game, ShooterZ.io lets you test your marksmanship against players from across the globe. Create your own custom match by setting the room name, player count, and game mode (Free-For-All or Team), or jump straight into an existing game. With 11 diverse maps and a wide arsenal of weapons including knives, pistols, rifles, and even RPGs, every match is a new challenge. Ready to dominate the battlefield? Play online for free and prove you're the ultimate soldier!",
-  "gamePlatform": "PC",
-  "operatingSystem": "Any",
-  "applicationCategory": "Game",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  }
-}</script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoGame",
+      "name": "ShooterZ.io",
+      "url": "https://shaoneng.github.io/freegamearcade.space/game/shooterzio.html",
+      "description": "Dive into the action-packed world of ShooterZ.io, a thrilling multiplayer first-person shooter! In this free browser game, you'll test your tactical skills against players from across the globe. Create your own custom match or jump into an existing one across 11 diverse maps. Choose from a wide arsenal of weapons to dominate the battlefield in Free-For-All or Team-based modes. Track your progress with detailed stats and climb the leaderboards. Play online for free and prove you're the ultimate soldier!",
+      "genre": ["Shooter", "Action"],
+      "playMode": "MultiPlayer",
+      "applicationCategory": "Game",
+      "operatingSystem": "Any (Web Browser)",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Free Game Arcade"
+      }
+    }
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -51,7 +52,6 @@
     <style>
         html { height: 100%; } body { min-height: 100%; display: flex; flex-direction: column; } main { flex-grow: 1; } .aspect-16-9 { position: relative; width: 100%; padding-bottom: 56.25%; } .aspect-16-9 iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
         .game-card-thumbnail { aspect-ratio: 300 / 200; background-color: #f0f0f0; }
-        .controls-list { list-style-position: inside; } .controls-list li { margin-bottom: 0.5rem; } .controls-list strong { color: #1d1d1f; }
     </style>
 </head>
 <body class="bg-apple-bg text-apple-text antialiased">
@@ -77,48 +77,68 @@
                 <button id="fullscreen-button" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition duration-150 ease-in-out text-sm sm:text-base">Enter Full Screen</button>
             </div>
         </section>
-        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play ShooterZ.io</h2><div class="text-apple-light-gray-text space-y-4 leading-relaxed text-sm sm:text-base"><p>Welcome to the intense battlegrounds of ShooterZ.io! In this strategic multiplayer shooter, your goal is to outsmart and outgun opponents from around the world. To get started, you can either create your own custom game room or join an existing one. When creating a room, you can set the name, maximum player count, and choose between 'Free-For-All' (FFA) or 'Team' game modes.</p><p>Master the battlefield by learning the essential controls:</p><ul class="controls-list list-disc pl-5 mt-4"><li><strong>Movement:</strong> Use <strong>W, A, S, D</strong> to move, <strong>Space Bar</strong> to jump, hold <strong>Shift</strong> to run, and press <strong>C</strong> to crouch.</li><li><strong>Combat:</strong> Aim down your sights with the <strong>Right Mouse Button</strong> and fire with the <strong>Left Mouse Button</strong>. Press <strong>R</strong> to reload your weapon.</li><li><strong>Weapons &amp; Menu:</strong> Quickly switch between your arsenal using the number keys <strong>1-9</strong>. Press <strong>Tab</strong> to open the in-game menu to check scores and settings.</li><li><strong>Communication:</strong> Coordinate with your team by pressing <strong>T</strong> to open the chat window, typing your message, and hitting <strong>Enter</strong> to send.</li></ul><p>With a variety of maps and a wide selection of weapons, from the Deagle to the RPG, every match offers a unique tactical experience. Keep an eye on your stats, adapt your strategy, and climb the leaderboards!</p></div></section>
+        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play ShooterZ.io</h2><div class="text-apple-light-gray-text space-y-4 leading-relaxed text-sm sm:text-base">
+<p>Welcome to the intense battlefield of ShooterZ.io! Your goal is simple: outgun your opponents in a fast-paced, online first-person shooter. You can either host your own game or join an existing one to dive straight into the action.</p>
+<p><strong>Getting Started:</strong> To begin, you can create a new room. Give it a name, set the maximum number of players, and choose your preferred game mode: Free-For-All (FFA) where it's every soldier for themselves, or Team mode for cooperative combat. Alternatively, browse the list of existing games and join a match that's already in progress.</p>
+<div>
+    <h3 class="font-semibold text-apple-text mb-2">Master the Controls:</h3>
+    <ul class="list-disc list-inside space-y-1">
+        <li><strong>Movement:</strong> W, A, S, D keys</li>
+        <li><strong>Jump:</strong> Space Bar</li>
+        <li><strong>Run:</strong> Hold Shift</li>
+        <li><strong>Crouch:</strong> C key</li>
+        <li><strong>Shoot:</strong> Left Mouse Button</li>
+        <li><strong>Aim Down Sights:</strong> Right Mouse Button</li>
+        <li><strong>Reload:</strong> R key</li>
+        <li><strong>Switch Weapon:</strong> 1-9 keys</li>
+        <li><strong>Chat:</strong> T key to open, Enter to send</li>
+        <li><strong>Menu/Scoreboard:</strong> Tab key</li>
+        <li><strong>Pause:</strong> P key</li>
+    </ul>
+</div>
+<p><strong>Arsenal and Battlegrounds:</strong> Your survival depends on your skill and your gear. Arm yourself with a diverse range of weapons, from the precise Ballistic Knife and Deagle to the powerful MP5KA4, STW-25 rifle, and even an RPG. Battle across 11 unique maps, including Sanctum, FactoryX, and Ship, each offering different tactical challenges. Keep an eye on your stats to track your kills, wins, and overall score as you become a legend on the battlefield!</p>
+</div></section>
         
     <section class="mb-10">
         <h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-8 text-center">You Might Also Like</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="../game/soldierlegend.html" class="game-card-thumbnail">
-                <img src="https://www.onlinegames.io/media/posts/1033/soldier-legend.jpg" alt="Soldier Legend" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/maskedspecialforces.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/310/Masked-Special-Forces-FPS.jpg" alt="Masked Special Forces" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Soldier Legend">Soldier Legend</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Defend Earth in Soldier Legend, a free online rogue-lite shooting game! Survive enemy waves, unlock ...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Masked Special Forces">Masked Special Forces</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Masked Special Forces is a multiplayer first-person shooter game. As a talented warrior, team up, st...</p>
                 </div>
             </a>
         </div>
         
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="../game/poopclicker.html" class="game-card-thumbnail">
-                <img src="https://www.onlinegames.io/media/posts/742/Poop-Clicker.jpg" alt="Poop Clicker" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/freecitydrive.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/349/Free-City-Drive-Online.jpg" alt="Free City Drive" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Poop Clicker">Poop Clicker</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Poop Clicker, a free idle game with an odd twist; you get to be a dedicated plumber. Click on the po...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Free City Drive">Free City Drive</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Free City Drive is a car simulator that allows you explore the open roads. Take control of your car ...</p>
                 </div>
             </a>
         </div>
         
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="../game/realflightsimulator.html" class="game-card-thumbnail">
-                <img src="https://www.onlinegames.io/media/posts/342/Real-Flight-Simulator-2.jpg" alt="Real Flight Simulator" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/stateio.html" class="game-card-thumbnail">
+                <img src="../assets/images/stateio.webp" alt="State.io" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Real Flight Simulator">Real Flight Simulator</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Real Flight Simulator is a realistic game that gives you the ultimate flight experience. There is th...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="State.io">State.io</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Are you ready to conquer your own world? State.io is a free strategic war game that you can play on…...</p>
                 </div>
             </a>
         </div>
         
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="../game/drunkenduel.html" class="game-card-thumbnail">
-                <img src="https://www.onlinegames.io/media/posts/698/Drunken-Duel.jpg" alt="Drunken Duel" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/minecraftclassic.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/382/Minecraft-Classic-Game.jpg" alt="Minecraft Classic" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Drunken Duel">Drunken Duel</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Welcome to the Drunken Duel game, where you'll constantly LoL with your friend, trying to shoot each...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Minecraft Classic">Minecraft Classic</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Minecraft Classic is filled with so many details, options, and features that you won't miss any feat...</p>
                 </div>
             </a>
         </div>
