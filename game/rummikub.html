@@ -14,7 +14,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play Rummikub - Free Online Game | Free Game Arcade</title>
-    <meta name="description" content="Dive into the classic tile-based strategy of Rummikub, now available as a free browser game. The objective is simple yet captivating: be the first player to place all your tiles on the table. Create smart combinations of 'groups' (same number, different colors) or 'runs' (consecutive numbers, same color) to outwit your opponents. Challenge the computer or connect with friends for a match of 2, 3, or 4 players. If you enjoy games that blend luck with skill, you can play Rummikub online for free and test your strategic thinking. Get ready for hours of addictive fun!">
+    <meta name="description" content="Dive into the classic tile-based strategy of Rummikub, now available as a free browser game. The objective is to be the first player to get rid of all your tiles by forming them into 'melds'—either groups of the same number in different colors, or runs of consecutive numbers in the same color. Challenge yourself against intelligent AI opponents or compete with friends in multiplayer mode. This engaging game combines elements of rummy and mahjong, offering endless strategic fun. If you love brain-teasing board games, you can play Rummikub online for free right here. Test your wits and tactical skills today!">
     <link rel="canonical" href="https://shaoneng.github.io/freegamearcade.space/game/rummikub.html">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -22,7 +22,7 @@
   "name": "Rummikub",
   "url": "https://shaoneng.github.io/freegamearcade.space/game/rummikub.html",
   "image": "assets/images/rummikub.webp",
-  "description": "Dive into the classic tile-based strategy of Rummikub, now available as a free browser game. The objective is simple yet captivating: be the first player to place all your tiles on the table. Create smart combinations of 'groups' (same number, different colors) or 'runs' (consecutive numbers, same color) to outwit your opponents. Challenge the computer or connect with friends for a match of 2, 3, or 4 players. If you enjoy games that blend luck with skill, you can play Rummikub online for free and test your strategic thinking. Get ready for hours of addictive fun!",
+  "description": "Dive into the classic tile-based strategy of Rummikub, now available as a free browser game. The objective is to be the first player to get rid of all your tiles by forming them into 'melds'\u2014either groups of the same number in different colors, or runs of consecutive numbers in the same color. Challenge yourself against intelligent AI opponents or compete with friends in multiplayer mode. This engaging game combines elements of rummy and mahjong, offering endless strategic fun. If you love brain-teasing board games, you can play Rummikub online for free right here. Test your wits and tactical skills today!",
   "gamePlatform": "PC",
   "operatingSystem": "Any",
   "applicationCategory": "Game",
@@ -32,6 +32,26 @@
     "priceCurrency": "USD"
   }
 }</script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoGame",
+      "name": "Rummikub",
+      "url": "https://shaoneng.github.io/freegamearcade.space/game/rummikub.html",
+      "description": "A classic tile-based game where players create melds of groups or runs. Play online against the computer or other players for free.",
+      "genre": ["Board Game", "Strategy"],
+      "playMode": "MultiPlayer",
+      "gamePlatform": "WebApp",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Kinkajoo"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Kinkajoo"
+      }
+    }
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -77,10 +97,9 @@
             </div>
         </section>
         <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play Rummikub</h2><div class="text-apple-light-gray-text space-y-3 leading-relaxed text-sm sm:text-base">
-            <p>Welcome to Rummikub, the classic tile-based game that blends strategy, luck, and quick thinking. Your goal is to be the first player to empty your rack of all its tiles by placing them on the playing board.</p>
-            <p>To play your tiles, you must form sets called 'groups' or 'runs'. A 'group' consists of three or four tiles of the same number but in different colors. A 'run' is a sequence of three or more consecutive numbers, all in the same color (e.g., a red 7, 8, 9).</p>
-            <p>On your turn, you can either play tiles from your rack to form new sets or add to existing sets already on the table. For your very first move, the tiles you play must add up to at least 30 points. If you cannot make a valid move, you must draw a tile from the pool and end your turn. Plan your moves carefully to outsmart your opponents and claim victory!</p>
-            <p>This version allows you to play against the computer or challenge friends in matches for 2, 3, or 4 players.</p>
+            <p>Welcome to Rummikub, the classic tile-based game that blends luck and strategy. The goal is simple: be the first player to play all the tiles from your rack. You can play against the computer or challenge friends in matches with 2, 3, or 4 players.</p>
+            <p>Tiles are numbered 1 through 13 in four different colors. To play your tiles, you must form 'melds' on the table. A meld can be a 'group' (three or four tiles of the same number but in different colors) or a 'run' (three or more consecutive numbers of the same color).</p>
+            <p>On your turn, you must either play one or more tiles from your rack or draw a new tile from the pool. To make your first play, the 'initial meld', you must lay down melds with a total value of at least 30 points. After that, you can add tiles to existing melds on the table or even rearrange them to create new melds with your own tiles. If you can't make a play, you must draw a tile and your turn ends.</p>
         </div></section>
         
     <section class="mb-10">
@@ -88,31 +107,31 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="../game/madalinstuntcarspro.html" class="game-card-thumbnail">
-                <img src="https://www.onlinegames.io/media/posts/401/Madalin-Stunt-Cars-Pro-Game.jpg" alt="Madalin Stunt Cars Pro" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/warstrike.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/870/WarStrike-Online.jpg" alt="WarStrike" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Madalin Stunt Cars Pro">Madalin Stunt Cars Pro</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Are you open to experiencing luxury? The 3D driving game Madalin Stunt Cars Pro features excellent g...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="WarStrike">WarStrike</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">WarStrike will give you the taste of playing Call of Duty: Modern Warfare, all from the comfort of y...</p>
                 </div>
             </a>
         </div>
         
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="../game/crazycattle3d.html" class="game-card-thumbnail">
-                <img src="https://www.onlinegames.io/media/posts/1004/Crazy-Cattle-3D.jpg" alt="Crazy Cattle 3D" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/religiousidle.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/1028/religious-idle.jpg" alt="Religious Idle" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Crazy Cattle 3D">Crazy Cattle 3D</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Play Crazy Cattle 3D, the free browser game where funny physics sheep battle it out online. Charge, ...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Religious Idle">Religious Idle</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Play Religious Idle online for free on OnlineGames.io! Start your own religion, recruit followers, b...</p>
                 </div>
             </a>
         </div>
         
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="../game/paperminecraft.html" class="game-card-thumbnail">
-                <img src="https://www.onlinegames.io/media/posts/528/Paper-Minecraft.jpg" alt="Paper Minecraft" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/stickmandestruction.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/233/Stickman-Destruction.jpg" alt="Stickman Destruction" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Paper Minecraft">Paper Minecraft</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">In Paper Minecraft (2D Minecraft game), you will attempt to survive. Making defense tools for yourse...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Stickman Destruction">Stickman Destruction</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">How many parts can you divide a virtual character into? Stickman Destruction is an action-oriented s...</p>
                 </div>
             </a>
         </div>
