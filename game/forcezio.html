@@ -14,7 +14,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play ForceZ.io - Free Online Game | Free Game Arcade</title>
-    <meta name="description" content="Jump into the adrenaline-fueled action of ForceZ.io, a strategic multiplayer shooter. Test your skills in intense online PvP battles across various maps and game modes like Free For All and Teams. Create your own custom rooms or join the fight instantly. Take on challenging solo missions to hone your abilities, from deathmatch victories to survival challenges. Customize your soldier with powerful armor and masks. ForceZ.io is a thrilling free browser game where strategy and quick reflexes lead to victory. Play online for free and prove you're the ultimate champion on the battlefield!">
+    <meta name="description" content="Dive into the high-octane action of ForceZ.io, an intense multiplayer shooter where strategy is key! Jump into fast-paced battles across diverse maps, outsmarting and outgunning your opponents. Choose your mode: engage in chaotic Free-For-All, coordinate with allies in Teams, or face the apocalypse in Doomsday. Complete challenging missions to level up, earn cash, and unlock powerful armor and masks to customize your soldier. With customizable rooms and a deep progression system, ForceZ.io is a top-tier free browser game you can play online for free. Are you ready to dominate the arena and prove your skills?">
     <link rel="canonical" href="https://shaoneng.github.io/freegamearcade.space/game/forcezio.html">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -22,7 +22,7 @@
   "name": "ForceZ.io",
   "url": "https://shaoneng.github.io/freegamearcade.space/game/forcezio.html",
   "image": "assets/images/forcezio.webp",
-  "description": "Jump into the adrenaline-fueled action of ForceZ.io, a strategic multiplayer shooter. Test your skills in intense online PvP battles across various maps and game modes like Free For All and Teams. Create your own custom rooms or join the fight instantly. Take on challenging solo missions to hone your abilities, from deathmatch victories to survival challenges. Customize your soldier with powerful armor and masks. ForceZ.io is a thrilling free browser game where strategy and quick reflexes lead to victory. Play online for free and prove you're the ultimate champion on the battlefield!",
+  "description": "Dive into the high-octane action of ForceZ.io, an intense multiplayer shooter where strategy is key! Jump into fast-paced battles across diverse maps, outsmarting and outgunning your opponents. Choose your mode: engage in chaotic Free-For-All, coordinate with allies in Teams, or face the apocalypse in Doomsday. Complete challenging missions to level up, earn cash, and unlock powerful armor and masks to customize your soldier. With customizable rooms and a deep progression system, ForceZ.io is a top-tier free browser game you can play online for free. Are you ready to dominate the arena and prove your skills?",
   "gamePlatform": "PC",
   "operatingSystem": "Any",
   "applicationCategory": "Game",
@@ -51,6 +51,10 @@
     <style>
         html { height: 100%; } body { min-height: 100%; display: flex; flex-direction: column; } main { flex-grow: 1; } .aspect-16-9 { position: relative; width: 100%; padding-bottom: 56.25%; } .aspect-16-9 iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
         .game-card-thumbnail { aspect-ratio: 300 / 200; background-color: #f0f0f0; }
+        .control-list { list-style: none; padding: 0; }
+        .control-list li { display: flex; justify-content: space-between; padding: 0.25rem 0; border-bottom: 1px solid #e5e7eb; }
+        .control-list li:last-child { border-bottom: none; }
+        .control-list strong { color: #374151; }
     </style>
 </head>
 <body class="bg-apple-bg text-apple-text antialiased">
@@ -76,48 +80,62 @@
                 <button id="fullscreen-button" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition duration-150 ease-in-out text-sm sm:text-base">Enter Full Screen</button>
             </div>
         </section>
-        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play ForceZ.io</h2><div class="text-apple-light-gray-text space-y-3 leading-relaxed text-sm sm:text-base"><p>Dive into the action-packed world of ForceZ.io, where strategy and quick reflexes are key to survival. The goal is to outsmart and outgun your opponents in various competitive modes. You can jump into online PvP matches, create your own custom rooms, or take on challenging single-player missions to sharpen your skills.</p><p>Master the controls to dominate the battlefield:</p><ul><li><strong>Move:</strong> WASD or Arrow Keys</li><li><strong>Shoot:</strong> Left Mouse Click</li><li><strong>Aim:</strong> Right Mouse Click</li><li><strong>Reload:</strong> R key</li><li><strong>Jump:</strong> Spacebar</li><li><strong>Switch Weapons:</strong> 1-9 keys or Mouse Wheel</li><li><strong>Open Chat:</strong> T key</li><li><strong>Pause Menu:</strong> Tab key</li></ul><p>As you play, you'll earn money that can be used to purchase powerful armor and masks, giving you an edge in combat. Choose your game mode, from Free For All to team-based battles, and fight your way to the top of the leaderboard!</p></div></section>
+        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play ForceZ.io</h2><div class="text-apple-light-gray-text space-y-4 leading-relaxed text-sm sm:text-base">
+            <p>Welcome to the intense battlegrounds of ForceZ.io! Your main objective is to dominate the arena by eliminating other players. Use cover, strategic movement, and precise shooting to climb the leaderboard. You can play in various online PvP modes like Free For All (FFA) and Teams, or take on specific single-player missions to hone your skills and earn rewards like cash and XP.</p>
+            <p>Master the controls to become a formidable soldier on the battlefield:</p>
+            <ul class="control-list mt-4 mb-4">
+                <li><strong>Movement:</strong> <span>WASD or Arrow Keys</span></li>
+                <li><strong>Shoot:</strong> <span>Left Mouse Click</span></li>
+                <li><strong>Aim:</strong> <span>Right Mouse Click</span></li>
+                <li><strong>Reload:</strong> <span>R Key</span></li>
+                <li><strong>Jump:</strong> <span>Spacebar</span></li>
+                <li><strong>Switch Weapons:</strong> <span>1-9 Keys or Mouse Wheel</span></li>
+                <li><strong>Chat:</strong> <span>T Key</span></li>
+                <li><strong>Pause/Menu:</strong> <span>Tab Key</span></li>
+            </ul>
+            <p>Keep an eye on your HP and ammo in the bottom right, and use the radar in the top right to track enemy positions. As you play, you'll earn money to upgrade your armor and masks from the shop, giving you a better chance of survival in increasingly difficult missions and heated PvP matches.</p>
+        </div></section>
         
     <section class="mb-10">
         <h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-8 text-center">You Might Also Like</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="../game/catgirlfashionchallenge.html" class="game-card-thumbnail">
-                <img src="../assets/images/catgirlfashionchallenge.webp" alt="Cat Girl Fashion Challenge" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/religiousidle.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/1028/religious-idle.jpg" alt="Religious Idle" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Cat Girl Fashion Challenge">Cat Girl Fashion Challenge</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Style Angela the Cat in fashion duels! Cat Girl Fashion Challenge is a free game on OnlineGames.io, ...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Religious Idle">Religious Idle</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Play Religious Idle online for free on OnlineGames.io! Start your own religion, recruit followers, b...</p>
                 </div>
             </a>
         </div>
         
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="../game/spendelonmuskmoney.html" class="game-card-thumbnail">
-                <img src="https://www.onlinegames.io/media/posts/625/Spend-Elon-Musk-Money-Game.jpg" alt="Spend Elon Musk Money" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/wormszoneio.html" class="game-card-thumbnail">
+                <img src="../assets/images/wormszoneio.webp" alt="WormsZone.io" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Spend Elon Musk Money">Spend Elon Musk Money</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Spend Elon Musk Money is not only a fun shopping game but also about seizing the wealth of 0.001% of...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="WormsZone.io">WormsZone.io</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">In WormsZone.io the main objective is to become as big as possible defeating other worms and eating ...</p>
                 </div>
             </a>
         </div>
         
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="../game/highwaytraffic.html" class="game-card-thumbnail">
-                <img src="https://www.onlinegames.io/media/posts/32/Highway-Traffic-2.jpg" alt="Highway Traffic" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/cubeworlds.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/986/Cube-Worlds.jpg" alt="Cube Worlds" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Highway Traffic">Highway Traffic</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Highway TrafficÂ game is centered around driving down the highway, dodging other cars, and avoiding ...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Cube Worlds">Cube Worlds</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Play Cube Worlds online for free! Perfect Minecraft game to play on your browser!...</p>
                 </div>
             </a>
         </div>
         
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="../game/paperio2.html" class="game-card-thumbnail">
-                <img src="https://www.onlinegames.io/media/posts/395/Paper-io-2-Online.jpg" alt="Paper io 2" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/pacxonnewrealms.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/1014/PaxCon-New-REalms.jpg" alt="PacXon New Realms" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Paper io 2">Paper io 2</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Welcome to the colorful world of Paper io 2! Paper io 2 is a free online game where you have…...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="PacXon New Realms">PacXon New Realms</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Pacxon is a fun arcade-style puzzle game that mixes mechanics from classic games like Pac-Man and Xo...</p>
                 </div>
             </a>
         </div>
