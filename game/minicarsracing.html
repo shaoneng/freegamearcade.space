@@ -14,30 +14,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play Mini Cars Racing - Free Online Game | Free Game Arcade</title>
-    <meta name="description" content="Experience the thrill of tabletop racing in Mini Cars Racing, a free browser game that brings the fun of toy cars to your screen! Play online for free and challenge either the computer or a friend in exciting split-screen multiplayer action. Choose your tiny vehicle, pick from wild, twisty tracks, and select your difficulty level from Easy to Expert. The controls are simple and tight, making it easy to jump in, but hard to master, especially on the toughest setting. It's a fast, fun, and nostalgic racing game perfect for quick sessions or friendly competitions.">
+    <meta name="description" content="Get behind the wheel in Mini Cars Racing, a delightful free browser game that brings the fun of toy car racing to your screen. Challenge a friend in an exciting split-screen 2-player mode or race against the clock and CPU opponents in solo play. Experience tight controls and vibrant, playful visuals across wild and twisty tracks. Choose from Easy, Medium, or Expert difficulty to test your driving skills. It's fast, fun, and feels just like playing with toy cars on your childhood traffic rug. Play online for free and see if you can master the mini race track!">
     <link rel="canonical" href="https://shaoneng.github.io/freegamearcade.space/game/minicarsracing.html">
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "VideoGame",
-        "name": "Mini Cars Racing",
-        "url": "https://shaoneng.github.io/freegamearcade.space/game/minicarsracing.html",
-        "description": "Experience the thrill of tabletop racing in Mini Cars Racing, a free browser game that brings the fun of toy cars to your screen! Play online for free and challenge either the computer or a friend in exciting split-screen multiplayer action.",
-        "genre": ["Racing", "2 Player"],
-        "playMode": ["SinglePlayer", "MultiPlayer"],
-        "gamePlatform": "Web Browser",
-        "author": {
-            "@type": "Organization",
-            "name": "FreezeNova"
-        },
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD",
-            "category": "free"
-        }
-    }
-    </script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Mini Cars Racing",
+  "url": "https://shaoneng.github.io/freegamearcade.space/game/minicarsracing.html",
+  "image": "https://www.onlinegames.io/media/posts/1010/Mini-Cars-Racing.jpg",
+  "description": "Get behind the wheel in Mini Cars Racing, a delightful free browser game that brings the fun of toy car racing to your screen. Challenge a friend in an exciting split-screen 2-player mode or race against the clock and CPU opponents in solo play. Experience tight controls and vibrant, playful visuals across wild and twisty tracks. Choose from Easy, Medium, or Expert difficulty to test your driving skills. It's fast, fun, and feels just like playing with toy cars on your childhood traffic rug. Play online for free and see if you can master the mini race track!",
+  "gamePlatform": "PC",
+  "operatingSystem": "Any",
+  "applicationCategory": "Game",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}</script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -57,6 +51,9 @@
     <style>
         html { height: 100%; } body { min-height: 100%; display: flex; flex-direction: column; } main { flex-grow: 1; } .aspect-16-9 { position: relative; width: 100%; padding-bottom: 56.25%; } .aspect-16-9 iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
         .game-card-thumbnail { aspect-ratio: 300 / 200; background-color: #f0f0f0; }
+        .controls-list { list-style: none; padding-left: 0; }
+        .controls-list li { margin-bottom: 0.5rem; }
+        .controls-list strong { color: #1d1d1f; }
     </style>
 </head>
 <body class="bg-apple-bg text-apple-text antialiased">
@@ -82,35 +79,21 @@
                 <button id="fullscreen-button" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition duration-150 ease-in-out text-sm sm:text-base">Enter Full Screen</button>
             </div>
         </section>
-        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play Mini Cars Racing</h2><div class="text-apple-light-gray-text space-y-3 leading-relaxed text-sm sm:text-base">
-            <p>Get ready for some miniature racing madness! Mini Cars Racing is a delightful racing game that feels like playing with toy cars on a classic road rug. The goal is simple: be the first to cross the finish line on a variety of wild and twisting tracks.</p>
-            <p>When you start, you can choose between two exciting game modes:</p>
-            <ul class="list-disc list-inside space-y-2 my-3">
-                <li><strong>Solo:</strong> Race against computer-controlled cars and test your skills.</li>
-                <li><strong>2 Player:</strong> Challenge a friend on the same device in a fun split-screen versus mode.</li>
+        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play Mini Cars Racing</h2><div class="text-apple-light-gray-text space-y-4 leading-relaxed text-sm sm:text-base">
+            <p>Welcome to the miniature racetrack! Mini Cars Racing is a vibrant racing game that you can enjoy solo or with a friend, perfectly capturing the nostalgia of playing with toy cars.</p>
+            <p>Upon starting the game, you'll find two exciting game modes to choose from:</p>
+            <ul class="list-disc pl-5 space-y-2">
+                <li><strong>Solo Mode:</strong> Race against computer-controlled opponents and test your skills against the clock on a variety of twisty tracks.</li>
+                <li><strong>2 Player Mode:</strong> Challenge a friend in a local, split-screen battle on the same device. It's the perfect way to settle a friendly rivalry!</li>
             </ul>
-            <p>The controls are straightforward, making it easy for anyone to pick up and play:</p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-3">
-                <div>
-                    <h4 class="font-semibold text-apple-text">Player 1 Controls</h4>
-                    <ul class="list-disc list-inside">
-                        <li><strong>W:</strong> Accelerate</li>
-                        <li><strong>S:</strong> Brake / Reverse</li>
-                        <li><strong>A:</strong> Steer Left</li>
-                        <li><strong>D:</strong> Steer Right</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold text-apple-text">Player 2 Controls</h4>
-                    <ul class="list-disc list-inside">
-                        <li><strong>Up Arrow:</strong> Accelerate</li>
-                        <li><strong>Down Arrow:</strong> Brake / Reverse</li>
-                        <li><strong>Left Arrow:</strong> Steer Left</li>
-                        <li><strong>Right Arrow:</strong> Steer Right</li>
-                    </ul>
-                </div>
+            <p>You can also adjust the challenge by selecting one of three difficulty levels: Easy, Medium, or Expert. Be warned, Expert mode will make steering your tiny vehicle a real test of skill!</p>
+            <div>
+                <h3 class="text-xl font-semibold text-apple-text mb-2">Controls</h3>
+                <ul class="controls-list">
+                    <li><strong>Player 1:</strong> Use the <strong>WASD keys</strong> to steer your car.</li>
+                    <li><strong>Player 2:</strong> Use the <strong>Arrow keys</strong> to drive your car.</li>
+                </ul>
             </div>
-            <p>You can also adjust the challenge by selecting from Easy, Medium, or Expert difficulty levels. Be warned, Expert mode makes steering your tiny car a true test of skill!</p>
         </div></section>
         
     <section class="mb-10">
@@ -118,41 +101,41 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="../game/fireboyandwatergirl.html" class="game-card-thumbnail">
-                <img src="https://www.onlinegames.io/media/posts/377/Fireboy-and-Watergirl-Online.jpg" alt="Fireboy and Watergirl" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/crazyplanelanding.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/999/crazy-plane-landing.jpg" alt="Crazy Plane Landing" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Fireboy and Watergirl">Fireboy and Watergirl</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Have you heard the saying 'Opposites attract'? We want to introduce you two best friends that can ne...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Crazy Plane Landing">Crazy Plane Landing</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Crazy Plane Landing is a free online stunt game where you launch, boost, and steer a plane across wi...</p>
                 </div>
             </a>
         </div>
         
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="../game/geometryvibesxball.html" class="game-card-thumbnail">
-                <img src="https://www.onlinegames.io/media/posts/1022/geometry-vibes-xball.jpg" alt="Geometry Vibes X-Ball" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/footballlegends.html" class="game-card-thumbnail">
+                <img src="../assets/images/footballlegends.webp" alt="Football Legends" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Geometry Vibes X-Ball">Geometry Vibes X-Ball</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Geometry Vibes: X-Ball is a platformer game where you guide a glowing ball on an obstacle course fil...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Football Legends">Football Legends</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">You can find everything you are looking for in this soccer game! Football Legends is a thrilling spo...</p>
                 </div>
             </a>
         </div>
         
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="../game/papasbakeria.html" class="game-card-thumbnail">
-                <img src="../assets/images/papasbakeria.webp" alt="Papa's Bakeria" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/kickthepirate.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/1012/Kick-The-Pirate.jpg" alt="Kick the Pirate" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Papa's Bakeria">Papa's Bakeria</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Take orders, bake perfect pies, add the topping according to the orders. Deliver on time and get the...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Kick the Pirate">Kick the Pirate</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Play Kick the Pirate online for free at OnlineGames.io...</p>
                 </div>
             </a>
         </div>
         
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="../game/racinghorizon.html" class="game-card-thumbnail">
-                <img src="../assets/images/racinghorizon.webp" alt="Racing Horizon" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/mobcity.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/418/Mob-City.jpg" alt="Mob City" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Racing Horizon">Racing Horizon</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Take a seat in the most powerful car and race through a full highway traffic to get to the finish…...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Mob City">Mob City</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Are you confident enough to attack the mafia gang alone? Mob City is a 3D shooting game with many mi...</p>
                 </div>
             </a>
         </div>
