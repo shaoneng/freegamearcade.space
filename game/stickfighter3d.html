@@ -14,30 +14,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play Stick Fighter 3D - Free Online Game | Free Game Arcade</title>
-    <meta name="description" content="Step into the glowing arena of Stick Fighter 3D, a neon-fueled 1v1 fighting game. Duke it out as a radiant stick figure against the CPU or challenge a friend in local two-player mode on the same keyboard. Master punches, kicks, and devastating special moves to deplete your opponent's health bar and claim victory. With its flashy design and smooth animations, this free browser game offers a visually stunning combat experience. The key to winning is the special move bar—charge it up, unleash an instant KO, and dominate the fight. Ready to become the ultimate stickman champion? Play online for free and prove your skills in the neon battleground!">
+    <meta name="description" content="Step into the neon arena of Stick Fighter 3D, a visually stunning 1v1 fighting game! Control your glowing stickman and battle against the CPU or a friend in local 2-player mode. Master punches, kicks, and devastating special moves to achieve a knockout victory. With its smooth animations and flashy aesthetic, this free browser game delivers intense dueling action. The key to winning is timing your ultimate attack for an instant KO. Ready to prove your skills? Play online for free and become the ultimate stick-fighting champion in this action-packed brawler!">
     <link rel="canonical" href="https://shaoneng.github.io/freegamearcade.space/game/stickfighter3d.html">
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "VideoGame",
-        "name": "Stick Fighter 3D",
-        "url": "https://shaoneng.github.io/freegamearcade.space/game/stickfighter3d.html",
-        "description": "Step into the glowing arena of Stick Fighter 3D, a neon-fueled 1v1 fighting game. Duke it out as a radiant stick figure against the CPU or challenge a friend in local two-player mode on the same keyboard. Master punches, kicks, and devastating special moves to deplete your opponent's health bar and claim victory. With its flashy design and smooth animations, this free browser game offers a visually stunning combat experience. The key to winning is the special move bar—charge it up, unleash an instant KO, and dominate the fight. Ready to become the ultimate stickman champion? Play online for free and prove your skills in the neon battleground!",
-        "playMode": ["MultiPlayer", "SinglePlayer"],
-        "applicationCategory": "Game",
-        "operatingSystem": "Any",
-        "genre": ["Fighting", "Action"],
-        "publisher": {
-            "@type": "Organization",
-            "name": "Free Game Arcade"
-        },
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-        }
-    }
-    </script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Stick Fighter 3D",
+  "url": "https://shaoneng.github.io/freegamearcade.space/game/stickfighter3d.html",
+  "image": "https://www.onlinegames.io/media/posts/1026/stick-fighter-3d.jpg",
+  "description": "Step into the neon arena of Stick Fighter 3D, a visually stunning 1v1 fighting game! Control your glowing stickman and battle against the CPU or a friend in local 2-player mode. Master punches, kicks, and devastating special moves to achieve a knockout victory. With its smooth animations and flashy aesthetic, this free browser game delivers intense dueling action. The key to winning is timing your ultimate attack for an instant KO. Ready to prove your skills? Play online for free and become the ultimate stick-fighting champion in this action-packed brawler!",
+  "gamePlatform": "PC",
+  "operatingSystem": "Any",
+  "applicationCategory": "Game",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}</script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -57,6 +51,7 @@
     <style>
         html { height: 100%; } body { min-height: 100%; display: flex; flex-direction: column; } main { flex-grow: 1; } .aspect-16-9 { position: relative; width: 100%; padding-bottom: 56.25%; } .aspect-16-9 iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
         .game-card-thumbnail { aspect-ratio: 300 / 200; background-color: #f0f0f0; }
+        .controls-list { list-style: none; padding-left: 0; } .controls-list li { margin-bottom: 0.5rem; } .controls-list strong { display: inline-block; width: 120px; font-weight: 600; color: #333; }
     </style>
 </head>
 <body class="bg-apple-bg text-apple-text antialiased">
@@ -82,38 +77,66 @@
                 <button id="fullscreen-button" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition duration-150 ease-in-out text-sm sm:text-base">Enter Full Screen</button>
             </div>
         </section>
-        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto"><h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play Stick Fighter 3D</h2><div class="text-apple-light-gray-text space-y-3 leading-relaxed text-sm sm:text-base"><p>Welcome to the neon-drenched arena of Stick Fighter 3D! The goal is simple: defeat your opponent in a one-on-one duel. You can challenge the computer in solo mode (1P) or battle a friend on the same keyboard in versus mode (2P). Each fighter has a health bar, and the first to deplete their opponent's health wins the round.</p><p>Control your glowing stickman using your designated keys to move, jump, punch, and kick. Combine moves to create combos and keep your opponent on their toes. The key to victory lies in mastering both offense and defense.</p><p>Pay close attention to the special move bar at the top of the screen. As you fight, it will gradually fill up. Once your bar is full, it will flash, signaling that your powerful Special Move is ready. Press the special attack button at the right moment to unleash a devastating blow that results in an instant KO, regardless of your opponent's remaining health! Be careful, as your opponent can do the same. Keep an eye on their bar and stay ready to dodge when they're powered up.</p></div></section>
+        <section class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg max-w-3xl mx-auto">
+            <h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-4">How to Play Stick Fighter 3D</h2>
+            <div class="text-apple-light-gray-text space-y-4 leading-relaxed text-sm sm:text-base">
+                <p>Dive into the electrifying arena of <strong>Stick Fighter 3D</strong>, a stunning neon-style 1v1 fighting game. You can challenge the computer in solo mode (1P) or battle a friend on the same keyboard in the intense versus mode (2P). The objective is simple: be the last stickman standing!</p>
+                <p>Control your glowing fighter using a combination of punches and kicks to wear down your opponent. Each player has a health bar, and the round ends when one is fully depleted. The game's real thrill comes from its ultimate game-changer: the <strong>Special Move</strong>. As you fight, a power bar will charge. Once full, it will flash, signaling your special is ready. Press the special move button at the right moment to unleash a powerful attack that results in an instant KO! But be careful—your opponent can do the same to you.</p>
+                
+                <h3 class="text-xl font-semibold text-apple-text pt-2 pb-1">Controls</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <h4 class="font-bold text-lg text-orange-500">Player 1 (Orange)</h4>
+                        <ul class="controls-list mt-2">
+                            <li><strong>Move:</strong> A / D Keys</li>
+                            <li><strong>Punch:</strong> F Key</li>
+                            <li><strong>Kick:</strong> G Key</li>
+                            <li><strong>Special:</strong> R Key</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg text-blue-500">Player 2 (Blue)</h4>
+                        <ul class="controls-list mt-2">
+                            <li><strong>Move:</strong> Left / Right Arrow Keys</li>
+                            <li><strong>Punch:</strong> K Key</li>
+                            <li><strong>Kick:</strong> L Key</li>
+                            <li><strong>Special:</strong> P Key</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
         
     <section class="mb-10">
         <h2 class="text-2xl sm:text-3xl font-bold text-apple-text mb-8 text-center">You Might Also Like</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="../game/stickmangtacity.html" class="game-card-thumbnail">
-                <img src="https://www.onlinegames.io/media/posts/900/stickman-gta-city-free.jpg" alt="Stickman GTA City" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/flipbottle.html" class="game-card-thumbnail">
+                <img src="../assets/images/flipbottle.webp" alt="Flip Bottle" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Stickman GTA City">Stickman GTA City</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Explore Stickman GTA City, an open-world game where you steal vehicles, evade police, and take on mi...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Flip Bottle">Flip Bottle</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Flip Bottle is a physics-based platformer where you flip bottle across obstacles, earn coins, and ma...</p>
                 </div>
             </a>
         </div>
         
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="../game/motox3m.html" class="game-card-thumbnail">
-                <img src="../assets/images/motox3m.webp" alt="Moto X3M" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/squidshooter.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/968/squid-Shooter-online.jpg" alt="Squid Shooter" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Moto X3M">Moto X3M</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Gather up, adrenaline junkies! Wear your helmet tightly before this dangerous ride! Moto X3M is a fr...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Squid Shooter">Squid Shooter</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Play Squid Shooter, a free online game inspired by Squid Game! Fight green-suited players, pink guar...</p>
                 </div>
             </a>
         </div>
         
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <a href="../game/obbyfindsprunki.html" class="game-card-thumbnail">
-                <img src="../assets/images/obbyfindsprunki.webp" alt="Obby: Find Sprunki" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
+            <a href="../game/fivenightsatpoppy.html" class="game-card-thumbnail">
+                <img src="https://www.onlinegames.io/media/posts/992/Five-Nights-at-Poppy.jpg" alt="Five Nights at Poppy" onerror="this.onerror=null;this.src='https://placehold.co/300x200/f5f5f7/1d1d1f?text=Game+Image';" class="w-full h-40 object-cover" loading="lazy" width="300" height="200">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Obby: Find Sprunki">Obby: Find Sprunki</h3>
-                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Play Obby: Find Sprunki, a fun adventure to find hidden Sprunks across vibrant and eerie worlds. Col...</p>
+                    <h3 class="text-lg font-semibold text-apple-text mb-1 truncate" title="Five Nights at Poppy">Five Nights at Poppy</h3>
+                    <p class="text-xs text-apple-light-gray-text h-10 overflow-hidden">Spend five terrifying nights in a haunted hospital with Poppy watching your every move. Play Five Ni...</p>
                 </div>
             </a>
         </div>
