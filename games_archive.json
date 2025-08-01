@@ -2628,5 +2628,45 @@
         "description": "Do you think you are a good driver who has car handling skills? If yes,Cars Simulatorwill give you the ultimate race experience. With no speed limits you have freedom of movement of your car.Â\nThere are3 landscapescreated for you:Ââ¢ 1 Forest landscapeâ¢ 2 industrial landscapesThere are3cars:Ââ¢ Rally carÂâ¢ Police CarÂâ¢ Old CarÂ\nControls:WASD or arrow keys to drive carSpace bar for handbrakeC to change view (camera)Shift to boost carR to reset sceneE to turn on police lightsX to hide instructions1, 2, 3 to change carTAB to exit main menu\nCars Simulator is created by FreezeNova.",
         "short_description": "Do you think you are a good driver who has car handling skills? If yes, Cars Simulator will give you…",
         "page_filename": "carssimulator.html"
+    },
+    {
+        "id": "superminiracing",
+        "title": "Super Mini Racing",
+        "url": "https://www.onlinegames.io/super-mini-racing/",
+        "iframe_url": "https://www.onlinegames.io/games/2022/unity4/super-mini-racing/index.html",
+        "thumbnail": "assets/images/superminiracing.webp",
+        "description": "A super duper race is about to begin in just a few minutes! Choose your car and take your position behind the wheel forSuper Mini Racingâa 3Dracing gamethat offers both single-player and two-player modes. You'll be driving super mini cars across 10 different racetracks, competing to be the winner and claim the prize.\nSingle Player or Player 1\nPlayer 2\nSuper Mini Racing was created byFreezeNova.\nIf you love the split-screen mode where you race with a friend on the same device, we recommend2 Player Crazy Racer. Take the race to a retro town and enjoy pushing vintage cars to their speed limits. For more2-player games, check out our catalog filled with co-op and competitive games that you can play with a friend on the same device.",
+        "short_description": "Try Super Mini Racing, a fantastic 3D racing game that you can play with your friend using a single keyboard.",
+        "page_filename": "superminiracing.html"
+    },
+    {
+        "id": "cityambulancedriver",
+        "title": "City Ambulance Driver",
+        "url": "https://www.onlinegames.io/city-ambulance-driver/",
+        "iframe_url": "https://www.onlinegames.io/games/2022/unity/city-ambulance-driver/index.html",
+        "thumbnail": "assets/images/cityambulancedriver.webp",
+        "description": "Test your precision and reflexes inCity Ambulance Driveras you take the role of the savior of the people in need. Whether is an accident or another unexpected situations, people need help to be rescued.\nYou rush with the ambulence or helicopter to the red pin placed on the map. Transport the patients to the hospital carefully and faster. Be a hero and save as many lives as you can.Select the levelâ¢ There are 10 levels ready to completed. Follow the instructions and follow the red pin on the map.City Ambulance Driver Controls:â¢ Use WASD to control ambulance",
+        "short_description": "Test your precision and reflexes in City Ambulance Driver as you take the role of the savior of the people…",
+        "page_filename": "cityambulancedriver.html"
+    },
+    {
+        "id": "soccermasters",
+        "title": "Soccer Masters",
+        "url": "https://www.onlinegames.io/soccer-masters/",
+        "iframe_url": "https://cloud.onlinegames.io/games/2024/gm/soccer-masters/index.html",
+        "thumbnail": "assets/images/soccermasters.webp",
+        "description": "Did you know the first official soccer match was played in 1863? Back then, there were no shin guards, no fancy boots, and definitely no vuvuzelas echoing through the match. Soccer has evolved over time, and now you can bring the magic of this epic game to your fingertips.Â\nSoccer Mastersis a funny soccer game guaranteed to have you and your friend laughing non-stop! With its cartoonish animations and unpredictable gameplay, every match feels like a highlight reel.\nGave away a goal? Your player might cry a river in the middle of the pitch. Score a winner? Cue the victory dance! Choose between 1v1 or 2v2 matches against AI or a friend, and use power-ups for pitch-perfect moves.\n1 Player\n2 Player\nSoccer Masters was created by MadPuffers.\nSoccer Masters is a great football game that takes the intensity of a real match and replaces it with laughters. It's the perfect choice for anyone looking for fun and laughter with friends, or even just to kill time between breaks. However, if you're in the mood for something more serious and realistic, playSoccer Simulatornext. Dribble, pass and shoot with precision. Let's see those skills in action!",
+        "short_description": "Play Soccer Masters on OnlineGames.io! Enjoy hilarious 1v1 or 2v2 soccer matches with friends!",
+        "page_filename": "soccermasters.html"
+    },
+    {
+        "id": "fivenightsatcatfreddy",
+        "title": "Five Nights At Cat Freddy",
+        "url": "https://www.onlinegames.io/five-nights-at-cat-freddy/",
+        "iframe_url": "https://playhop.com/app/219368?utm_source=distrib&is-united-page=1&skip-guard=1&header=no&utm_medium=cristian-ovidiu&clid=8531463",
+        "thumbnail": "assets/images/fivenightsatcatfreddy.webp",
+        "description": "MeetFreddy the Cat, an adorable feline who needs your help! Freddy is no ordinary kitty; he comes from a haunted pet shop. So you better keep him happy by providing enough food and water in his bowl, a cozy bed, and plenty of playtime. If Freddy isn't cared for properly, he transforms into a terrifying monster, and your nights turn into a spooky survival game. In Five Nights at Cat Freddy, your mission is to survive through spooky nights where you'll solve puzzles and sneak past Freddy's monster form. In the meantime, you will figure out how to escape from this house on the fourth night. The night that is both adorable and thrilling awaits you. Outsmart Freddy the cat monster and make it to freedom!\nFive Nights at Cat Freddy is a spin-off version of the popular gameFive Nights at Freddy's(FNaF), but with a twist of cats instead of animatronics.Â\nGet ready to jump into the action! Here's how to play, along with a step-by-step guide to help you succeed:\nIn the beginning, you can select the Level of difficulty:\nIf you like escape puzzle challenges, next playThe House. It offers at least scary game experience as Five Nights at Cat Freddy but harder puzzles to solve. You can play many other escape games on OnlineGames.io.Â",
+        "short_description": "Join Freddy the Cat on a spooky adventure! Solve puzzles and craft items, and survive the night in this fun and thrilling game!",
+        "page_filename": "fivenightsatcatfreddy.html"
     }
 ]
