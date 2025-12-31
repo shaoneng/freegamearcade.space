@@ -1028,3 +1028,7 @@ https://www.onlinegames.io/boat-racing/
 https://www.onlinegames.io/quordle-today/
 https://www.onlinegames.io/coin-empire/
 https://www.onlinegames.io/penguin-fishing/
+https://www.onlinegames.io/classic-minesweeper/
+https://www.onlinegames.io/klondike-solitaire/
+https://www.onlinegames.io/speed-pinball/
+https://www.onlinegames.io/taxi-pickup/
