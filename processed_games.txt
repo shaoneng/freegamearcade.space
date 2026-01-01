@@ -1032,3 +1032,6 @@ https://www.onlinegames.io/classic-minesweeper/
 https://www.onlinegames.io/klondike-solitaire/
 https://www.onlinegames.io/speed-pinball/
 https://www.onlinegames.io/taxi-pickup/
+https://www.onlinegames.io/sudoku-village/
+https://www.onlinegames.io/sweet-sugar-match/
+https://www.onlinegames.io/mr-dracula/
